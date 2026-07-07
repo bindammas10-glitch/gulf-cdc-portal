@@ -1,0 +1,1158 @@
+[
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Outbreak Investigation",
+    "holders_n": 5,
+    "holders": [
+      "Salman AlHajri (PHPP)",
+      "Rose (PHPP)",
+      "Sami Almudarra (PHI)",
+      "Heyam Almosabihi (PHPP)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Contact Tracing",
+    "holders_n": 1,
+    "holders": [
+      "Salman AlHajri (PHPP)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Field Epidemiology Training Program (FETP)",
+    "holders_n": 1,
+    "holders": [
+      "Turki Almalki (PHI)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Surveillance Systems Design",
+    "holders_n": 1,
+    "holders": [
+      "Bushra (PHI)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Epidemic Intelligence",
+    "holders_n": 3,
+    "holders": [
+      "Abdullah Fahad Alnowaiser (PHE)",
+      "Sami Almudarra (PHI)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Surveillance Reporting & Analytics",
+    "holders_n": 2,
+    "holders": [
+      "Norah Albedah (PHI)",
+      "Turki Almalki (PHI)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Disease Modelling & Forecasting",
+    "holders_n": 2,
+    "holders": [
+      "Bushra (PHI)",
+      "Turki Almalki (PHI)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Biostatistics & Population Health",
+    "expertise": "Biostatistics",
+    "holders_n": 1,
+    "holders": [
+      "Sami Almudarra (PHI)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Biostatistics & Population Health",
+    "expertise": "Population Health",
+    "holders_n": 1,
+    "holders": [
+      "Sami Almudarra (PHI)"
+    ]
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Biostatistics & Population Health",
+    "expertise": "Burden of Disease Analysis",
+    "holders_n": 1,
+    "holders": [
+      "Bushra (PHI)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Preparedness & Planning",
+    "expertise": "Emergency Preparedness Planning",
+    "holders_n": 5,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Abdullah Fahad Alnowaiser (PHE)",
+      "Said Alghafri (TCB)",
+      "Hamad Alsaab (PHE)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Preparedness & Planning",
+    "expertise": "Risk Assessment (Rapid Risk Assessment)",
+    "holders_n": 9,
+    "holders": [
+      "Dr Mahim Al Balushi (PHPP)",
+      "Abdullah Fahad Alnowaiser (PHE)",
+      "Salman AlHajri (PHPP)",
+      "Reem Alotaibi  (PHPP)",
+      "Turki Almalki (PHI)",
+      "Sami Almudarra (PHI)",
+      "Heyam Almosabihi (PHPP)",
+      "Hamad Alsaab (PHE)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Preparedness & Planning",
+    "expertise": "SOP Development for Emergencies",
+    "holders_n": 5,
+    "holders": [
+      "Nouf Alzuhayri (PHI)",
+      "MOHAMMED ALSHEHRI (PHI)",
+      "Hamad Alsaab (PHE)",
+      "Abdullatif Bin Khunayn (PHE)",
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "PHEOC / Emergency Operations Centers",
+    "holders_n": 1,
+    "holders": [
+      "Hamad Alsaab (PHE)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Incident Management Systems (IMS)",
+    "holders_n": 1,
+    "holders": [
+      "Hamad Alsaab (PHE)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Disaster Medicine & Management",
+    "holders_n": 3,
+    "holders": [
+      "Abdullah Fahad Alnowaiser (PHE)",
+      "Said Alghafri (TCB)",
+      "Hamad Alsaab (PHE)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Simulation Exercises (SimEx)",
+    "holders_n": 2,
+    "holders": [
+      "Hamad Alsaab (PHE)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Health Security",
+    "expertise": "Strategic Stockpile Management",
+    "holders_n": 1,
+    "holders": [
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Health Security",
+    "expertise": "Health Security Strategy",
+    "holders_n": 1,
+    "holders": [
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Infectious Disease Epidemiology",
+    "holders_n": 11,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Nada Alnaji (PHPP)",
+      "Norah Albedah (PHI)",
+      "Salman AlHajri (PHPP)",
+      "Reem Alotaibi  (PHPP)",
+      "Turki Almalki (PHI)",
+      "Rose (PHPP)",
+      "Sami Almudarra (PHI)",
+      "Heyam Almosabihi (PHPP)",
+      "Najla Alorayyidh  (PHPP)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Infection Prevention & Control",
+    "holders_n": 4,
+    "holders": [
+      "Salman AlHajri (PHPP)",
+      "Said Alghafri (TCB)",
+      "Rose (PHPP)",
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Infection & Immunity",
+    "holders_n": 1,
+    "holders": [
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "NCD Prevention & Control",
+    "holders_n": 7,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Nada Alnaji (PHPP)",
+      "Norah Albedah (PHI)",
+      "Said Alghafri (TCB)",
+      "Reem Alotaibi  (PHPP)",
+      "Najla Alorayyidh  (PHPP)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Cancer Screening & Management",
+    "holders_n": 2,
+    "holders": [
+      "Said Alghafri (TCB)",
+      "Mazin Al Rahbi (PHI)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Obesity & Metabolic Disease",
+    "holders_n": 1,
+    "holders": [
+      "Najla Alorayyidh  (PHPP)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Hematologic Diseases",
+    "holders_n": 1,
+    "holders": [
+      "Said Alghafri (TCB)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Road Traffic & Injury Prevention",
+    "holders_n": 3,
+    "holders": [
+      "Dr Mahim Al Balushi (PHPP)",
+      "Raghad AlHumud (PHPP)",
+      "Mazin Al Rahbi (PHI)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Maternal & Child Health",
+    "holders_n": 1,
+    "holders": [
+      "Nada Alnaji (PHPP)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Mental Health",
+    "holders_n": 1,
+    "holders": [
+      "Nada Alnaji (PHPP)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Health Equity & Vulnerable Populations",
+    "holders_n": 1,
+    "holders": [
+      "Nada Alnaji (PHPP)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Policy & Guidelines",
+    "expertise": "Policy Drafting & Analysis",
+    "holders_n": 9,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Salman AlHajri (PHPP)",
+      "Raghad AlHumud (PHPP)",
+      "MOHAMMED ALSHEHRI (PHI)",
+      "Sami Almudarra (PHI)",
+      "Heyam Almosabihi (PHPP)",
+      "Mazin Al Rahbi (PHI)",
+      "Najla Alorayyidh  (PHPP)",
+      "Ahmed Alhatlan (PHI)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Policy & Guidelines",
+    "expertise": "Technical Guidelines Development",
+    "holders_n": 9,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Norah Albedah (PHI)",
+      "Abdullah Fahad Alnowaiser (PHE)",
+      "Salman AlHajri (PHPP)",
+      "Nouf Alzuhayri (PHI)",
+      "Turki Almalki (PHI)",
+      "MOHAMMED ALSHEHRI (PHI)",
+      "Najla Alorayyidh  (PHPP)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Policy & Guidelines",
+    "expertise": "Policy Brief & White Paper Writing",
+    "holders_n": 1,
+    "holders": [
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Health Systems Strengthening",
+    "holders_n": 2,
+    "holders": [
+      "Bushra (PHI)",
+      "Sarah Alsaleh (CEO)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Health Systems Research",
+    "holders_n": 1,
+    "holders": [
+      "Nouf Alzuhayri (PHI)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Health Economics & Financing",
+    "holders_n": 5,
+    "holders": [
+      "MOHAMMED ALSHEHRI (PHI)",
+      "Najla Alorayyidh  (PHPP)",
+      "Abdullatif Bin Khunayn (PHE)",
+      "Ahmed Alhatlan (PHI)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Value-Based Healthcare (VBHC)",
+    "holders_n": 1,
+    "holders": [
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Strategic Planning",
+    "expertise": "Strategic Planning & Priority Setting",
+    "holders_n": 5,
+    "holders": [
+      "Nouf Alzuhayri (PHI)",
+      "Sarah Alsaleh (CEO)",
+      "Reema Althunayyan (TCB)",
+      "Abdullatif Bin Khunayn (PHE)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Strategic Planning",
+    "expertise": "Healthcare Transformation",
+    "holders_n": 2,
+    "holders": [
+      "Sarah Alsaleh (CEO)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Strategic Planning",
+    "expertise": "Performance Management (KPIs / OKRs)",
+    "holders_n": 7,
+    "holders": [
+      "Waleed Al Nadabi (PHE)",
+      "Nouf Alzuhayri (PHI)",
+      "Sarah Alsaleh (CEO)",
+      "Rose (PHPP)",
+      "Reema Althunayyan (TCB)",
+      "Mazin Al Rahbi (PHI)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Health Promotion Strategy",
+    "holders_n": 7,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Nada Alnaji (PHPP)",
+      "Salman AlHajri (PHPP)",
+      "Said Alghafri (TCB)",
+      "Reem Alotaibi  (PHPP)",
+      "Nouf Alzuhayri (PHI)",
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Behavior Change Theory & Campaigns",
+    "holders_n": 1,
+    "holders": [
+      "Reem Alotaibi  (PHPP)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Public Health Nutrition",
+    "holders_n": 1,
+    "holders": [
+      "Haya Alzeer (PHPP)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Tobacco Use Prevention",
+    "holders_n": 1,
+    "holders": [
+      "Said Alghafri (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Workforce Development",
+    "expertise": "Health Workforce Development",
+    "holders_n": 2,
+    "holders": [
+      "Said Alghafri (TCB)",
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Workforce Development",
+    "expertise": "Competency Framework Design",
+    "holders_n": 2,
+    "holders": [
+      "Said Alghafri (TCB)",
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Workforce Development",
+    "expertise": "Continuing Professional Development (CPD)",
+    "holders_n": 1,
+    "holders": [
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Training Needs Analysis",
+    "holders_n": 1,
+    "holders": [
+      "Said Alghafri (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Curriculum & Instructional Design",
+    "holders_n": 2,
+    "holders": [
+      "Said Alghafri (TCB)",
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Training Delivery & Facilitation",
+    "holders_n": 7,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Said Alghafri (TCB)",
+      "Nouf Alzuhayri (PHI)",
+      "Reema Althunayyan (TCB)",
+      "Sami Almudarra (PHI)",
+      "Najla Alorayyidh  (PHPP)",
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Digital Learning (LMS / LXP)",
+    "holders_n": 1,
+    "holders": [
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Medical Education",
+    "holders_n": 1,
+    "holders": [
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Governance",
+    "holders_n": 2,
+    "holders": [
+      "Mazin Al Rahbi (PHI)",
+      "Ahmed Alhatlan (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Quality & Standardization",
+    "holders_n": 2,
+    "holders": [
+      "Bushra (PHI)",
+      "Mazin Al Rahbi (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Sharing Frameworks",
+    "holders_n": 1,
+    "holders": [
+      "Mazin Al Rahbi (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Data Analysis (Quantitative)",
+    "holders_n": 16,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Dr Mahim Al Balushi (PHPP)",
+      "Bushra (PHI)",
+      "Norah Albedah (PHI)",
+      "Salman AlHajri (PHPP)",
+      "Reem Alotaibi  (PHPP)",
+      "Nouf Alzuhayri (PHI)",
+      "Sarah Alsaleh (CEO)",
+      "Turki Almalki (PHI)",
+      "Faris (TCB)",
+      "Reema Althunayyan (TCB)",
+      "Sami Almudarra (PHI)",
+      "Heyam Almosabihi (PHPP)",
+      "Mazin Al Rahbi (PHI)",
+      "Najla Alorayyidh  (PHPP)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Qualitative & Thematic Analysis",
+    "holders_n": 1,
+    "holders": [
+      "Nouf Alzuhayri (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Dashboard & BI Development",
+    "holders_n": 5,
+    "holders": [
+      "Bushra (PHI)",
+      "Faris (TCB)",
+      "Mazin Al Rahbi (PHI)",
+      "Hamad Alsaab (PHE)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Data Engineering & Automation",
+    "holders_n": 2,
+    "holders": [
+      "Turki Almalki (PHI)",
+      "Mazin Al Rahbi (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Public Health Informatics",
+    "holders_n": 3,
+    "holders": [
+      "Bushra (PHI)",
+      "Zayed Al Zayed (TCB)",
+      "Heyam Almosabihi (PHPP)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Health Information Exchange",
+    "holders_n": 1,
+    "holders": [
+      "Bushra (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Registry Development (Cancer, RTI, etc.)",
+    "holders_n": 2,
+    "holders": [
+      "Mazin Al Rahbi (PHI)",
+      "Ahmed Alhatlan (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Health Information Management",
+    "holders_n": 1,
+    "holders": [
+      "Ahmed Alhatlan (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Digital Health",
+    "expertise": "Digital Transformation",
+    "holders_n": 3,
+    "holders": [
+      "Bushra (PHI)",
+      "Mazin Al Rahbi (PHI)",
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Digital Health",
+    "expertise": "Usability Testing & Health System Design",
+    "holders_n": 1,
+    "holders": [
+      "Bushra (PHI)"
+    ]
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Digital Health",
+    "expertise": "AI in Health",
+    "holders_n": 3,
+    "holders": [
+      "Norah Albedah (PHI)",
+      "Zayed Al Zayed (TCB)",
+      "Faris (TCB)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Clinical Research",
+    "expertise": "Clinical Research / Clinical Trials",
+    "holders_n": 5,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Bushra (PHI)",
+      "Norah Albedah (PHI)",
+      "Najla Alorayyidh  (PHPP)",
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Clinical Research",
+    "expertise": "Clinical Research Auditing & Monitoring",
+    "holders_n": 1,
+    "holders": [
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Clinical Research",
+    "expertise": "Ethical Review & Compliance",
+    "holders_n": 1,
+    "holders": [
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Research Methodology Development",
+    "holders_n": 3,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Norah Albedah (PHI)",
+      "MOHAMMED ALSHEHRI (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Systematic Reviews & Meta-Analysis",
+    "holders_n": 4,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Norah Albedah (PHI)",
+      "Nouf Alzuhayri (PHI)",
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Survey Design & Validation",
+    "holders_n": 2,
+    "holders": [
+      "Dr Mahim Al Balushi (PHPP)",
+      "Nouf Alzuhayri (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Indicators Development & Measurement",
+    "holders_n": 1,
+    "holders": [
+      "Nouf Alzuhayri (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Scientific Communication",
+    "expertise": "Scientific Writing & Publications",
+    "holders_n": 6,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Norah Albedah (PHI)",
+      "Reem Alotaibi  (PHPP)",
+      "Nouf Alzuhayri (PHI)",
+      "Heyam Almosabihi (PHPP)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Scientific Communication",
+    "expertise": "Knowledge Translation",
+    "holders_n": 2,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Nouf Alzuhayri (PHI)"
+    ]
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Scientific Communication",
+    "expertise": "Research Governance",
+    "holders_n": 2,
+    "holders": [
+      "MOHAMMED ALSHEHRI (PHI)",
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Healthcare Quality Improvement",
+    "holders_n": 4,
+    "holders": [
+      "Bushra (PHI)",
+      "Sarah Alsaleh (CEO)",
+      "Reema Althunayyan (TCB)",
+      "Mazin Al Rahbi (PHI)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Patient Safety",
+    "holders_n": 1,
+    "holders": [
+      "Waleed Al Nadabi (PHE)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Quality Auditing",
+    "holders_n": 1,
+    "holders": [
+      "Said Alghafri (TCB)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Governance & Compliance",
+    "expertise": "Governance, Risk & Compliance (GRC)",
+    "holders_n": 2,
+    "holders": [
+      "Sarah Alsaleh (CEO)",
+      "Ahmed Alhatlan (PHI)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Governance & Compliance",
+    "expertise": "Healthcare Governance",
+    "holders_n": 1,
+    "holders": [
+      "Sarah Alsaleh (CEO)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Governance & Compliance",
+    "expertise": "Casemix Funding & Classification",
+    "holders_n": 1,
+    "holders": [
+      "Ahmed Alhatlan (PHI)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Project Management (PMP/CAPM)",
+    "holders_n": 15,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Waleed Al Nadabi (PHE)",
+      "Salman AlHajri (PHPP)",
+      "Said Alghafri (TCB)",
+      "Reem Alotaibi  (PHPP)",
+      "Zayed Al Zayed (TCB)",
+      "Sarah Alsaleh (CEO)",
+      "MOHAMMED ALSHEHRI (PHI)",
+      "Rose (PHPP)",
+      "Faris (TCB)",
+      "Reema Althunayyan (TCB)",
+      "Najla Alorayyidh  (PHPP)",
+      "Hamad Alsaab (PHE)",
+      "Abdullatif Bin Khunayn (PHE)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Program Evaluation",
+    "holders_n": 3,
+    "holders": [
+      "Said Alghafri (TCB)",
+      "Nouf Alzuhayri (PHI)",
+      "Reema Althunayyan (TCB)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Agile / Scrum",
+    "holders_n": 1,
+    "holders": [
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Change Management",
+    "holders_n": 3,
+    "holders": [
+      "Nouf Alzuhayri (PHI)",
+      "Sarah Alsaleh (CEO)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Knowledge Management",
+    "holders_n": 2,
+    "holders": [
+      "Said Alghafri (TCB)",
+      "Faris (TCB)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Clinical Pharmacy",
+    "holders_n": 1,
+    "holders": [
+      "Faris (TCB)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Clinical Nutrition",
+    "holders_n": 2,
+    "holders": [
+      "Haya Alzeer (PHPP)",
+      "Najla Alorayyidh  (PHPP)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Nursing",
+    "holders_n": 1,
+    "holders": [
+      "Said Alghafri (TCB)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Emergency Medical Services / Paramedic",
+    "holders_n": 1,
+    "holders": [
+      "Abdullah Fahad Alnowaiser (PHE)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Medical Laboratory",
+    "holders_n": 2,
+    "holders": [
+      "Abdullatif Bin Khunayn (PHE)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Clinical Immunology / Serology",
+    "holders_n": 1,
+    "holders": [
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Microbiology",
+    "holders_n": 1,
+    "holders": [
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Specialized Areas",
+    "expertise": "Toxicology",
+    "holders_n": 1,
+    "holders": [
+      "Faris (TCB)"
+    ]
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Specialized Areas",
+    "expertise": "Lifestyle Medicine",
+    "holders_n": 1,
+    "holders": [
+      "Alaa AlQurashi (PHI)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Leadership",
+    "holders_n": 10,
+    "holders": [
+      "Waleed Al Nadabi (PHE)",
+      "Nada Alnaji (PHPP)",
+      "Dr Mahim Al Balushi (PHPP)",
+      "Bushra (PHI)",
+      "Salman AlHajri (PHPP)",
+      "Turki Almalki (PHI)",
+      "Sami Almudarra (PHI)",
+      "Mazin Al Rahbi (PHI)",
+      "Abdullatif Bin Khunayn (PHE)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Strategic Thinking",
+    "holders_n": 5,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Bushra (PHI)",
+      "Salman AlHajri (PHPP)",
+      "Heyam Almosabihi (PHPP)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Decision Support",
+    "holders_n": 6,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Norah Albedah (PHI)",
+      "Nouf Alzuhayri (PHI)",
+      "Faris (TCB)",
+      "Mazin Al Rahbi (PHI)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Stakeholder Engagement",
+    "holders_n": 15,
+    "holders": [
+      "Nada Alnaji (PHPP)",
+      "Bushra (PHI)",
+      "Norah Albedah (PHI)",
+      "Salman AlHajri (PHPP)",
+      "Said Alghafri (TCB)",
+      "Reem Alotaibi  (PHPP)",
+      "Nouf Alzuhayri (PHI)",
+      "Turki Almalki (PHI)",
+      "Reema Althunayyan (TCB)",
+      "Mazin Al Rahbi (PHI)",
+      "Najla Alorayyidh  (PHPP)",
+      "Hamad Alsaab (PHE)",
+      "Abdullatif Bin Khunayn (PHE)",
+      "Ahmed Alhatlan (PHI)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Cross-Country / GCC Coordination",
+    "holders_n": 5,
+    "holders": [
+      "Said Alghafri (TCB)",
+      "Raghad AlHumud (PHPP)",
+      "Turki Almalki (PHI)",
+      "Mazin Al Rahbi (PHI)",
+      "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Public Speaking & Representation",
+    "holders_n": 2,
+    "holders": [
+      "Najla Alorayyidh  (PHPP)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Technical Writing & Reporting",
+    "holders_n": 4,
+    "holders": [
+      "Reema Althunayyan (TCB)",
+      "Heyam Almosabihi (PHPP)",
+      "Mazin Al Rahbi (PHI)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Analytical Skills",
+    "expertise": "Critical Thinking & Problem Solving",
+    "holders_n": 5,
+    "holders": [
+      "Bushra (PHI)",
+      "Norah Albedah (PHI)",
+      "Reema Althunayyan (TCB)",
+      "Najla Alorayyidh  (PHPP)",
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Analytical Skills",
+    "expertise": "Evidence Synthesis & Insight Generation",
+    "holders_n": 1,
+    "holders": [
+      "Abrar Alsurayhi  (TCB)"
+    ]
+  }
+]

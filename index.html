@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gulf CDC · Workforce Knowledge Continuity Portal</title>
+  <meta name="description" content="Expertise coverage, continuity risk, and knowledge-capture planning for the Gulf CDC workforce." />
+  <link rel="preconnect" href="data:," />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__brand">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28" role="img" aria-label="Gulf CDC">
+          <path d="M16 2 L28 7 V16 C28 23 22 28 16 30 C10 28 4 23 4 16 V7 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M11 16.5 l3.2 3.2 L21.5 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="topbar__titles">
+        <span class="topbar__org">Gulf CDC</span>
+        <span class="topbar__sub">Workforce Knowledge Continuity</span>
+      </div>
+    </div>
+
+    <nav class="tabs" id="tabs" aria-label="Sections">
+      <button class="tab is-active" data-view="overview">Overview</button>
+      <button class="tab" data-view="holders">Critical Experts</button>
+      <button class="tab" data-view="gaps">Knowledge Gaps</button>
+      <button class="tab" data-view="interviews">Interview Plan</button>
+      <button class="tab" data-view="matrix">Expertise Matrix</button>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" title="Toggle light / dark" aria-label="Toggle light or dark theme">
+      <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+    </button>
+  </header>
+
+  <main id="main" class="main">
+    <!-- Views render here -->
+    <section id="view-overview" class="view" aria-labelledby="tab-overview"></section>
+    <section id="view-holders" class="view" hidden></section>
+    <section id="view-gaps" class="view" hidden></section>
+    <section id="view-interviews" class="view" hidden></section>
+    <section id="view-matrix" class="view" hidden></section>
+  </main>
+
+  <footer class="footer">
+    <span>Gulf CDC · Knowledge Continuity &amp; Succession Risk Assessment</span>
+    <span class="footer__meta" id="footerMeta"></span>
+  </footer>
+
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite" hidden></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

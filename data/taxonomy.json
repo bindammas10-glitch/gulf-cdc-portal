@@ -1,0 +1,632 @@
+[
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Outbreak Investigation",
+    "path": "Epidemiology & Surveillance > Field Epidemiology > Outbreak Investigation"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Contact Tracing",
+    "path": "Epidemiology & Surveillance > Field Epidemiology > Contact Tracing"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Field Epidemiology Training Program (FETP)",
+    "path": "Epidemiology & Surveillance > Field Epidemiology > Field Epidemiology Training Program (FETP)"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Surveillance Systems Design",
+    "path": "Epidemiology & Surveillance > Disease Surveillance > Surveillance Systems Design"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Epidemic Intelligence",
+    "path": "Epidemiology & Surveillance > Disease Surveillance > Epidemic Intelligence"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Surveillance Reporting & Analytics",
+    "path": "Epidemiology & Surveillance > Disease Surveillance > Surveillance Reporting & Analytics"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Disease Modelling & Forecasting",
+    "path": "Epidemiology & Surveillance > Disease Surveillance > Disease Modelling & Forecasting"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Biostatistics & Population Health",
+    "expertise": "Biostatistics",
+    "path": "Epidemiology & Surveillance > Biostatistics & Population Health > Biostatistics"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Biostatistics & Population Health",
+    "expertise": "Population Health",
+    "path": "Epidemiology & Surveillance > Biostatistics & Population Health > Population Health"
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Biostatistics & Population Health",
+    "expertise": "Burden of Disease Analysis",
+    "path": "Epidemiology & Surveillance > Biostatistics & Population Health > Burden of Disease Analysis"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Preparedness & Planning",
+    "expertise": "Emergency Preparedness Planning",
+    "path": "Public Health Emergency & Health Security > Preparedness & Planning > Emergency Preparedness Planning"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Preparedness & Planning",
+    "expertise": "Risk Assessment (Rapid Risk Assessment)",
+    "path": "Public Health Emergency & Health Security > Preparedness & Planning > Risk Assessment (Rapid Risk Assessment)"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Preparedness & Planning",
+    "expertise": "SOP Development for Emergencies",
+    "path": "Public Health Emergency & Health Security > Preparedness & Planning > SOP Development for Emergencies"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "PHEOC / Emergency Operations Centers",
+    "path": "Public Health Emergency & Health Security > Response & Operations > PHEOC / Emergency Operations Centers"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Incident Management Systems (IMS)",
+    "path": "Public Health Emergency & Health Security > Response & Operations > Incident Management Systems (IMS)"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Disaster Medicine & Management",
+    "path": "Public Health Emergency & Health Security > Response & Operations > Disaster Medicine & Management"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Simulation Exercises (SimEx)",
+    "path": "Public Health Emergency & Health Security > Response & Operations > Simulation Exercises (SimEx)"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Health Security",
+    "expertise": "Strategic Stockpile Management",
+    "path": "Public Health Emergency & Health Security > Health Security > Strategic Stockpile Management"
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Health Security",
+    "expertise": "Health Security Strategy",
+    "path": "Public Health Emergency & Health Security > Health Security > Health Security Strategy"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Infectious Disease Epidemiology",
+    "path": "Communicable & Non-Communicable Diseases > Communicable Diseases > Infectious Disease Epidemiology"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Infection Prevention & Control",
+    "path": "Communicable & Non-Communicable Diseases > Communicable Diseases > Infection Prevention & Control"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Infection & Immunity",
+    "path": "Communicable & Non-Communicable Diseases > Communicable Diseases > Infection & Immunity"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "NCD Prevention & Control",
+    "path": "Communicable & Non-Communicable Diseases > Non-Communicable Diseases > NCD Prevention & Control"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Cancer Screening & Management",
+    "path": "Communicable & Non-Communicable Diseases > Non-Communicable Diseases > Cancer Screening & Management"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Obesity & Metabolic Disease",
+    "path": "Communicable & Non-Communicable Diseases > Non-Communicable Diseases > Obesity & Metabolic Disease"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Hematologic Diseases",
+    "path": "Communicable & Non-Communicable Diseases > Non-Communicable Diseases > Hematologic Diseases"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Road Traffic & Injury Prevention",
+    "path": "Communicable & Non-Communicable Diseases > Injuries & Special Populations > Road Traffic & Injury Prevention"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Maternal & Child Health",
+    "path": "Communicable & Non-Communicable Diseases > Injuries & Special Populations > Maternal & Child Health"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Mental Health",
+    "path": "Communicable & Non-Communicable Diseases > Injuries & Special Populations > Mental Health"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Health Equity & Vulnerable Populations",
+    "path": "Communicable & Non-Communicable Diseases > Injuries & Special Populations > Health Equity & Vulnerable Populations"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Policy & Guidelines",
+    "expertise": "Policy Drafting & Analysis",
+    "path": "Health Policy, Systems & Strategy > Policy & Guidelines > Policy Drafting & Analysis"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Policy & Guidelines",
+    "expertise": "Technical Guidelines Development",
+    "path": "Health Policy, Systems & Strategy > Policy & Guidelines > Technical Guidelines Development"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Policy & Guidelines",
+    "expertise": "Policy Brief & White Paper Writing",
+    "path": "Health Policy, Systems & Strategy > Policy & Guidelines > Policy Brief & White Paper Writing"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Health Systems Strengthening",
+    "path": "Health Policy, Systems & Strategy > Health Systems > Health Systems Strengthening"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Health Systems Research",
+    "path": "Health Policy, Systems & Strategy > Health Systems > Health Systems Research"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Health Economics & Financing",
+    "path": "Health Policy, Systems & Strategy > Health Systems > Health Economics & Financing"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Value-Based Healthcare (VBHC)",
+    "path": "Health Policy, Systems & Strategy > Health Systems > Value-Based Healthcare (VBHC)"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Strategic Planning",
+    "expertise": "Strategic Planning & Priority Setting",
+    "path": "Health Policy, Systems & Strategy > Strategic Planning > Strategic Planning & Priority Setting"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Strategic Planning",
+    "expertise": "Healthcare Transformation",
+    "path": "Health Policy, Systems & Strategy > Strategic Planning > Healthcare Transformation"
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Strategic Planning",
+    "expertise": "Performance Management (KPIs / OKRs)",
+    "path": "Health Policy, Systems & Strategy > Strategic Planning > Performance Management (KPIs / OKRs)"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Health Promotion Strategy",
+    "path": "Health Promotion, Education & Workforce > Health Promotion > Health Promotion Strategy"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Behavior Change Theory & Campaigns",
+    "path": "Health Promotion, Education & Workforce > Health Promotion > Behavior Change Theory & Campaigns"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Public Health Nutrition",
+    "path": "Health Promotion, Education & Workforce > Health Promotion > Public Health Nutrition"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Tobacco Use Prevention",
+    "path": "Health Promotion, Education & Workforce > Health Promotion > Tobacco Use Prevention"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Workforce Development",
+    "expertise": "Health Workforce Development",
+    "path": "Health Promotion, Education & Workforce > Workforce Development > Health Workforce Development"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Workforce Development",
+    "expertise": "Competency Framework Design",
+    "path": "Health Promotion, Education & Workforce > Workforce Development > Competency Framework Design"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Workforce Development",
+    "expertise": "Continuing Professional Development (CPD)",
+    "path": "Health Promotion, Education & Workforce > Workforce Development > Continuing Professional Development (CPD)"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Training Needs Analysis",
+    "path": "Health Promotion, Education & Workforce > Training & Education > Training Needs Analysis"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Curriculum & Instructional Design",
+    "path": "Health Promotion, Education & Workforce > Training & Education > Curriculum & Instructional Design"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Training Delivery & Facilitation",
+    "path": "Health Promotion, Education & Workforce > Training & Education > Training Delivery & Facilitation"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Digital Learning (LMS / LXP)",
+    "path": "Health Promotion, Education & Workforce > Training & Education > Digital Learning (LMS / LXP)"
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Medical Education",
+    "path": "Health Promotion, Education & Workforce > Training & Education > Medical Education"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Governance",
+    "path": "Data, Digital Health & Health Informatics > Data Governance & Quality > Data Governance"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Quality & Standardization",
+    "path": "Data, Digital Health & Health Informatics > Data Governance & Quality > Data Quality & Standardization"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Sharing Frameworks",
+    "path": "Data, Digital Health & Health Informatics > Data Governance & Quality > Data Sharing Frameworks"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Data Analysis (Quantitative)",
+    "path": "Data, Digital Health & Health Informatics > Data Analytics & BI > Data Analysis (Quantitative)"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Qualitative & Thematic Analysis",
+    "path": "Data, Digital Health & Health Informatics > Data Analytics & BI > Qualitative & Thematic Analysis"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Dashboard & BI Development",
+    "path": "Data, Digital Health & Health Informatics > Data Analytics & BI > Dashboard & BI Development"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Data Engineering & Automation",
+    "path": "Data, Digital Health & Health Informatics > Data Analytics & BI > Data Engineering & Automation"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Public Health Informatics",
+    "path": "Data, Digital Health & Health Informatics > Health Informatics > Public Health Informatics"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Health Information Exchange",
+    "path": "Data, Digital Health & Health Informatics > Health Informatics > Health Information Exchange"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Registry Development (Cancer, RTI, etc.)",
+    "path": "Data, Digital Health & Health Informatics > Health Informatics > Registry Development (Cancer, RTI, etc.)"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Health Information Management",
+    "path": "Data, Digital Health & Health Informatics > Health Informatics > Health Information Management"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Digital Health",
+    "expertise": "Digital Transformation",
+    "path": "Data, Digital Health & Health Informatics > Digital Health > Digital Transformation"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Digital Health",
+    "expertise": "Usability Testing & Health System Design",
+    "path": "Data, Digital Health & Health Informatics > Digital Health > Usability Testing & Health System Design"
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Digital Health",
+    "expertise": "AI in Health",
+    "path": "Data, Digital Health & Health Informatics > Digital Health > AI in Health"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Clinical Research",
+    "expertise": "Clinical Research / Clinical Trials",
+    "path": "Research & Scientific Practice > Clinical Research > Clinical Research / Clinical Trials"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Clinical Research",
+    "expertise": "Clinical Research Auditing & Monitoring",
+    "path": "Research & Scientific Practice > Clinical Research > Clinical Research Auditing & Monitoring"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Clinical Research",
+    "expertise": "Ethical Review & Compliance",
+    "path": "Research & Scientific Practice > Clinical Research > Ethical Review & Compliance"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Research Methodology Development",
+    "path": "Research & Scientific Practice > Research Methodology > Research Methodology Development"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Systematic Reviews & Meta-Analysis",
+    "path": "Research & Scientific Practice > Research Methodology > Systematic Reviews & Meta-Analysis"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Survey Design & Validation",
+    "path": "Research & Scientific Practice > Research Methodology > Survey Design & Validation"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Indicators Development & Measurement",
+    "path": "Research & Scientific Practice > Research Methodology > Indicators Development & Measurement"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Scientific Communication",
+    "expertise": "Scientific Writing & Publications",
+    "path": "Research & Scientific Practice > Scientific Communication > Scientific Writing & Publications"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Scientific Communication",
+    "expertise": "Knowledge Translation",
+    "path": "Research & Scientific Practice > Scientific Communication > Knowledge Translation"
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Scientific Communication",
+    "expertise": "Research Governance",
+    "path": "Research & Scientific Practice > Scientific Communication > Research Governance"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Healthcare Quality Improvement",
+    "path": "Quality, Governance & Project Management > Quality & Patient Safety > Healthcare Quality Improvement"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Patient Safety",
+    "path": "Quality, Governance & Project Management > Quality & Patient Safety > Patient Safety"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Quality Auditing",
+    "path": "Quality, Governance & Project Management > Quality & Patient Safety > Quality Auditing"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Governance & Compliance",
+    "expertise": "Governance, Risk & Compliance (GRC)",
+    "path": "Quality, Governance & Project Management > Governance & Compliance > Governance, Risk & Compliance (GRC)"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Governance & Compliance",
+    "expertise": "Healthcare Governance",
+    "path": "Quality, Governance & Project Management > Governance & Compliance > Healthcare Governance"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Governance & Compliance",
+    "expertise": "Casemix Funding & Classification",
+    "path": "Quality, Governance & Project Management > Governance & Compliance > Casemix Funding & Classification"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Project Management (PMP/CAPM)",
+    "path": "Quality, Governance & Project Management > Project & Program Management > Project Management (PMP/CAPM)"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Program Evaluation",
+    "path": "Quality, Governance & Project Management > Project & Program Management > Program Evaluation"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Agile / Scrum",
+    "path": "Quality, Governance & Project Management > Project & Program Management > Agile / Scrum"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Change Management",
+    "path": "Quality, Governance & Project Management > Project & Program Management > Change Management"
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Knowledge Management",
+    "path": "Quality, Governance & Project Management > Project & Program Management > Knowledge Management"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Clinical Pharmacy",
+    "path": "Clinical & Specialized Practice > Clinical Disciplines > Clinical Pharmacy"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Clinical Nutrition",
+    "path": "Clinical & Specialized Practice > Clinical Disciplines > Clinical Nutrition"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Nursing",
+    "path": "Clinical & Specialized Practice > Clinical Disciplines > Nursing"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Emergency Medical Services / Paramedic",
+    "path": "Clinical & Specialized Practice > Clinical Disciplines > Emergency Medical Services / Paramedic"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Medical Laboratory",
+    "path": "Clinical & Specialized Practice > Laboratory & Diagnostics > Medical Laboratory"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Clinical Immunology / Serology",
+    "path": "Clinical & Specialized Practice > Laboratory & Diagnostics > Clinical Immunology / Serology"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Microbiology",
+    "path": "Clinical & Specialized Practice > Laboratory & Diagnostics > Microbiology"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Specialized Areas",
+    "expertise": "Toxicology",
+    "path": "Clinical & Specialized Practice > Specialized Areas > Toxicology"
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Specialized Areas",
+    "expertise": "Lifestyle Medicine",
+    "path": "Clinical & Specialized Practice > Specialized Areas > Lifestyle Medicine"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Leadership",
+    "path": "Cross-Cutting Professional Skills > Leadership & Strategy > Leadership"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Strategic Thinking",
+    "path": "Cross-Cutting Professional Skills > Leadership & Strategy > Strategic Thinking"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Decision Support",
+    "path": "Cross-Cutting Professional Skills > Leadership & Strategy > Decision Support"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Stakeholder Engagement",
+    "path": "Cross-Cutting Professional Skills > Communication & Engagement > Stakeholder Engagement"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Cross-Country / GCC Coordination",
+    "path": "Cross-Cutting Professional Skills > Communication & Engagement > Cross-Country / GCC Coordination"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Public Speaking & Representation",
+    "path": "Cross-Cutting Professional Skills > Communication & Engagement > Public Speaking & Representation"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Communication & Engagement",
+    "expertise": "Technical Writing & Reporting",
+    "path": "Cross-Cutting Professional Skills > Communication & Engagement > Technical Writing & Reporting"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Analytical Skills",
+    "expertise": "Critical Thinking & Problem Solving",
+    "path": "Cross-Cutting Professional Skills > Analytical Skills > Critical Thinking & Problem Solving"
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Analytical Skills",
+    "expertise": "Evidence Synthesis & Insight Generation",
+    "path": "Cross-Cutting Professional Skills > Analytical Skills > Evidence Synthesis & Insight Generation"
+  }
+]

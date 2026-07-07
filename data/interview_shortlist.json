@@ -1,0 +1,112 @@
+[
+  {
+    "priority": 1,
+    "name": "Ahmed Alhatlan",
+    "department": "PHI",
+    "years": "More than 10 years",
+    "profile_level": "Strategic",
+    "risk_index": 125,
+    "why": "High continuity risk | Holds rare expertise: Casemix Funding & Classification, Data Governance, Governance, Risk & Compliance (GRC) | Externally consulted (WHO/MoH/partners) | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Casemix Funding & Classification; Data Governance; Governance, Risk & Compliance (GRC)\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps\n • External network & stakeholder map",
+    "duration": "60 min"
+  },
+  {
+    "priority": 2,
+    "name": "Abdullatif Bin Khunayn",
+    "department": "PHE",
+    "years": "More than 10 years",
+    "profile_level": "Strategic",
+    "risk_index": 125,
+    "why": "High continuity risk | Holds rare expertise: Clinical Immunology / Serology, Health Security Strategy, Infection & Immunity | Externally consulted (WHO/MoH/partners) | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Clinical Immunology / Serology; Health Security Strategy; Infection & Immunity\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps\n • External network & stakeholder map",
+    "duration": "60 min"
+  },
+  {
+    "priority": 3,
+    "name": "Waleed Al Nadabi",
+    "department": "PHE",
+    "years": "More than 10 years",
+    "profile_level": "Strategic",
+    "risk_index": 100,
+    "why": "High continuity risk | Holds rare expertise: Patient Safety | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Patient Safety\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps",
+    "duration": "60 min"
+  },
+  {
+    "priority": 4,
+    "name": "Dr Mahim Al Balushi",
+    "department": "PHPP",
+    "years": "More than 10 years",
+    "profile_level": "Strategic",
+    "risk_index": 100,
+    "why": "High continuity risk | Holds rare expertise: Survey Design & Validation | Externally consulted (WHO/MoH/partners) | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Survey Design & Validation\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps\n • External network & stakeholder map",
+    "duration": "60 min"
+  },
+  {
+    "priority": 5,
+    "name": "Hamad Alsaab",
+    "department": "PHE",
+    "years": "6–10 years",
+    "profile_level": "Strategic",
+    "risk_index": 100,
+    "why": "High continuity risk | Holds rare expertise: Incident Management Systems (IMS), PHEOC / Emergency Operations Centers, Simulation Exercises (SimEx) | Externally consulted (WHO/MoH/partners) | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Incident Management Systems (IMS); PHEOC / Emergency Operations Centers; Simulation Exercises (SimEx)\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps\n • External network & stakeholder map",
+    "duration": "60 min"
+  },
+  {
+    "priority": 6,
+    "name": "Sami Almudarra",
+    "department": "PHI",
+    "years": "More than 10 years",
+    "profile_level": "Strategic",
+    "risk_index": 100,
+    "why": "High continuity risk | Holds rare expertise: Biostatistics, Population Health | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Biostatistics; Population Health\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps",
+    "duration": "60 min"
+  },
+  {
+    "priority": 7,
+    "name": "Alaa AlQurashi",
+    "department": "PHI",
+    "years": "More than 10 years",
+    "profile_level": "Strategic",
+    "risk_index": 100,
+    "why": "High continuity risk | Holds rare expertise: Clinical Research Auditing & Monitoring, Ethical Review & Compliance, Lifestyle Medicine | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Clinical Research Auditing & Monitoring; Ethical Review & Compliance; Lifestyle Medicine\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps",
+    "duration": "60 min"
+  },
+  {
+    "priority": 8,
+    "name": "Faris",
+    "department": "TCB",
+    "years": "2–5 years",
+    "profile_level": "Expert",
+    "risk_index": 80,
+    "why": "High continuity risk | Holds rare expertise: Clinical Pharmacy, Knowledge Management, Toxicology | Externally consulted (WHO/MoH/partners) | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Clinical Pharmacy; Knowledge Management; Toxicology\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps\n • External network & stakeholder map",
+    "duration": "60 min"
+  },
+  {
+    "priority": 9,
+    "name": "Abrar Alsurayhi ",
+    "department": "TCB",
+    "years": "2–5 years",
+    "profile_level": "Expert",
+    "risk_index": 80,
+    "why": "High continuity risk | Holds rare expertise: Agile / Scrum, Evidence Synthesis & Insight Generation, Healthcare Transformation | Externally consulted (WHO/MoH/partners) | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Agile / Scrum; Evidence Synthesis & Insight Generation; Healthcare Transformation\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps\n • External network & stakeholder map",
+    "duration": "60 min"
+  },
+  {
+    "priority": 10,
+    "name": "Reema Althunayyan",
+    "department": "TCB",
+    "years": "2–5 years",
+    "profile_level": "Expert",
+    "risk_index": 80,
+    "why": "High continuity risk | Holds rare expertise: Competency Framework Design, Continuing Professional Development (CPD), Curriculum & Instructional Design | Externally consulted (WHO/MoH/partners) | Self-identified focal point",
+    "focus_areas": " • Critical/Rare expertise capture: Competency Framework Design; Continuing Professional Development (CPD); Curriculum & Instructional Design\n • Continuity risk: decisions only this person can make; processes that depend on them\n • Successor & documentation gaps\n • External network & stakeholder map",
+    "duration": "60 min"
+  }
+]
