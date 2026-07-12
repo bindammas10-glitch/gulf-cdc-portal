@@ -4,31 +4,32 @@
    =========================================================================== */
 
 :root {
-  /* Surfaces & ink (light) */
-  --bg: #f4f6f8;
+  /* Surfaces & ink (light) — GCDC "Balance" neutral (#F3F3F4) family */
+  --bg: #eef1f5;
   --surface: #ffffff;
-  --surface-2: #f8fafc;
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
-  --ink: #0f2333;
+  --surface-2: #f3f5f8;
+  --border: #dde3ea;
+  --border-strong: #c3ccd8;
+  --ink: #12243c;
   --ink-2: #40566b;
-  --ink-muted: #708196;
+  --ink-muted: #6b7c90;
 
-  /* Brand — deep teal, evokes Gulf + public health */
-  --brand: #0e6e73;
-  --brand-ink: #0a5155;
-  --brand-soft: #e2f1f1;
-  --accent: #1d6fb8;
+  /* Brand — GCDC Reliability navy (#0D3269) leads, Trust cyan (#03A3CF) accents */
+  --brand: #0D3269;
+  --brand-ink: #09264E;
+  --brand-soft: #E4EDF6;
+  --accent: #03A3CF;
 
-  /* Status palette (reserved — always paired with an icon + label) */
-  --st-good: #1a7f5a;      --st-good-bg: #e4f4ec;
-  --st-warn: #b07400;      --st-warn-bg: #fbf0da;
-  --st-serious: #c2410c;   --st-serious-bg: #fbe7dc;
-  --st-critical: #b42318;  --st-critical-bg: #fbe3e0;
+  /* Status palette (reserved — always paired with an icon + label).
+     Mapped to GCDC secondaries: Prosperity green / gold / Resilience maroon / Power red */
+  --st-good: #00902E;      --st-good-bg: #e0f0e6;
+  --st-warn: #a97b00;      --st-warn-bg: #f6eed4;
+  --st-serious: #8D002E;   --st-serious-bg: #f4dfe5;
+  --st-critical: #DE001B;  --st-critical-bg: #fbdfe1;
 
-  /* Categorical (domain colours) — fixed order, never cycled */
-  --c1: #0e6e73; --c2: #1d6fb8; --c3: #7048b6; --c4: #b8397e;
-  --c5: #c2410c; --c6: #9a7d0a; --c7: #2e7d32; --c8: #5a6b7b; --c9: #b0455b;
+  /* Categorical (domain colours) — GCDC brand hues, fixed order, never cycled */
+  --c1: #0D3269; --c2: #03A3CF; --c3: #00902E; --c4: #8D002E;
+  --c5: #a97b00; --c6: #046F8A; --c7: #506B93; --c8: #DE001B; --c9: #2F2F2F;
 
   --radius: 12px;
   --radius-sm: 8px;
@@ -40,27 +41,29 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #0b141c;
-  --surface: #121e28;
-  --surface-2: #16242f;
-  --border: #24384a;
-  --border-strong: #33506a;
-  --ink: #e8eef4;
+  /* Deep GCDC navy ground */
+  --bg: #081422;
+  --surface: #0f2135;
+  --surface-2: #162a41;
+  --border: #223c57;
+  --border-strong: #33526f;
+  --ink: #e9eff5;
   --ink-2: #aebfce;
   --ink-muted: #7a8ea0;
 
-  --brand: #3fb0b4;
-  --brand-ink: #93d7d9;
-  --brand-soft: #10353a;
-  --accent: #5aa6e6;
+  /* Trust cyan leads in dark (navy recedes into the ground) */
+  --brand: #2FB3DB;
+  --brand-ink: #cbeef9;
+  --brand-soft: #10344c;
+  --accent: #4CC0DF;
 
-  --st-good: #4cc38a;      --st-good-bg: #123026;
-  --st-warn: #e0a838;      --st-warn-bg: #33280d;
-  --st-serious: #f0803e;   --st-serious-bg: #3a2013;
-  --st-critical: #f2685c;  --st-critical-bg: #3a1a17;
+  --st-good: #35b96a;      --st-good-bg: #0f2c1c;
+  --st-warn: #d6a52c;      --st-warn-bg: #302512;
+  --st-serious: #e06a86;   --st-serious-bg: #34141f;
+  --st-critical: #f4595f;  --st-critical-bg: #391619;
 
-  --c1: #3fb0b4; --c2: #5aa6e6; --c3: #a487e0; --c4: #e072ab;
-  --c5: #f0803e; --c6: #d7b53e; --c7: #5cbf62; --c8: #91a5b6; --c9: #e0778c;
+  --c1: #5a86c4; --c2: #2FB3DB; --c3: #35b96a; --c4: #d76a86;
+  --c5: #d6a52c; --c6: #3f9fc0; --c7: #8aa0bd; --c8: #f4595f; --c9: #b8bdc4;
 
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.32);
   --shadow-lg: 0 8px 32px rgba(0,0,0,.5);
@@ -97,13 +100,10 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--border);
 }
 .topbar__brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.mark {
-  width: 40px; height: 40px; border-radius: 10px;
-  display: grid; place-items: center;
-  background: var(--brand-soft); color: var(--brand);
-}
+.mark { width: 42px; height: 42px; display: grid; place-items: center; flex-shrink: 0; }
+.mark svg { display: block; border-radius: 13px; box-shadow: var(--shadow); }
 .topbar__titles { display: flex; flex-direction: column; line-height: 1.15; }
-.topbar__org { font-weight: 700; font-size: 16px; letter-spacing: .2px; }
+.topbar__org { font-weight: 800; font-size: 19px; letter-spacing: 1px; color: var(--brand); }
 .topbar__sub { font-size: 12px; color: var(--ink-muted); }
 
 .tabs { display: flex; gap: 2px; margin-left: auto; flex-wrap: wrap; }

@@ -174,7 +174,7 @@
     el.innerHTML = `
       <div class="view__head">
         <h1>Workforce Knowledge Continuity</h1>
-        <p>A live picture of where the Gulf CDC's critical expertise lives, where losing one person would break a capability, and who to talk to first. Assessed across ${M.experts} staff, ${M.domains} domains and ${M.expertiseAreas} expertise areas.</p>
+        <p>A live picture of where GCDC's critical expertise lives, where losing one person would break a capability, and who to talk to first. Assessed across ${M.experts} staff, ${M.domains} domains and ${M.expertiseAreas} expertise areas.</p>
       </div>
 
       <div class="grid grid--kpi">
@@ -499,7 +499,7 @@
   const MAP_TREE = (function buildTree() {
     const holdersByPath = {};
     MATRIX.forEach((m) => { holdersByPath[m.domain + ">" + m.subdomain + ">" + m.expertise] = m.holders; });
-    const root = { id: "root", label: "Gulf CDC Expertise", tier: 0, color: "var(--brand)", children: [] };
+    const root = { id: "root", label: "GCDC Expertise", tier: 0, color: "var(--brand)", children: [] };
     DOMAINS.forEach((d, di) => {
       const dn = { id: "d" + di, label: d, tier: 1, color: DOMAIN_COLOR[d], children: [] };
       const subs = [];
