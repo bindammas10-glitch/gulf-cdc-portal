@@ -732,6 +732,17 @@
     const active = $(".tab.is-active"); if (active) VIEWS[active.dataset.view].render($(VIEWS[active.dataset.view].el));
   });
 
+  /* ---------------------------------------------------------------- site search */
+  const siteSearch = $("#siteSearch");
+  if (siteSearch) {
+    const runSearch = () => {
+      matrixState.q = siteSearch.value.trim();
+      go("matrix");
+      const mq = $("#mq"); if (mq) { mq.value = matrixState.q; }
+    };
+    siteSearch.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); runSearch(); } });
+  }
+
   /* ---------------------------------------------------------------- boot */
   $("#footerMeta").textContent = `${M.experts} staff · ${M.expertiseAreas} expertise areas · ${M.spof} single points of failure`;
   go(location.hash.replace("#", "") || "overview");
