@@ -11,28 +11,40 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <div class="topbar__brand">
-      <span class="mark mark--logo">
-        <img src="assets/img/gcdc-logo.svg" alt="GCDC — Gulf Center for Disease Prevention and Control" />
+  <div class="utilbar">
+    <div class="utilbar__inner">
+      <span class="utilbar__org">
+        <span dir="rtl">المركز الخليجي للوقاية من الأمراض ومكافحتها</span>
+        <span class="sep">·</span>
+        <span>Gulf Center for Disease Prevention and Control</span>
       </span>
-      <span class="topbar__titles">
-        <span class="topbar__org">Knowledge Mapping Portal</span>
-      </span>
+      <form class="site-search" role="search" onsubmit="return false">
+        <span class="site-search__icon" aria-hidden="true">⌕</span>
+        <input type="search" id="siteSearch" placeholder="Search this portal…" aria-label="Search this portal" />
+      </form>
     </div>
+  </div>
 
-    <nav class="tabs" id="tabs" aria-label="Sections">
-      <button class="tab is-active" data-view="overview">Overview</button>
-      <button class="tab" data-view="holders">Critical Experts</button>
-      <button class="tab" data-view="gaps">Knowledge Gaps</button>
-      <button class="tab" data-view="interviews">Interview Plan</button>
-      <button class="tab" data-view="matrix">Expertise Matrix</button>
-      <button class="tab" data-view="mapping">Mapping</button>
-    </nav>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#overview" aria-label="GCDC — Gulf Center for Disease Prevention and Control · home">
+        <img class="brand__logo" src="assets/img/gcdc-logo-white.svg" alt="GCDC" />
+        <span class="brand__tag">Knowledge Mapping Portal</span>
+      </a>
 
-    <button class="theme-toggle" id="themeToggle" title="Toggle light / dark" aria-label="Toggle light or dark theme">
-      <span class="theme-toggle__icon" aria-hidden="true">◐</span>
-    </button>
+      <nav class="tabs" id="tabs" aria-label="Sections">
+        <button class="tab is-active" data-view="overview">Overview</button>
+        <button class="tab" data-view="holders">Critical Experts</button>
+        <button class="tab" data-view="gaps">Knowledge Gaps</button>
+        <button class="tab" data-view="interviews">Interview Plan</button>
+        <button class="tab" data-view="matrix">Expertise Matrix</button>
+        <button class="tab" data-view="mapping">Mapping</button>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" title="Toggle light / dark" aria-label="Toggle light or dark theme">
+        <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+      </button>
+    </div>
   </header>
 
   <main id="main" class="main">
