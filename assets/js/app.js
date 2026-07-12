@@ -492,6 +492,209 @@
     $("#mdomain").addEventListener("change", (e) => { matrixState.domain = e.target.value; draw(); });
   }
 
+  /* ---------------------------------------------------------------- Mapping (Coggle-style tree) */
+  // Root → Domain (Tier 1) → Sub-domain (Tier 2) → Expertise (Tier 3) → Holders
+  const mapState = { expanded: null, q: "", k: 1, tx: 24, ty: 24 };
+
+  const MAP_TREE = (function buildTree() {
+    const holdersByPath = {};
+    MATRIX.forEach((m) => { holdersByPath[m.domain + ">" + m.subdomain + ">" + m.expertise] = m.holders; });
+    const root = { id: "root", label: "Gulf CDC Expertise", tier: 0, color: "var(--brand)", children: [] };
+    DOMAINS.forEach((d, di) => {
+      const dn = { id: "d" + di, label: d, tier: 1, color: DOMAIN_COLOR[d], children: [] };
+      const subs = [];
+      TX.forEach((t) => { if (t.domain === d && !subs.includes(t.subdomain)) subs.push(t.subdomain); });
+      subs.forEach((s, si) => {
+        const sn = { id: dn.id + "-s" + si, label: s, tier: 2, color: dn.color, children: [] };
+        TX.filter((t) => t.domain === d && t.subdomain === s).forEach((t, ei) => {
+          const holders = holdersByPath[d + ">" + s + ">" + t.expertise] || [];
+          sn.children.push({
+            id: sn.id + "-e" + ei, label: t.expertise, tier: 3, color: dn.color,
+            children: holders.map((h, hi) => ({
+              id: sn.id + "-e" + ei + "-h" + hi, label: clean(h), tier: 4, color: dn.color, children: [],
+            })),
+          });
+        });
+        dn.children.push(sn);
+      });
+      root.children.push(dn);
+    });
+    // descendant counts (expertise areas + holders) for collapsed-node badges
+    (function count(n) {
+      n.nExp = n.tier === 3 ? 1 : 0;
+      n.nHold = n.tier === 4 ? 1 : 0;
+      n.children.forEach((c) => { count(c); n.nExp += c.nExp; n.nHold += c.nHold; });
+    })(root);
+    return root;
+  })();
+
+  function mapDefaultExpanded() {
+    return new Set(["root", ...MAP_TREE.children.map((d) => d.id)]);
+  }
+
+  function renderMapping(el) {
+    if (!mapState.expanded) mapState.expanded = mapDefaultExpanded();
+
+    el.innerHTML = `
+      <div class="view__head"><h1>Expertise Mapping</h1>
+        <p>The full knowledge hierarchy as an interactive tree — Root → Domain → Sub-domain → Expertise → Holders. Click a node to expand or collapse its branch; drag to pan and scroll to zoom.</p></div>
+      <div class="toolbar">
+        <div class="field"><input type="search" id="mapq" placeholder="Search the tree…" aria-label="Search mapping tree" value="${esc(mapState.q)}"></div>
+        <button class="btn" id="mapExpand">Expand all</button>
+        <button class="btn" id="mapCollapse">Collapse all</button>
+        <button class="btn" id="mapReset">Reset view</button>
+        <span class="muted" style="margin-left:auto;font-size:13px">${MAP_TREE.children.length} domains · ${M.subdomains} sub-domains · ${M.expertiseAreas} areas · ${M.experts} experts</span>
+      </div>
+      <div class="map-wrap card" id="mapWrap">
+        <svg id="mapSvg" class="map-svg" role="tree" aria-label="Expertise hierarchy tree"><g id="mapPan"></g></svg>
+      </div>
+      <div class="legend" style="margin-top:12px">
+        <span class="legend__item"><span class="legend__swatch" style="background:var(--brand)"></span>Root</span>
+        <span class="legend__item"><span class="legend__swatch" style="background:var(--c2)"></span>Domain</span>
+        <span class="legend__item"><span class="legend__swatch" style="background:var(--surface);border:2px solid var(--c2)"></span>Sub-domain</span>
+        <span class="legend__item"><span class="legend__swatch" style="background:var(--surface-2);border:1px solid var(--border-strong)"></span>Expertise</span>
+        <span class="legend__item"><span class="legend__swatch" style="background:var(--brand-soft);border-radius:8px"></span>Holder</span>
+      </div>`;
+
+    // Tier geometry: x offset and node width per tier
+    const TIER_X = [0, 240, 520, 790, 1090];
+    const TIER_W = [200, 240, 230, 260, 210];
+    const ROW_H = 34, NODE_H = 26;
+
+    function visibleChildren(n) {
+      return mapState.expanded.has(n.id) ? n.children : [];
+    }
+
+    // With a search query, force-expand every ancestor of a match
+    function applySearch() {
+      const q = mapState.q.trim().toLowerCase();
+      if (!q) return null;
+      const open = new Set(["root"]), hits = new Set();
+      (function walk(n, ancestors) {
+        if (n.label.toLowerCase().includes(q)) {
+          hits.add(n.id);
+          ancestors.forEach((a) => open.add(a));
+        }
+        n.children.forEach((c) => walk(c, [...ancestors, n.id]));
+      })(MAP_TREE, []);
+      mapState.expanded = open;
+      return hits;
+    }
+
+    function draw() {
+      const hits = applySearch();
+      let row = 0;
+      const nodes = [], links = [];
+      (function place(n, parent) {
+        const kids = visibleChildren(n);
+        const node = { n, x: TIER_X[n.tier], y: 0 };
+        if (kids.length) {
+          const placed = kids.map((c) => place(c, node));
+          node.y = (placed[0].y + placed[placed.length - 1].y) / 2;
+        } else {
+          node.y = row++ * ROW_H;
+        }
+        nodes.push(node);
+        if (parent) links.push({ from: parent, to: node, color: n.color });
+        return node;
+      })(MAP_TREE, null);
+
+      const height = Math.max(row * ROW_H + 60, 200);
+      const linkSvg = links.map((l) => {
+        const x1 = l.from.x + TIER_W[l.from.n.tier], y1 = l.from.y + NODE_H / 2;
+        const x2 = l.to.x, y2 = l.to.y + NODE_H / 2;
+        const mx = (x1 + x2) / 2;
+        return `<path class="map-link" d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}" style="stroke:${l.color}"/>`;
+      }).join("");
+
+      const nodeSvg = nodes.map(({ n, x, y }) => {
+        const w = TIER_W[n.tier];
+        const expandable = n.children.length > 0;
+        const open = mapState.expanded.has(n.id);
+        const hit = hits && hits.has(n.id);
+        const badge = expandable && !open
+          ? (n.tier <= 1 ? ` · ${n.nExp}▸` : n.tier === 2 ? ` · ${n.nExp}▸` : ` · ${n.nHold}▸`)
+          : "";
+        const arrow = expandable ? (open ? "▾ " : "▸ ") : "";
+        const budget = Math.floor((w - 22) / 6.6) - badge.length - arrow.length;
+        const label = n.label.length > budget ? n.label.slice(0, budget - 1) + "…" : n.label;
+        const cls = `map-node map-node--t${n.tier}${expandable ? " is-toggle" : ""}${hit ? " is-hit" : ""}`;
+        const style = n.tier === 1 ? `fill:${n.color}` :
+                      n.tier === 2 ? `stroke:${n.color}` :
+                      n.tier === 4 ? `fill:color-mix(in srgb, ${n.color} 14%, var(--surface))` : "";
+        return `<g class="${cls}" transform="translate(${x},${y})" data-id="${n.id}" ${expandable ? 'data-toggle="1"' : ""}>
+          <title>${esc(n.label)}${expandable ? ` — ${n.nExp} area${n.nExp !== 1 ? "s" : ""}, ${n.nHold} holder${n.nHold !== 1 ? "s" : ""}` : ""}</title>
+          <rect width="${w}" height="${NODE_H}" rx="${n.tier === 4 ? 13 : 7}" style="${style}"/>
+          <text x="11" y="${NODE_H / 2 + 4}">${esc(arrow + label)}${badge ? `<tspan class="map-badge">${esc(badge)}</tspan>` : ""}</text>
+        </g>`;
+      }).join("");
+
+      $("#mapPan").innerHTML = linkSvg + nodeSvg;
+      $("#mapPan").setAttribute("transform", `translate(${mapState.tx},${mapState.ty}) scale(${mapState.k})`);
+      $("#mapSvg").style.minHeight = "560px";
+      $("#mapSvg").dataset.contentHeight = height;
+    }
+
+    /* interactions ---------------------------------------------------- */
+    const svg = $("#mapSvg");
+    let drag = null, moved = 0, downTarget = null;
+    svg.addEventListener("pointerdown", (e) => {
+      drag = { x: e.clientX, y: e.clientY, tx: mapState.tx, ty: mapState.ty };
+      moved = 0; downTarget = e.target.closest("[data-toggle]");
+      svg.setPointerCapture(e.pointerId);
+    });
+    svg.addEventListener("pointermove", (e) => {
+      if (!drag) return;
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      moved = Math.max(moved, Math.abs(dx) + Math.abs(dy));
+      mapState.tx = drag.tx + dx; mapState.ty = drag.ty + dy;
+      $("#mapPan").setAttribute("transform", `translate(${mapState.tx},${mapState.ty}) scale(${mapState.k})`);
+    });
+    // Toggle on pointerup: pointer capture retargets the click event to the
+    // svg itself, so the node must be resolved from the pointerdown target.
+    svg.addEventListener("pointerup", () => {
+      drag = null;
+      if (moved > 5 || !downTarget) { downTarget = null; return; }
+      const id = downTarget.getAttribute("data-id");
+      downTarget = null;
+      if (mapState.q) { mapState.q = ""; $("#mapq").value = ""; }
+      if (mapState.expanded.has(id)) mapState.expanded.delete(id);
+      else mapState.expanded.add(id);
+      draw();
+    });
+    svg.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      const rect = svg.getBoundingClientRect();
+      const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+      const f = Math.exp(-e.deltaY * 0.0012);
+      const k = Math.min(2.5, Math.max(0.35, mapState.k * f));
+      const real = k / mapState.k;
+      mapState.tx = mx - (mx - mapState.tx) * real;
+      mapState.ty = my - (my - mapState.ty) * real;
+      mapState.k = k;
+      $("#mapPan").setAttribute("transform", `translate(${mapState.tx},${mapState.ty}) scale(${mapState.k})`);
+    }, { passive: false });
+
+    $("#mapq").addEventListener("input", (e) => { mapState.q = e.target.value; draw(); });
+    $("#mapExpand").addEventListener("click", () => {
+      mapState.q = ""; $("#mapq").value = "";
+      const all = new Set();
+      (function walk(n) { if (n.children.length) { all.add(n.id); n.children.forEach(walk); } })(MAP_TREE);
+      mapState.expanded = all; draw();
+    });
+    $("#mapCollapse").addEventListener("click", () => {
+      mapState.q = ""; $("#mapq").value = "";
+      mapState.expanded = new Set(["root"]); draw();
+    });
+    $("#mapReset").addEventListener("click", () => {
+      mapState.q = ""; $("#mapq").value = "";
+      mapState.expanded = mapDefaultExpanded();
+      mapState.k = 1; mapState.tx = 24; mapState.ty = 24; draw();
+    });
+
+    draw();
+  }
+
   /* ---------------------------------------------------------------- router */
   const VIEWS = {
     overview: { el: "#view-overview", render: renderOverview, done: false },
@@ -499,6 +702,7 @@
     gaps: { el: "#view-gaps", render: renderGaps },
     interviews: { el: "#view-interviews", render: renderInterviews },
     matrix: { el: "#view-matrix", render: renderMatrix },
+    mapping: { el: "#view-mapping", render: renderMapping },
   };
   function go(name) {
     if (!VIEWS[name]) name = "overview";
