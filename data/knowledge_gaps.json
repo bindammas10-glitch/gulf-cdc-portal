@@ -3,41 +3,31 @@
     "domain": "Epidemiology & Surveillance",
     "subdomain": "Field Epidemiology",
     "expertise": "Outbreak Investigation",
-    "holders_n": 5,
+    "holders_n": 4,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Epidemiology & Surveillance",
-    "subdomain": "Field Epidemiology",
-    "expertise": "Contact Tracing",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Epidemiology & Surveillance",
-    "subdomain": "Field Epidemiology",
-    "expertise": "Field Epidemiology Training Program (FETP)",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Epidemiology & Surveillance",
     "subdomain": "Disease Surveillance",
     "expertise": "Surveillance Systems Design",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Bushra (PHI, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Epidemiology & Surveillance",
     "subdomain": "Disease Surveillance",
     "expertise": "Epidemic Intelligence",
-    "holders_n": 3,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Sami Almudarra (PHI, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Epidemiology & Surveillance",
@@ -45,167 +35,119 @@
     "expertise": "Surveillance Reporting & Analytics",
     "holders_n": 2,
     "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Epidemiology & Surveillance",
-    "subdomain": "Disease Surveillance",
-    "expertise": "Disease Modelling & Forecasting",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Epidemiology & Surveillance",
     "subdomain": "Biostatistics & Population Health",
     "expertise": "Biostatistics",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Epidemiology & Surveillance",
-    "subdomain": "Biostatistics & Population Health",
-    "expertise": "Population Health",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Haya Sulaiman Alothaimeen (PHE, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Epidemiology & Surveillance",
     "subdomain": "Biostatistics & Population Health",
     "expertise": "Burden of Disease Analysis",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Raghad AlHumud (PHPP, Advanced)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Public Health Emergency & Health Security",
     "subdomain": "Preparedness & Planning",
     "expertise": "Emergency Preparedness Planning",
-    "holders_n": 5,
+    "holders_n": 3,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Public Health Emergency & Health Security",
     "subdomain": "Preparedness & Planning",
     "expertise": "Risk Assessment (Rapid Risk Assessment)",
-    "holders_n": 9,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Public Health Emergency & Health Security",
-    "subdomain": "Preparedness & Planning",
-    "expertise": "SOP Development for Emergencies",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Dr Mahim Al Balushi (PHPP, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Public Health Emergency & Health Security",
     "subdomain": "Response & Operations",
     "expertise": "PHEOC / Emergency Operations Centers",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Public Health Emergency & Health Security",
-    "subdomain": "Response & Operations",
-    "expertise": "Incident Management Systems (IMS)",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Hamad Alsaab (PHE, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Public Health Emergency & Health Security",
     "subdomain": "Response & Operations",
     "expertise": "Disaster Medicine & Management",
-    "holders_n": 3,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Public Health Emergency & Health Security",
-    "subdomain": "Response & Operations",
-    "expertise": "Simulation Exercises (SimEx)",
     "holders_n": 2,
     "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Public Health Emergency & Health Security",
     "subdomain": "Health Security",
     "expertise": "Strategic Stockpile Management",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Public Health Emergency & Health Security",
-    "subdomain": "Health Security",
-    "expertise": "Health Security Strategy",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Abdullatif Bin Khunayn (PHE, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Communicable & Non-Communicable Diseases",
     "subdomain": "Communicable Diseases",
     "expertise": "Infectious Disease Epidemiology",
-    "holders_n": 11,
+    "holders_n": 4,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Communicable & Non-Communicable Diseases",
     "subdomain": "Communicable Diseases",
     "expertise": "Infection Prevention & Control",
-    "holders_n": 4,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Rose (PHPP, Advanced)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Communicable & Non-Communicable Diseases",
     "subdomain": "Communicable Diseases",
     "expertise": "Infection & Immunity",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Abdullatif Bin Khunayn (PHE, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Communicable & Non-Communicable Diseases",
     "subdomain": "Non-Communicable Diseases",
     "expertise": "NCD Prevention & Control",
-    "holders_n": 7,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Communicable & Non-Communicable Diseases",
-    "subdomain": "Non-Communicable Diseases",
-    "expertise": "Cancer Screening & Management",
     "holders_n": 2,
     "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Communicable & Non-Communicable Diseases",
-    "subdomain": "Non-Communicable Diseases",
-    "expertise": "Obesity & Metabolic Disease",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Communicable & Non-Communicable Diseases",
-    "subdomain": "Non-Communicable Diseases",
-    "expertise": "Hematologic Diseases",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Communicable & Non-Communicable Diseases",
@@ -213,175 +155,119 @@
     "expertise": "Road Traffic & Injury Prevention",
     "holders_n": 3,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Communicable & Non-Communicable Diseases",
-    "subdomain": "Injuries & Special Populations",
-    "expertise": "Maternal & Child Health",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Communicable & Non-Communicable Diseases",
-    "subdomain": "Injuries & Special Populations",
-    "expertise": "Mental Health",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Communicable & Non-Communicable Diseases",
-    "subdomain": "Injuries & Special Populations",
-    "expertise": "Health Equity & Vulnerable Populations",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Policy, Systems & Strategy",
     "subdomain": "Policy & Guidelines",
     "expertise": "Policy Drafting & Analysis",
-    "holders_n": 9,
+    "holders_n": 4,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Health Policy, Systems & Strategy",
-    "subdomain": "Policy & Guidelines",
-    "expertise": "Technical Guidelines Development",
-    "holders_n": 9,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Policy, Systems & Strategy",
     "subdomain": "Policy & Guidelines",
     "expertise": "Policy Brief & White Paper Writing",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Health Policy, Systems & Strategy",
-    "subdomain": "Health Systems",
-    "expertise": "Health Systems Strengthening",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Abrar Alsurayhi (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Policy, Systems & Strategy",
     "subdomain": "Health Systems",
     "expertise": "Health Systems Research",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Nouf Alzuhayri (PHI, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Policy, Systems & Strategy",
     "subdomain": "Health Systems",
     "expertise": "Health Economics & Financing",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "MOHAMMED ALSHEHRI (PHI, Advanced)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Policy, Systems & Strategy",
     "subdomain": "Health Systems",
     "expertise": "Value-Based Healthcare (VBHC)",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Abrar Alsurayhi (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Policy, Systems & Strategy",
     "subdomain": "Strategic Planning",
     "expertise": "Strategic Planning & Priority Setting",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Health Policy, Systems & Strategy",
-    "subdomain": "Strategic Planning",
-    "expertise": "Healthcare Transformation",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Raghad AlHumud (PHPP, Advanced)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Policy, Systems & Strategy",
     "subdomain": "Strategic Planning",
     "expertise": "Performance Management (KPIs / OKRs)",
-    "holders_n": 7,
+    "holders_n": 3,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Promotion, Education & Workforce",
     "subdomain": "Health Promotion",
     "expertise": "Health Promotion Strategy",
-    "holders_n": 7,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 2,
+    "status": "🟡 Thin Coverage",
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Promotion, Education & Workforce",
     "subdomain": "Health Promotion",
     "expertise": "Behavior Change Theory & Campaigns",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Health Promotion, Education & Workforce",
-    "subdomain": "Health Promotion",
-    "expertise": "Public Health Nutrition",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Health Promotion, Education & Workforce",
-    "subdomain": "Health Promotion",
-    "expertise": "Tobacco Use Prevention",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Health Promotion, Education & Workforce",
-    "subdomain": "Workforce Development",
-    "expertise": "Health Workforce Development",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Reem Alotaibi (PHPP, Practitioner)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Promotion, Education & Workforce",
     "subdomain": "Workforce Development",
     "expertise": "Competency Framework Design",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Said Alghafri (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Promotion, Education & Workforce",
     "subdomain": "Workforce Development",
     "expertise": "Continuing Professional Development (CPD)",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Health Promotion, Education & Workforce",
-    "subdomain": "Training & Education",
-    "expertise": "Training Needs Analysis",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Reema Althunayyan (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Promotion, Education & Workforce",
@@ -389,31 +275,29 @@
     "expertise": "Curriculum & Instructional Design",
     "holders_n": 2,
     "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Promotion, Education & Workforce",
     "subdomain": "Training & Education",
     "expertise": "Training Delivery & Facilitation",
-    "holders_n": 7,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Said Alghafri (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Health Promotion, Education & Workforce",
     "subdomain": "Training & Education",
     "expertise": "Digital Learning (LMS / LXP)",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Health Promotion, Education & Workforce",
-    "subdomain": "Training & Education",
-    "expertise": "Medical Education",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Reema Althunayyan (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
@@ -421,47 +305,29 @@
     "expertise": "Data Governance",
     "holders_n": 2,
     "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Data, Digital Health & Health Informatics",
-    "subdomain": "Data Governance & Quality",
-    "expertise": "Data Quality & Standardization",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Data, Digital Health & Health Informatics",
-    "subdomain": "Data Governance & Quality",
-    "expertise": "Data Sharing Frameworks",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Data Analytics & BI",
     "expertise": "Data Analysis (Quantitative)",
-    "holders_n": 16,
+    "holders_n": 8,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Data, Digital Health & Health Informatics",
-    "subdomain": "Data Analytics & BI",
-    "expertise": "Qualitative & Thematic Analysis",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Data Analytics & BI",
     "expertise": "Dashboard & BI Development",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 2,
+    "status": "🟡 Thin Coverage",
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
@@ -469,135 +335,109 @@
     "expertise": "Data Engineering & Automation",
     "holders_n": 2,
     "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Health Informatics",
     "expertise": "Public Health Informatics",
-    "holders_n": 3,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Data, Digital Health & Health Informatics",
-    "subdomain": "Health Informatics",
-    "expertise": "Health Information Exchange",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Zayed Al Zayed (TCB, Practitioner)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Health Informatics",
     "expertise": "Registry Development (Cancer, RTI, etc.)",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Data, Digital Health & Health Informatics",
-    "subdomain": "Health Informatics",
-    "expertise": "Health Information Management",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Data, Digital Health & Health Informatics",
-    "subdomain": "Digital Health",
-    "expertise": "Digital Transformation",
-    "holders_n": 3,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Ahmed Alhatlan (PHI, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Digital Health",
     "expertise": "Usability Testing & Health System Design",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Bushra (PHI, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Digital Health",
     "expertise": "AI in Health",
-    "holders_n": 3,
+    "holders_n": 4,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Research & Scientific Practice",
     "subdomain": "Clinical Research",
     "expertise": "Clinical Research / Clinical Trials",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Research & Scientific Practice",
-    "subdomain": "Clinical Research",
-    "expertise": "Clinical Research Auditing & Monitoring",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "holders_n": 2,
+    "status": "🟡 Thin Coverage",
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Research & Scientific Practice",
     "subdomain": "Clinical Research",
     "expertise": "Ethical Review & Compliance",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Alaa AlQurashi (PHI, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Research & Scientific Practice",
     "subdomain": "Research Methodology",
     "expertise": "Research Methodology Development",
-    "holders_n": 3,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Research & Scientific Practice",
-    "subdomain": "Research Methodology",
-    "expertise": "Systematic Reviews & Meta-Analysis",
-    "holders_n": 4,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 2,
+    "status": "🟡 Thin Coverage",
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Research & Scientific Practice",
     "subdomain": "Research Methodology",
     "expertise": "Survey Design & Validation",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Dr Mahim Al Balushi (PHPP, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Research & Scientific Practice",
     "subdomain": "Research Methodology",
     "expertise": "Indicators Development & Measurement",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Nouf Alzuhayri (PHI, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Research & Scientific Practice",
     "subdomain": "Scientific Communication",
     "expertise": "Scientific Writing & Publications",
-    "holders_n": 6,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Research & Scientific Practice",
-    "subdomain": "Scientific Communication",
-    "expertise": "Knowledge Translation",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Norah Albedah (PHI, Advanced)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Research & Scientific Practice",
@@ -605,238 +445,608 @@
     "expertise": "Research Governance",
     "holders_n": 2,
     "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Quality, Governance & Project Management",
-    "subdomain": "Quality & Patient Safety",
-    "expertise": "Healthcare Quality Improvement",
-    "holders_n": 4,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Quality, Governance & Project Management",
     "subdomain": "Quality & Patient Safety",
     "expertise": "Patient Safety",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Quality, Governance & Project Management",
-    "subdomain": "Quality & Patient Safety",
-    "expertise": "Quality Auditing",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Waleed Al Nadabi (PHE, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Quality, Governance & Project Management",
     "subdomain": "Governance & Compliance",
     "expertise": "Governance, Risk & Compliance (GRC)",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Quality, Governance & Project Management",
-    "subdomain": "Governance & Compliance",
-    "expertise": "Healthcare Governance",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Ahmed Alhatlan (PHI, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Quality, Governance & Project Management",
     "subdomain": "Governance & Compliance",
     "expertise": "Casemix Funding & Classification",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Ahmed Alhatlan (PHI, Strategic)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Quality, Governance & Project Management",
     "subdomain": "Project & Program Management",
     "expertise": "Project Management (PMP/CAPM)",
-    "holders_n": 15,
+    "holders_n": 8,
     "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "sole_holder": "",
+    "recommendation": "Maintain via documentation and knowledge champions.",
+    "in_taxonomy": true
   },
   {
     "domain": "Quality, Governance & Project Management",
     "subdomain": "Project & Program Management",
     "expertise": "Program Evaluation",
-    "holders_n": 3,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Quality, Governance & Project Management",
-    "subdomain": "Project & Program Management",
-    "expertise": "Agile / Scrum",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Reema Althunayyan (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Quality, Governance & Project Management",
     "subdomain": "Project & Program Management",
     "expertise": "Change Management",
-    "holders_n": 3,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Quality, Governance & Project Management",
-    "subdomain": "Project & Program Management",
-    "expertise": "Knowledge Management",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
-    "subdomain": "Clinical Disciplines",
-    "expertise": "Clinical Pharmacy",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Sarah Alsaleh (CEO, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Clinical & Specialized Practice",
     "subdomain": "Clinical Disciplines",
     "expertise": "Clinical Nutrition",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
-    "subdomain": "Clinical Disciplines",
-    "expertise": "Nursing",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Haya Alzeer (PHPP, Advanced)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Clinical & Specialized Practice",
     "subdomain": "Clinical Disciplines",
     "expertise": "Emergency Medical Services / Paramedic",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "holders_n": 2,
+    "status": "🟡 Thin Coverage",
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Clinical & Specialized Practice",
     "subdomain": "Laboratory & Diagnostics",
     "expertise": "Medical Laboratory",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
-    "subdomain": "Laboratory & Diagnostics",
-    "expertise": "Clinical Immunology / Serology",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
-    "subdomain": "Laboratory & Diagnostics",
-    "expertise": "Microbiology",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Abrar Alsurayhi (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Clinical & Specialized Practice",
     "subdomain": "Specialized Areas",
     "expertise": "Toxicology",
     "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
-    "subdomain": "Specialized Areas",
-    "expertise": "Lifestyle Medicine",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Faris (TCB, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Leadership & Strategy",
     "expertise": "Leadership",
-    "holders_n": 10,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Cross-Cutting Professional Skills",
-    "subdomain": "Leadership & Strategy",
-    "expertise": "Strategic Thinking",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
-  },
-  {
-    "domain": "Cross-Cutting Professional Skills",
-    "subdomain": "Leadership & Strategy",
-    "expertise": "Decision Support",
-    "holders_n": 6,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 2,
+    "status": "🟡 Thin Coverage",
+    "sole_holder": "",
+    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "in_taxonomy": true
   },
   {
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Communication & Engagement",
     "expertise": "Stakeholder Engagement",
-    "holders_n": 15,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Nada Alnaji (PHPP, Expert)",
+    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Contact Tracing",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Field Epidemiology",
+    "expertise": "Field Epidemiology Training Program (FETP)",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Disease Surveillance",
+    "expertise": "Disease Modelling & Forecasting",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Epidemiology & Surveillance",
+    "subdomain": "Biostatistics & Population Health",
+    "expertise": "Population Health",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Preparedness & Planning",
+    "expertise": "SOP Development for Emergencies",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Incident Management Systems (IMS)",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Response & Operations",
+    "expertise": "Simulation Exercises (SimEx)",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Health Security",
+    "expertise": "Health Security Strategy",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Cancer Screening & Management",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Obesity & Metabolic Disease",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Non-Communicable Diseases",
+    "expertise": "Hematologic Diseases",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Maternal & Child Health",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Mental Health",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Injuries & Special Populations",
+    "expertise": "Health Equity & Vulnerable Populations",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Policy & Guidelines",
+    "expertise": "Technical Guidelines Development",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Health Systems",
+    "expertise": "Health Systems Strengthening",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Policy, Systems & Strategy",
+    "subdomain": "Strategic Planning",
+    "expertise": "Healthcare Transformation",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Public Health Nutrition",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Health Promotion",
+    "expertise": "Tobacco Use Prevention",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Workforce Development",
+    "expertise": "Health Workforce Development",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Training Needs Analysis",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Health Promotion, Education & Workforce",
+    "subdomain": "Training & Education",
+    "expertise": "Medical Education",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Quality & Standardization",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Governance & Quality",
+    "expertise": "Data Sharing Frameworks",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Data Analytics & BI",
+    "expertise": "Qualitative & Thematic Analysis",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Health Information Exchange",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Health Informatics",
+    "expertise": "Health Information Management",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Data, Digital Health & Health Informatics",
+    "subdomain": "Digital Health",
+    "expertise": "Digital Transformation",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Clinical Research",
+    "expertise": "Clinical Research Auditing & Monitoring",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Systematic Reviews & Meta-Analysis",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Scientific Communication",
+    "expertise": "Knowledge Translation",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Healthcare Quality Improvement",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Quality & Patient Safety",
+    "expertise": "Quality Auditing",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Governance & Compliance",
+    "expertise": "Healthcare Governance",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Agile / Scrum",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Quality, Governance & Project Management",
+    "subdomain": "Project & Program Management",
+    "expertise": "Knowledge Management",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Clinical Pharmacy",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Clinical Disciplines",
+    "expertise": "Nursing",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Clinical Immunology / Serology",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Microbiology",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Specialized Areas",
+    "expertise": "Lifestyle Medicine",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Strategic Thinking",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Cross-Cutting Professional Skills",
+    "subdomain": "Leadership & Strategy",
+    "expertise": "Decision Support",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
   },
   {
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Communication & Engagement",
     "expertise": "Cross-Country / GCC Coordination",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
   },
   {
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Communication & Engagement",
     "expertise": "Public Speaking & Representation",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "recommendation": "Build redundancy via internal training or hiring; document SOPs."
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
   },
   {
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Communication & Engagement",
     "expertise": "Technical Writing & Reporting",
-    "holders_n": 4,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
   },
   {
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Analytical Skills",
     "expertise": "Critical Thinking & Problem Solving",
-    "holders_n": 5,
-    "status": "🟢 Adequate",
-    "recommendation": "Maintain via Knowledge Champions and continuous documentation."
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
   },
   {
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Analytical Skills",
     "expertise": "Evidence Synthesis & Insight Generation",
-    "holders_n": 1,
-    "status": "🟠 Single Point of Failure",
-    "recommendation": "Identify a successor; capture knowledge via interview & SOP; consider cross-training."
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "(nobody)",
+    "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
   }
 ]

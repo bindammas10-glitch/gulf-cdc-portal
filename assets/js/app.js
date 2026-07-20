@@ -22,7 +22,9 @@
   // Classify a coverage-status string → {cls, icon, label}
   function coverageStatus(raw) {
     const s = String(raw || "");
-    if (s.includes("Single Point")) return { cls: "serious", icon: "▲", label: "Single Point of Failure" };
+    if (s.includes("No Core Expert")) return { cls: "critical", icon: "■", label: "No Core Expert" };
+    if (s.includes("Single Core") || s.includes("SPOF") || s.includes("Single Point"))
+      return { cls: "serious", icon: "▲", label: "Single Core Expert" };
     if (s.includes("Thin")) return { cls: "warn", icon: "◆", label: "Thin Coverage" };
     if (s.includes("Adequate")) return { cls: "good", icon: "●", label: "Adequate" };
     return { cls: "neutral", icon: "•", label: clean(s.replace(/^[^\w]+/, "")) || "—" };
@@ -126,6 +128,7 @@
     spof: GAPS.filter((g) => coverageStatus(g.status).cls === "serious").length,
     thin: GAPS.filter((g) => coverageStatus(g.status).cls === "warn").length,
     adequate: GAPS.filter((g) => coverageStatus(g.status).cls === "good").length,
+    noCore: GAPS.filter((g) => coverageStatus(g.status).cls === "critical").length,
     highRisk: HOLDERS.filter((h) => riskFlag(h.flag).cls === "critical").length,
     moderateRisk: HOLDERS.filter((h) => riskFlag(h.flag).cls === "moderate").length,
     lowRisk: HOLDERS.filter((h) => riskFlag(h.flag).cls === "good").length,
@@ -136,9 +139,9 @@
 
   function renderOverview(el) {
     const cov = [
-      { label: "Adequate", value: M.adequate, color: "var(--st-good)" },
-      { label: "Thin Coverage", value: M.thin, color: "var(--st-warn)" },
-      { label: "Single Point of Failure", value: M.spof, color: "var(--st-serious)" },
+      { label: "Adequate (3+ core)", value: M.adequate, color: "var(--st-good)" },
+      { label: "Thin (2 core)", value: M.thin, color: "var(--st-warn)" },
+      { label: "Single core expert", value: M.spof, color: "var(--st-serious)" },
     ];
     const risk = [
       { label: "High Continuity Risk", value: M.highRisk, color: "var(--st-critical)" },
@@ -146,16 +149,16 @@
       { label: "Low / Standard", value: M.lowRisk, color: "var(--st-good)" },
     ];
 
-    // Coverage by domain (stacked)
+    // Coverage by domain (stacked) — core taxonomy areas only (57)
     const byDomain = DOMAINS.map((d) => {
-      const rows = GAPS.filter((g) => g.domain === d);
+      const rows = GAPS.filter((g) => g.domain === d && g.in_taxonomy !== false);
       const c = { good: 0, warn: 0, serious: 0 };
-      rows.forEach((g) => { c[coverageStatus(g.status).cls]++; });
+      rows.forEach((g) => { const cl = coverageStatus(g.status).cls; if (c[cl] != null) c[cl]++; });
       return { label: d, total: rows.length,
         segs: [
           { value: c.good, color: "var(--st-good)", label: "Adequate" },
-          { value: c.warn, color: "var(--st-warn)", label: "Thin Coverage" },
-          { value: c.serious, color: "var(--st-serious)", label: "Single Point of Failure" },
+          { value: c.warn, color: "var(--st-warn)", label: "Thin (2 core)" },
+          { value: c.serious, color: "var(--st-serious)", label: "Single core expert" },
         ] };
     }).sort((a, b) => b.total - a.total);
     const maxDomTotal = Math.max(...byDomain.map((d) => d.total));
@@ -174,16 +177,17 @@
     el.innerHTML = `
       <div class="view__head">
         <h1>Workforce Knowledge Continuity</h1>
-        <p>A live picture of where GCDC's critical expertise lives, where losing one person would break a capability, and who to talk to first. Assessed across ${M.experts} staff, ${M.domains} domains and ${M.expertiseAreas} expertise areas.</p>
+        <p>A live picture of where GCDC's core expertise lives, where losing one person would break a capability, and who to talk to first. Built from the core-taxonomy analysis: ${M.experts} staff across ${M.depts} departments, mapped to ${M.domains} domains and ${M.expertiseAreas} core expertise areas.</p>
       </div>
 
       <div class="grid grid--kpi">
         ${kpi(M.experts, "Staff assessed", `${M.depts} departments`, "var(--brand)")}
-        ${kpi(M.expertiseAreas, "Expertise areas", `${M.subdomains} sub-domains`, "var(--accent)")}
-        ${kpi(M.spof, "Single points of failure", "Only one holder", "var(--st-serious)")}
-        ${kpi(M.thin, "Thinly covered", "Only two holders", "var(--st-warn)")}
+        ${kpi(M.expertiseAreas, "Core expertise areas", `${M.subdomains} sub-domains`, "var(--accent)")}
+        ${kpi(M.spof, "Single core expert", "Only one core holder", "var(--st-serious)")}
+        ${kpi(M.thin, "Thinly covered", "Only two core holders", "var(--st-warn)")}
+        ${kpi(M.noCore, "No core expert", "Areas dropped from taxonomy", "var(--st-critical)")}
         ${kpi(M.highRisk, "High-risk experts", "Continuity flag", "var(--st-critical)")}
-        ${kpi(M.interviews, "Interviews planned", "Knowledge capture", "var(--brand)")}
+        ${kpi(M.interviews, "Interview shortlist", "Knowledge capture", "var(--brand)")}
       </div>
 
       <div class="grid grid--2" style="margin-top:16px">
@@ -254,7 +258,7 @@
       { key: "scarcity", label: "Scarce", num: true },
       { key: "impact", label: "Impact", num: true },
       { key: "risk_index", label: "Risk", num: true },
-      { key: "rare_expertise", label: "Rare / scarce expertise", sort: false },
+      { key: "core_areas", label: "Core expertise areas", sort: false },
       { key: "flag", label: "Flag" },
     ];
 
@@ -262,7 +266,7 @@
       const q = holdersState.q.toLowerCase();
       let rows = HOLDERS.filter((h) =>
         (holdersState.dept === "all" || h.department === holdersState.dept) &&
-        (!q || (h.name + " " + h.rare_expertise + " " + h.position).toLowerCase().includes(q)));
+        (!q || (h.name + " " + h.core_areas + " " + h.position).toLowerCase().includes(q)));
       const k = holdersState.sort, dir = holdersState.dir;
       rows = rows.slice().sort((a, b) => {
         let x = a[k], y = b[k];
@@ -278,11 +282,10 @@
       }).join("")}</tr></thead>`;
       const body = `<tbody>${rows.map((h) => {
         const f = riskFlag(h.flag);
-        const rare = h.rare_expertise && !/^\(none/.test(h.rare_expertise)
-          ? esc(h.rare_expertise) : `<span class="muted">— none scarce —</span>`;
+        const core = h.core_areas ? esc(h.core_areas) : `<span class="muted">—</span>`;
         return `<tr>
           <td class="num muted">${h.rank}</td>
-          <td class="name-cell">${esc(h.name.trim())}</td>
+          <td class="name-cell">${esc(h.name.trim())}${h.leader ? ' <span title="Manager / leader" style="color:var(--st-warn)">★</span>' : ""}</td>
           <td><span class="dept-tag">${esc(h.department)}</span></td>
           <td>${esc(h.position)}</td>
           <td class="muted">${esc(h.years)}</td>
@@ -291,7 +294,7 @@
           <td class="num">${h.impact}</td>
           <td><span class="riskbar"><span class="riskbar__val">${h.risk_index}</span>
             <span class="riskbar__track"><span class="riskbar__fill" style="width:${h.risk_index / maxRisk * 100}%;background:${riskColor(f.cls)}"></span></span></span></td>
-          <td class="rare-list">${rare}</td>
+          <td class="rare-list">${core}</td>
           <td>${pill(f.cls, f.cls === "critical" ? "High" : f.cls === "moderate" ? "Moderate" : "Low")}</td>
         </tr>`;
       }).join("")}</tbody>`;
@@ -316,17 +319,18 @@
     const statusOrder = [
       { cls: "good", label: "Adequate", color: "var(--st-good)" },
       { cls: "warn", label: "Thin", color: "var(--st-warn)" },
-      { cls: "serious", label: "Single point", color: "var(--st-serious)" },
+      { cls: "serious", label: "Single core", color: "var(--st-serious)" },
+      { cls: "critical", label: "No core", color: "var(--st-critical)" },
     ];
     const heatRows = DOMAINS.map((d) => {
-      const counts = { good: 0, warn: 0, serious: 0 };
-      GAPS.filter((g) => g.domain === d).forEach((g) => counts[coverageStatus(g.status).cls]++);
+      const counts = { good: 0, warn: 0, serious: 0, critical: 0 };
+      GAPS.filter((g) => g.domain === d).forEach((g) => { const c = coverageStatus(g.status).cls; if (counts[c] != null) counts[c]++; });
       return { domain: d, counts };
     });
     const heat = `<table class="heat"><thead><tr><th class="row-h">Domain</th>
       ${statusOrder.map((s) => `<th>${s.label}</th>`).join("")}<th>Total</th></tr></thead><tbody>
       ${heatRows.map((r) => {
-        const total = r.counts.good + r.counts.warn + r.counts.serious;
+        const total = r.counts.good + r.counts.warn + r.counts.serious + r.counts.critical;
         return `<tr><td class="row-h">${esc(r.domain)}</td>
           ${statusOrder.map((s) => {
             const v = r.counts[s.cls];
@@ -338,12 +342,13 @@
 
     el.innerHTML = `
       <div class="view__head"><h1>Knowledge Gaps</h1>
-        <p>Every expertise area rated by how many people hold it. <b style="color:var(--st-serious)">Single points of failure</b> (one holder) and <b style="color:var(--st-warn)">thin coverage</b> (two holders) are where the organisation is most exposed.</p></div>
+        <p>Core expertise areas rated by how many people hold each as <em>core</em> expertise. <b style="color:var(--st-serious)">Single core experts</b> (one holder) are the sharpest continuity risk; <b style="color:var(--st-critical)">no core expert</b> marks areas dropped from the taxonomy because nobody holds them at core level.</p></div>
 
       <div class="grid grid--kpi" style="margin-bottom:16px">
-        <div class="card kpi" style="--kpi-accent:var(--st-good)"><div class="kpi__value">${M.adequate}</div><div class="kpi__label">Adequate (3+ holders)</div></div>
-        <div class="card kpi" style="--kpi-accent:var(--st-warn)"><div class="kpi__value">${M.thin}</div><div class="kpi__label">Thin coverage (2 holders)</div></div>
-        <div class="card kpi" style="--kpi-accent:var(--st-serious)"><div class="kpi__value">${M.spof}</div><div class="kpi__label">Single point of failure</div></div>
+        <div class="card kpi" style="--kpi-accent:var(--st-good)"><div class="kpi__value">${M.adequate}</div><div class="kpi__label">Adequate (3+ core)</div></div>
+        <div class="card kpi" style="--kpi-accent:var(--st-warn)"><div class="kpi__value">${M.thin}</div><div class="kpi__label">Thin coverage (2 core)</div></div>
+        <div class="card kpi" style="--kpi-accent:var(--st-serious)"><div class="kpi__value">${M.spof}</div><div class="kpi__label">Single core expert</div></div>
+        <div class="card kpi" style="--kpi-accent:var(--st-critical)"><div class="kpi__value">${M.noCore}</div><div class="kpi__label">No core expert</div></div>
       </div>
 
       <div class="card">
@@ -356,7 +361,8 @@
         <div class="field"><input type="search" id="gq" placeholder="Search expertise or domain…" aria-label="Search gaps" value="${esc(gapsState.q)}"></div>
         <div class="field"><select id="gstatus" aria-label="Filter by status">
           <option value="all">All statuses</option>
-          <option value="serious">Single point of failure</option>
+          <option value="serious">Single core expert</option>
+          <option value="critical">No core expert</option>
           <option value="warn">Thin coverage</option>
           <option value="good">Adequate</option>
         </select></div>
@@ -375,7 +381,7 @@
       }).sort((a, b) => a.holders_n - b.holders_n || a.domain.localeCompare(b.domain));
       $("#gtable").innerHTML = `<thead><tr>
           <th>Expertise</th><th>Domain</th><th>Sub-domain</th>
-          <th class="num">Holders</th><th>Status</th><th>Recommended action</th>
+          <th class="num">Core</th><th>Status</th><th>Sole core holder</th><th>Recommended action</th>
         </tr></thead><tbody>${rows.map((g) => {
           const s = coverageStatus(g.status);
           return `<tr>
@@ -384,6 +390,7 @@
             <td class="muted">${esc(g.subdomain)}</td>
             <td class="num"><b>${g.holders_n}</b></td>
             <td>${pill(s.cls, s.label, s.icon)}</td>
+            <td class="muted">${g.sole_holder ? esc(g.sole_holder) : "—"}</td>
             <td class="muted">${esc(g.recommendation)}</td>
           </tr>`;
         }).join("")}</tbody>`;
@@ -395,34 +402,37 @@
   }
 
   /* ---------------------------------------------------------------- Interviews */
-  function parseFocus(raw) {
-    return String(raw || "").split(/\n?\s*•\s*/).map(clean).filter(Boolean);
+  // Classify the interview status string → {cls, label}
+  function interviewStatus(raw) {
+    const s = String(raw || "");
+    if (s.includes("✓") || /interviewed/i.test(s)) return { cls: "good", label: "Interviewed" };
+    if (s.includes("◑") || /survey/i.test(s)) return { cls: "moderate", label: "Survey-validated" };
+    return { cls: "neutral", label: "Pending interview" };
   }
   function renderInterviews(el) {
+    const done = SHORTLIST.filter((s) => interviewStatus(s.interview_status).cls === "good").length;
     const totalMin = SHORTLIST.reduce((a, s) => a + (parseInt(s.duration, 10) || 0), 0);
-    const cards = SHORTLIST.slice().sort((a, b) => a.priority - b.priority).map((s) => {
-      const focus = parseFocus(s.focus_areas);
-      const reasons = String(s.why || "").split("|").map(clean).filter(Boolean);
+    const cards = SHORTLIST.slice().sort((a, b) => a.order - b.order).map((s) => {
+      const focus = String(s.focus || "").split(";").map(clean).filter(Boolean);
+      const iv = interviewStatus(s.interview_status);
       return `<article class="iv">
-        <div class="iv__rank">${s.priority}</div>
+        <div class="iv__rank">${s.order}</div>
         <div>
           <div class="iv__name">${esc(s.name.trim())} <span class="dept-tag">${esc(s.department)}</span></div>
-          <div class="iv__meta">${esc(s.profile_level)} · ${esc(s.years)}</div>
+          <div class="iv__meta">${esc(s.position)} · ${esc(s.profile_level)}</div>
         </div>
         <div class="iv__right">
           ${pill("critical", "Risk " + s.risk_index)}
+          ${pill(iv.cls, iv.label)}
           <span class="muted" style="font-size:12px">${esc(s.duration)}</span>
         </div>
-        <div class="iv__why">${reasons.map((r) => `<span class="tag-chip">${esc(r)}</span>`).join("")}</div>
-        <details class="iv__focus"><summary>Interview focus areas</summary>
-          <ul>${focus.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
-        </details>
+        <div class="iv__why">${focus.map((r) => `<span class="tag-chip">${esc(r)}</span>`).join("")}</div>
       </article>`;
     }).join("");
 
     el.innerHTML = `
       <div class="view__head"><h1>Knowledge-Capture Interview Plan</h1>
-        <p>A prioritised shortlist for structured knowledge-capture interviews — ordered by continuity risk and rarity of expertise. ${SHORTLIST.length} interviews · about ${Math.round(totalMin / 60)} hours total.</p></div>
+        <p>The structured deep-dive interview shortlist — all managers and strategic-profile staff, ordered by continuity risk. ${done} of ${SHORTLIST.length} interviews complete · about ${Math.round(totalMin / 60)} hours total.</p></div>
       <div class="iv-list">${cards}</div>`;
   }
 
