@@ -11,9 +11,10 @@ first to capture that knowledge.
 |---|---|
 | **Overview** | Headline KPIs, expertise-coverage and workforce-risk breakdowns, coverage-by-domain, and the highest continuity risks at a glance. |
 | **Critical Experts** | All assessed staff scored on knowledge depth, skill scarcity, and impact. Sortable/filterable; risk index = depth × scarcity × impact. |
-| **Knowledge Gaps** | Every expertise area rated by number of holders, with a domain × resilience heatmap and recommended actions. Flags single points of failure and thin coverage. |
-| **Interview Plan** | A prioritised knowledge-capture interview shortlist with rationale and per-person focus areas. |
-| **Expertise Matrix** | The full taxonomy (domains → sub-domains → expertise) with the people holding each area, colour-coded by coverage resilience. |
+| **Knowledge Gaps** | Every core area rated by number of core holders, with a domain × resilience heatmap and recommended actions. Flags single core experts, thin coverage, and areas with no core expert. |
+| **Interview Plan** | The knowledge-capture interview shortlist with per-person core-expertise focus and interview status. |
+| **Expertise Matrix** | The full core taxonomy (domains → sub-domains → expertise) with the people holding each area, colour-coded by coverage resilience. |
+| **Mapping** | The whole hierarchy as an interactive Coggle-style tree: Root → Domain → Sub-domain → Expertise → Holders. |
 
 ## Running it
 
@@ -33,24 +34,32 @@ and even when opened straight from disk (`file://`).
 
 ## Data
 
-Source data lives in `/data` as JSON and is the single source of truth:
+The single source of truth is the master workbook:
 
-- `taxonomy.json` — domain → sub-domain → expertise structure
-- `expertise_matrix.json` — holders of each expertise area
-- `knowledge_gaps.json` — coverage status & recommendation per area
-- `critical_holders.json` — staff risk scoring (depth, scarcity, impact, risk index)
-- `interview_shortlist.json` — prioritised interview plan
+- `data/GulfCDC_KnowledgeMapping_MasterAnalysis_CoreTaxonomy.xlsx`
 
-`assets/js/data.js` is regenerated from these files:
+It covers the **core-taxonomy** analysis: **10 domains → 30 sub-domains → 57 core
+expertise areas**, and **30 staff**. An area counts only where someone holds it as
+*core* expertise (not mere awareness); areas nobody holds at core level are flagged
+**No Core Expert**.
+
+To update the portal after editing the workbook, drop the new file in over the one
+above (same name) and regenerate:
 
 ```bash
-node -e '
-const fs=require("fs"), r=f=>JSON.parse(fs.readFileSync("data/"+f,"utf8"));
-const out={taxonomy:r("taxonomy.json"),expertiseMatrix:r("expertise_matrix.json"),
-knowledgeGaps:r("knowledge_gaps.json"),criticalHolders:r("critical_holders.json"),
-interviewShortlist:r("interview_shortlist.json")};
-fs.writeFileSync("assets/js/data.js","window.GCDC_DATA = "+JSON.stringify(out,null,2)+";\n");'
+python3 scripts/generate_data.py
 ```
+
+That reads the workbook and rewrites `assets/js/data.js` (the embedded dataset the
+portal loads) plus readable JSON exports in `/data`:
+
+- `taxonomy.json` — domain → sub-domain → core expertise structure
+- `expertise_matrix.json` — core holders of each area
+- `knowledge_gaps.json` — coverage status, sole holder & recommendation per area
+- `critical_holders.json` — staff risk scoring (depth, scarcity, impact, risk index)
+- `interview_shortlist.json` — the knowledge-capture interview plan
+
+Requires Python with `openpyxl` (`pip install openpyxl`).
 
 ## Design notes
 
@@ -62,9 +71,12 @@ fs.writeFileSync("assets/js/data.js","window.GCDC_DATA = "+JSON.stringify(out,nu
 ## Layout
 
 ```
-index.html            # shell + navigation
-assets/css/styles.css # design tokens, layout, components
-assets/js/data.js     # embedded dataset (generated from /data)
-assets/js/app.js       # views, charts, tables, routing
-data/*.json           # source data
+index.html                # shell + navigation
+assets/css/styles.css     # design tokens, layout, components
+assets/js/data.js         # embedded dataset (generated)
+assets/js/app.js          # views, charts, tables, routing
+assets/img/               # GCDC logo (colour + reversed white)
+scripts/generate_data.py  # rebuilds data.js + /data JSON from the workbook
+data/*.xlsx               # master workbook — the source of truth
+data/*.json               # generated JSON exports
 ```
