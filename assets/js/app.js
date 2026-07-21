@@ -143,12 +143,6 @@
       { label: "Thin (2 core)", value: M.thin, color: "var(--st-warn)" },
       { label: "Single core expert", value: M.spof, color: "var(--st-serious)" },
     ];
-    const risk = [
-      { label: "High Continuity Risk", value: M.highRisk, color: "var(--st-critical)" },
-      { label: "Moderate Risk", value: M.moderateRisk, color: "var(--st-warn)" },
-      { label: "Low / Standard", value: M.lowRisk, color: "var(--st-good)" },
-    ];
-
     // Coverage by department — core areas each department has ≥1 core holder in
     const deptOf = (h) => { const m = /\(([^)]+)\)\s*$/.exec(h); return m ? m[1].trim() : ""; };
     const DEPTS = Array.from(new Set(HOLDERS.map((h) => h.department)));
@@ -190,21 +184,10 @@
           </div>
         </div>
         <div class="card">
-          <div class="card__hd"><div class="card__title">Workforce continuity risk</div>
-            <div class="card__sub">Staff by continuity-risk flag</div></div>
-          <div class="donut-wrap">
-            ${donut(risk, { centerNum: M.experts, centerLbl: "staff", aria: "Workforce risk distribution" })}
-            <div style="flex:1;min-width:150px">${legend(risk)}
-              <p class="card__sub" style="margin-top:12px">${M.highRisk} staff combine deep, scarce and high-impact expertise — the priority for knowledge capture.</p>
-            </div>
-          </div>
+          <div class="card__hd"><div class="card__title">Coverage by department</div>
+            <div class="card__sub">Core expertise areas each department covers (of ${M.expertiseAreas})</div></div>
+          ${rankedBars(deptCov, maxDeptCov)}
         </div>
-      </div>
-
-      <div class="card" style="margin-top:16px">
-        <div class="card__hd"><div class="card__title">Coverage by department</div>
-          <div class="card__sub">Core expertise areas each department covers (of ${M.expertiseAreas})</div></div>
-        ${rankedBars(deptCov, maxDeptCov)}
       </div>`;
   }
 
@@ -232,11 +215,10 @@
         (!q || (h.name + " " + h.core_areas).toLowerCase().includes(q))
       ).slice().sort((a, b) => a.name.localeCompare(b.name));
       $("#ctable").innerHTML = `<thead><tr>
-          <th>Name</th><th>Department</th><th>Tenure</th><th>Core expertise areas</th>
+          <th>Name</th><th>Department</th><th>Core expertise areas</th>
         </tr></thead><tbody>${rows.map((h) => `<tr>
           <td class="name-cell">${esc(h.name.trim())}${h.leader ? ' <span title="Manager / leader" style="color:var(--st-warn)">★</span>' : ""}</td>
           <td><span class="dept-tag">${esc(h.department)}</span></td>
-          <td class="muted">${esc(h.years)}</td>
           <td class="rare-list">${h.core_areas ? esc(h.core_areas) : '<span class="muted">—</span>'}</td>
         </tr>`).join("")}</tbody>`;
       $("#ccount").textContent = `${rows.length} of ${HOLDERS.length} staff`;
@@ -258,7 +240,7 @@
     const depts = ["all", ...Array.from(new Set(HOLDERS.map((h) => h.department)))];
     el.innerHTML = `
       <div class="view__head"><h1>Contacts</h1>
-        <p>Directory of all ${M.experts} staff — role, tenure, core expertise, and work email. Filter by department, or search by name or expertise.</p></div>
+        <p>Directory of all ${M.experts} staff — role, core expertise, and work email. Filter by department, or search by name or expertise.</p></div>
       <div class="toolbar">
         <div class="field"><input type="search" id="ctq" placeholder="Search name or expertise…" aria-label="Search contacts" value="${esc(contactsState.q)}"></div>
         <div class="field"><select id="ctdept" aria-label="Filter by department">
@@ -287,7 +269,6 @@
             </div>
           </div>
           <dl class="contact__meta">
-            <div><dt>Tenure</dt><dd>${esc(h.years)}</dd></div>
             <div><dt>Profile</dt><dd>${esc(h.profile_level)}</dd></div>
           </dl>
           <div class="contact__areas">${areas.map((a) => `<span class="tag-chip">${esc(a)}</span>`).join("")}</div>
@@ -611,65 +592,9 @@
       </div>`;
   }
 
-  /* ---------------------------------------------------------------- About */
-  function renderAbout(el) {
-    el.innerHTML = `
-      <div class="view__head"><h1>About</h1></div>
-
-      <section class="about-block">
-        <h2 class="about-title">About Gulf CDC</h2>
-        <div class="about-grid">
-          <div class="card about-text">
-            <p>In January 2021, at the Al-Ula Summit, the Supreme Council of the Gulf Cooperation Council decided to establish the Gulf Center for Disease Prevention and Control. The aim of the Gulf Center is to enhance cooperation in public health and exchange knowledge among all member states.</p>
-          </div>
-          <figure class="photo-frame">
-            <img src="assets/img/about-summit.png" alt="Signing ceremony at the Al-Ula Summit"
-                 onerror="this.parentElement.classList.add('photo-frame--missing')" />
-            <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/about-summit.png</code></figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="about-block">
-        <div class="grid grid--2">
-          <div class="card">
-            <div class="card__hd"><div class="card__title">Our Mission</div></div>
-            <p style="color:var(--ink-2)">To strengthen coordination, build knowledge, and generate evidence to enable the prevention of communicable and non-communicable diseases, reduce public health emergencies, and promote healthy communities across the Gulf.</p>
-          </div>
-          <div class="card">
-            <div class="card__hd"><div class="card__title">Our Vision</div></div>
-            <p style="color:var(--ink-2)">A Gulf community where all individuals enjoy the best possible health at every stage of life.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-block about-block--band">
-        <h2 class="about-title">CEO Message</h2>
-        <div class="about-grid about-grid--ceo">
-          <div class="card about-text">
-            <p>I am truly excited to begin this journey with you.</p>
-            <p style="margin-top:10px">What makes Gulf CDC special is not only its mission, but the people behind it — a team united by purpose, expertise, and commitment to protecting the health of our region.</p>
-            <p style="margin-top:10px">Together, we have a unique opportunity to build a Gulf CDC that is agile, respected, science-driven, and globally connected.</p>
-          </div>
-          <div class="ceo-card">
-            <figure class="photo-frame photo-frame--portrait">
-              <img src="assets/img/ceo-manaf.png" alt="Dr. Manaf Alqahtani, Chief Executive Officer, Gulf CDC"
-                   onerror="this.parentElement.classList.add('photo-frame--missing')" />
-              <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/ceo-manaf.png</code></figcaption>
-            </figure>
-            <div class="ceo-card__plate">
-              <div class="ceo-card__name">Dr. Manaf Alqahtani</div>
-              <div class="ceo-card__role">Chief Executive Officer, Gulf CDC</div>
-            </div>
-          </div>
-        </div>
-      </section>`;
-  }
-
   /* ---------------------------------------------------------------- router */
   const VIEWS = {
     home: { el: "#view-home", render: renderHome },
-    about: { el: "#view-about", render: renderAbout },
     overview: { el: "#view-overview", render: renderOverview, done: false },
     core: { el: "#view-core", render: renderCore },
     contacts: { el: "#view-contacts", render: renderContacts },
