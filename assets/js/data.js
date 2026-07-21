@@ -1976,6 +1976,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Infection & Immunity, Strategic Stockpile Management. Priority for knowledge capture & succession planning.",
+      "email": "a.binkhunayn@gulfcdc.org",
       "rank": 1
     },
     {
@@ -1994,6 +1995,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Casemix Funding & Classification, Governance, Risk & Compliance (GRC), Registry Development (Cancer, RTI, etc.). Priority for knowledge capture & succession planning.",
+      "email": "a.alhatlan@gulfcdc.org",
       "rank": 2
     },
     {
@@ -2012,6 +2014,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Risk Assessment (Rapid Risk Assessment), Survey Design & Validation. Priority for knowledge capture & succession planning.",
+      "email": "m.albalushi@gulfcdc.org",
       "rank": 3
     },
     {
@@ -2030,6 +2033,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Patient Safety. Priority for knowledge capture & succession planning.",
+      "email": "w.alnadabi@gulfcdc.org",
       "rank": 4
     },
     {
@@ -2048,6 +2052,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Epidemic Intelligence. Priority for knowledge capture & succession planning.",
+      "email": "s.almudarra@gulfcdc.org",
       "rank": 5
     },
     {
@@ -2066,6 +2071,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Ethical Review & Compliance. Priority for knowledge capture & succession planning.",
+      "email": "A.AlQurashi@gulfcdc.org",
       "rank": 6
     },
     {
@@ -2084,6 +2090,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": false,
       "continuity": "",
+      "email": "h.alsaab@gulfcdc.org",
       "rank": 7
     },
     {
@@ -2102,6 +2109,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": false,
       "continuity": "",
+      "email": "H.Alothaimeen@gulfcdc.org",
       "rank": 8
     },
     {
@@ -2120,6 +2128,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Surveillance Systems Design, Usability Testing & Health System Design. Priority for knowledge capture & succession planning.",
+      "email": "b.alghamdi@gulfcdc.org",
       "rank": 9
     },
     {
@@ -2138,6 +2147,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Medical Laboratory, Policy Brief & White Paper Writing, Value-Based Healthcare (VBHC). Priority for knowledge capture & succession planning.",
+      "email": "aalsurayhi@gulfcdc.org",
       "rank": 10
     },
     {
@@ -2156,6 +2166,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": false,
       "continuity": "",
+      "email": "a.alqahtani@gulfcdc.org",
       "rank": 11
     },
     {
@@ -2174,6 +2185,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": false,
       "continuity": "",
+      "email": "F.Aldammas@gulfcdc.org",
       "rank": 12
     },
     {
@@ -2192,6 +2204,7 @@ window.GCDC_DATA = {
       "flag": "🔴 High Continuity Risk",
       "leader": false,
       "continuity": "",
+      "email": "r.althunayyan@gulfcdc.org",
       "rank": 13
     },
     {
@@ -2210,6 +2223,7 @@ window.GCDC_DATA = {
       "flag": "🟡 Moderate Risk",
       "leader": false,
       "continuity": "",
+      "email": "M.Alrahbi@gulfcdc.org",
       "rank": 14
     },
     {
@@ -2228,6 +2242,7 @@ window.GCDC_DATA = {
       "flag": "🟡 Moderate Risk",
       "leader": true,
       "continuity": "Sole core expert in: Stakeholder Engagement. Priority for knowledge capture & succession planning.",
+      "email": "n.alnaji@gulfcdc.org",
       "rank": 15
     },
     {
@@ -2246,6 +2261,7 @@ window.GCDC_DATA = {
       "flag": "🟡 Moderate Risk",
       "leader": false,
       "continuity": "",
+      "email": "s.alsaleh@gulfcdc.org",
       "rank": 16
     },
     {
@@ -2264,6 +2280,7 @@ window.GCDC_DATA = {
       "flag": "🟡 Moderate Risk",
       "leader": false,
       "continuity": "",
+      "email": "s.alghafri@gulfcdc.org",
       "rank": 17
     },
     {
@@ -2282,6 +2299,7 @@ window.GCDC_DATA = {
       "flag": "🟡 Moderate Risk",
       "leader": false,
       "continuity": "",
+      "email": "n.alzuhayri@Gulfcdc.org",
       "rank": 18
     },
     {
@@ -2300,6 +2318,7 @@ window.GCDC_DATA = {
       "flag": "🟡 Moderate Risk",
       "leader": true,
       "continuity": "Core areas have redundancy; focus on leadership handover & institutional memory.",
+      "email": "s.alhajri@gulfcdc.org",
       "rank": 19
     },
     {
@@ -2318,6 +2337,7 @@ window.GCDC_DATA = {
       "flag": "🟡 Moderate Risk",
       "leader": false,
       "continuity": "",
+      "email": "R.alotaibi@gulfcdc.org",
       "rank": 20
     },
     {
@@ -2336,6 +2356,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "r.nazra@gulfcdc.org",
       "rank": 21
     },
     {
@@ -2354,6 +2375,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "m.alshehri@gulfcdc.org",
       "rank": 22
     },
     {
@@ -2372,6 +2394,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "n.albedah@gulfcdc.org",
       "rank": 23
     },
     {
@@ -2390,6 +2413,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "H.Alzeer@gulfcdc.org",
       "rank": 24
     },
     {
@@ -2408,6 +2432,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "r.alhumud@gulfcdc.org",
       "rank": 25
     },
     {
@@ -2426,6 +2451,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "a.alnowaiser@gulfcdc.org",
       "rank": 26
     },
     {
@@ -2444,6 +2470,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "N.Alorayyidh@gulfcdc.org",
       "rank": 27
     },
     {
@@ -2462,6 +2489,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "z.alzayid@gulfcdc.org",
       "rank": 28
     },
     {
@@ -2480,6 +2508,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "t.almalki@gulfcdc.org",
       "rank": 29
     },
     {
@@ -2498,6 +2527,7 @@ window.GCDC_DATA = {
       "flag": "🟢 Low/Standard",
       "leader": false,
       "continuity": "",
+      "email": "H.Almosabihi@gulfcdc.org",
       "rank": 30
     }
   ],
