@@ -356,7 +356,7 @@ window.GCDC_DATA = {
       "holders": [
         "Sami Almudarra (PHI)",
         "Salman AlHajri (PHPP)",
-        "Rose (PHPP)",
+        "Rose Nazra (PHPP)",
         "Heyam Almosabihi (PHPP)"
       ]
     },
@@ -366,7 +366,7 @@ window.GCDC_DATA = {
       "expertise": "Surveillance Systems Design",
       "holders_n": 1,
       "holders": [
-        "Bushra (PHI)"
+        "Bushra Alghamdi (PHI)"
       ]
     },
     {
@@ -462,7 +462,7 @@ window.GCDC_DATA = {
       "holders": [
         "Sami Almudarra (PHI)",
         "Salman AlHajri (PHPP)",
-        "Rose (PHPP)",
+        "Rose Nazra (PHPP)",
         "Heyam Almosabihi (PHPP)"
       ]
     },
@@ -472,7 +472,7 @@ window.GCDC_DATA = {
       "expertise": "Infection Prevention & Control",
       "holders_n": 1,
       "holders": [
-        "Rose (PHPP)"
+        "Rose Nazra (PHPP)"
       ]
     },
     {
@@ -569,8 +569,8 @@ window.GCDC_DATA = {
       "holders_n": 3,
       "holders": [
         "Waleed Al Nadabi (PHE)",
-        "Sarah Alsaleh (CEO)",
-        "Rose (PHPP)"
+        "Sarah Alsaleh (CEO office)",
+        "Rose Nazra (PHPP)"
       ]
     },
     {
@@ -661,7 +661,7 @@ window.GCDC_DATA = {
         "Norah Albedah (PHI)",
         "Turki Almalki (PHI)",
         "Heyam Almosabihi (PHPP)",
-        "Faris (TCB)"
+        "Faris Aldammas (TCB)"
       ]
     },
     {
@@ -671,7 +671,7 @@ window.GCDC_DATA = {
       "holders_n": 2,
       "holders": [
         "Mazin Al Rahbi (PHI)",
-        "Faris (TCB)"
+        "Faris Aldammas (TCB)"
       ]
     },
     {
@@ -708,7 +708,7 @@ window.GCDC_DATA = {
       "expertise": "Usability Testing & Health System Design",
       "holders_n": 1,
       "holders": [
-        "Bushra (PHI)"
+        "Bushra Alghamdi (PHI)"
       ]
     },
     {
@@ -717,9 +717,9 @@ window.GCDC_DATA = {
       "expertise": "AI in Health",
       "holders_n": 4,
       "holders": [
-        "Bushra (PHI)",
+        "Bushra Alghamdi (PHI)",
         "Turki Almalki (PHI)",
-        "Faris (TCB)",
+        "Faris Aldammas (TCB)",
         "Zayed Al Zayed (TCB)"
       ]
     },
@@ -824,11 +824,11 @@ window.GCDC_DATA = {
       "holders": [
         "Waleed Al Nadabi (PHE)",
         "Abdullatif Bin Khunayn (PHE)",
-        "Sarah Alsaleh (CEO)",
-        "Rose (PHPP)",
+        "Sarah Alsaleh (CEO office)",
+        "Rose Nazra (PHPP)",
         "Najla Alorayyidh (PHPP)",
         "Reem Alotaibi (PHPP)",
-        "Faris (TCB)",
+        "Faris Aldammas (TCB)",
         "Zayed Al Zayed (TCB)"
       ]
     },
@@ -847,7 +847,7 @@ window.GCDC_DATA = {
       "expertise": "Change Management",
       "holders_n": 1,
       "holders": [
-        "Sarah Alsaleh (CEO)"
+        "Sarah Alsaleh (CEO office)"
       ]
     },
     {
@@ -884,7 +884,7 @@ window.GCDC_DATA = {
       "expertise": "Toxicology",
       "holders_n": 1,
       "holders": [
-        "Faris (TCB)"
+        "Faris Aldammas (TCB)"
       ]
     },
     {
@@ -2113,7 +2113,7 @@ window.GCDC_DATA = {
       "rank": 8
     },
     {
-      "name": "Bushra",
+      "name": "Bushra Alghamdi",
       "department": "PHI",
       "position": "Manager",
       "years": "2–5 years",
@@ -2170,7 +2170,7 @@ window.GCDC_DATA = {
       "rank": 11
     },
     {
-      "name": "Faris",
+      "name": "Faris Aldammas",
       "department": "TCB",
       "position": "Analyst",
       "years": "2–5 years",
@@ -2247,7 +2247,7 @@ window.GCDC_DATA = {
     },
     {
       "name": "Sarah Alsaleh",
-      "department": "CEO",
+      "department": "CEO office",
       "position": "Senior Specialist",
       "years": "6–10 years",
       "profile_level": "Expert",
@@ -2341,7 +2341,7 @@ window.GCDC_DATA = {
       "rank": 20
     },
     {
-      "name": "Rose",
+      "name": "Rose Nazra",
       "department": "PHPP",
       "position": "Senior Specialist",
       "years": "2–5 years",

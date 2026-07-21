@@ -18,6 +18,15 @@ def s(v): return "" if v is None else str(v).strip()
 def norm(n):
     return re.sub(r"[^a-z0-9 ]", "", str(n or "").lower()).strip()
 
+# Display-name and department corrections, applied everywhere downstream
+NAME_FIX = {"Bushra": "Bushra Alghamdi", "Faris": "Faris Aldammas", "Rose": "Rose Nazra"}
+DEPT_FIX = {"CEO": "CEO office"}
+def fix_name(n): return NAME_FIX.get(s(n), s(n))
+def fix_dept(d): return DEPT_FIX.get(s(d), s(d))
+def fix_holder(label):
+    m = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", s(label))
+    return f"{fix_name(m.group(1))} ({fix_dept(m.group(2))})" if m else fix_name(label)
+
 # Emails from the survey workbook, keyed by normalised name
 email_by_name = {}
 if os.path.exists(SURVEY):
@@ -30,7 +39,7 @@ if os.path.exists(SURVEY):
         found = re.findall(r"[\w.\-]+@[\w.\-]+\.[A-Za-z]{2,}", raw)
         email = next((e for e in found if "gulfcdc" in e.lower()), found[0] if found else "")
         if email:
-            email_by_name[norm(name)] = email.strip()
+            email_by_name[norm(fix_name(name))] = email.strip()
 
 wb = openpyxl.load_workbook(XLSX, data_only=True)
 
@@ -45,7 +54,7 @@ for r in wb["01_Taxonomy"].iter_rows(min_row=2, values_only=True):
 # 03 Expertise Matrix — holders per area
 mws = wb["03_Expertise_Matrix"]
 hdr = list(next(mws.iter_rows(min_row=1, max_row=1, values_only=True)))
-emp_cols = [(ci, re.sub(r"\s+", " ", s(hdr[ci]).replace("\n", " "))) for ci in range(4, len(hdr)) if s(hdr[ci])]
+emp_cols = [(ci, fix_holder(re.sub(r"\s+", " ", s(hdr[ci]).replace("\n", " ")))) for ci in range(4, len(hdr)) if s(hdr[ci])]
 matrix = []
 for r in mws.iter_rows(min_row=2, values_only=True):
     if not r[0] or not r[2]:
@@ -64,7 +73,7 @@ master = []
 for r in wb["02_Master_Dataset"].iter_rows(min_row=2, values_only=True):
     if not r[0]:
         continue
-    master.append(dict(num=int(r[0]), name=s(r[1]), department=s(r[2]), position=s(r[3]),
+    master.append(dict(num=int(r[0]), name=fix_name(r[1]), department=fix_dept(r[2]), position=s(r[3]),
         years=s(r[4]), profile_level=s(r[5]), depth=int(r[6]), scarcity=int(r[7]), impact=int(r[8]),
         risk_index=int(r[9]), core_count=int(r[10]) if r[10] not in (None, "") else 0,
         core_areas=s(r[11]), source=s(r[12]), leader=bool(s(r[13]))))
@@ -74,7 +83,7 @@ cont = {}
 for r in wb["05_Critical_Holders"].iter_rows(min_row=5, values_only=True):
     if not r[0] or r[0] == "Rank":
         continue
-    cont[s(r[1])] = s(r[10])
+    cont[fix_name(r[1])] = s(r[10])
 
 # sole-held areas per person (from matrix, holders_n == 1)
 sole = {}
