@@ -568,7 +568,7 @@ window.GCDC_DATA = {
       "expertise": "Performance Management (KPIs / OKRs)",
       "holders_n": 3,
       "holders": [
-        "Waleed Al Nadabi (PHE)",
+        "Waleed Al Nadabi (CEO office)",
         "Sarah Alsaleh (CEO office)",
         "Rose Nazra (PHPP)"
       ]
@@ -795,7 +795,7 @@ window.GCDC_DATA = {
       "expertise": "Patient Safety",
       "holders_n": 1,
       "holders": [
-        "Waleed Al Nadabi (PHE)"
+        "Waleed Al Nadabi (CEO office)"
       ]
     },
     {
@@ -822,7 +822,7 @@ window.GCDC_DATA = {
       "expertise": "Project Management (PMP/CAPM)",
       "holders_n": 8,
       "holders": [
-        "Waleed Al Nadabi (PHE)",
+        "Waleed Al Nadabi (CEO office)",
         "Abdullatif Bin Khunayn (PHE)",
         "Sarah Alsaleh (CEO office)",
         "Rose Nazra (PHPP)",
@@ -893,7 +893,7 @@ window.GCDC_DATA = {
       "expertise": "Leadership",
       "holders_n": 2,
       "holders": [
-        "Waleed Al Nadabi (PHE)",
+        "Waleed Al Nadabi (CEO office)",
         "Mahim Al Balushi (PHPP)"
       ]
     },
@@ -2019,7 +2019,7 @@ window.GCDC_DATA = {
     },
     {
       "name": "Waleed Al Nadabi",
-      "department": "PHE",
+      "department": "CEO office",
       "position": "Executive Director",
       "years": "More than 10 years",
       "profile_level": "Strategic",

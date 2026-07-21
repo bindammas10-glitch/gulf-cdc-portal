@@ -22,11 +22,16 @@ def norm(n):
 NAME_FIX = {"Bushra": "Bushra Alghamdi", "Faris": "Faris Aldammas", "Rose": "Rose Nazra",
             "Dr Mahim Al Balushi": "Mahim Al Balushi"}
 DEPT_FIX = {"CEO": "CEO office"}
+# Per-person department overrides (applied after name fixes)
+PERSON_DEPT_FIX = {"Waleed Al Nadabi": "CEO office"}
 def fix_name(n): return NAME_FIX.get(s(n), s(n))
-def fix_dept(d): return DEPT_FIX.get(s(d), s(d))
+def fix_dept(d, name=""): return PERSON_DEPT_FIX.get(s(name), DEPT_FIX.get(s(d), s(d)))
 def fix_holder(label):
     m = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", s(label))
-    return f"{fix_name(m.group(1))} ({fix_dept(m.group(2))})" if m else fix_name(label)
+    if not m:
+        return fix_name(label)
+    name = fix_name(m.group(1))
+    return f"{name} ({fix_dept(m.group(2), name)})"
 
 # Emails from the survey workbook, keyed by normalised name
 email_by_name = {}
@@ -74,7 +79,7 @@ master = []
 for r in wb["02_Master_Dataset"].iter_rows(min_row=2, values_only=True):
     if not r[0]:
         continue
-    master.append(dict(num=int(r[0]), name=fix_name(r[1]), department=fix_dept(r[2]), position=s(r[3]),
+    master.append(dict(num=int(r[0]), name=fix_name(r[1]), department=fix_dept(r[2], fix_name(r[1])), position=s(r[3]),
         years=s(r[4]), profile_level=s(r[5]), depth=int(r[6]), scarcity=int(r[7]), impact=int(r[8]),
         risk_index=int(r[9]), core_count=int(r[10]) if r[10] not in (None, "") else 0,
         core_areas=s(r[11]), source=s(r[12]), leader=bool(s(r[13]))))
