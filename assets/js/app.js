@@ -232,173 +232,42 @@
       </div>`;
   }
 
-  /* ---------------------------------------------------------------- Holders */
-  const holdersState = { sort: "risk_index", dir: -1, dept: "all", q: "" };
-  function renderHolders(el) {
+
+  /* ---------------------------------------------------------------- Core Expertise */
+  const coreState = { dept: "all", q: "" };
+  function renderCore(el) {
     const depts = ["all", ...Array.from(new Set(HOLDERS.map((h) => h.department)))];
     el.innerHTML = `
-      <div class="view__head"><h1>Critical Experts</h1>
-        <p>All ${M.experts} staff scored on knowledge depth, scarcity of their skills, and organisational impact. Risk index = depth × scarcity × impact. Sort or filter to explore.</p></div>
+      <div class="view__head"><h1>Core Expertise</h1>
+        <p>Every staff member and the areas they hold at <em>core</em> expertise level. Filter by department, or search by name or expertise.</p></div>
       <div class="toolbar">
-        <div class="field"><input type="search" id="hq" placeholder="Search name or expertise…" aria-label="Search experts" value="${esc(holdersState.q)}"></div>
-        <div class="field"><select id="hdept" aria-label="Filter by department">
-          ${depts.map((d) => `<option value="${esc(d)}"${d === holdersState.dept ? " selected" : ""}>${d === "all" ? "All departments" : esc(d)}</option>`).join("")}
+        <div class="field"><input type="search" id="cq" placeholder="Search name or expertise…" aria-label="Search core expertise" value="${esc(coreState.q)}"></div>
+        <div class="field"><select id="cdept" aria-label="Filter by department">
+          ${depts.map((d) => `<option value="${esc(d)}"${d === coreState.dept ? " selected" : ""}>${d === "all" ? "All departments" : esc(d)}</option>`).join("")}
         </select></div>
-        <span class="muted" id="hcount" style="margin-left:auto;font-size:13px"></span>
+        <span class="muted" id="ccount" style="margin-left:auto;font-size:13px"></span>
       </div>
-      <div class="table-wrap"><table class="data" id="htable"></table></div>`;
-
-    const cols = [
-      { key: "rank", label: "#", num: true },
-      { key: "name", label: "Name" },
-      { key: "department", label: "Dept" },
-      { key: "position", label: "Position" },
-      { key: "years", label: "Tenure" },
-      { key: "depth", label: "Depth", num: true },
-      { key: "scarcity", label: "Scarce", num: true },
-      { key: "impact", label: "Impact", num: true },
-      { key: "risk_index", label: "Risk", num: true },
-      { key: "core_areas", label: "Core expertise areas", sort: false },
-      { key: "flag", label: "Flag" },
-    ];
+      <div class="table-wrap"><table class="data" id="ctable"></table></div>`;
 
     function draw() {
-      const q = holdersState.q.toLowerCase();
-      let rows = HOLDERS.filter((h) =>
-        (holdersState.dept === "all" || h.department === holdersState.dept) &&
-        (!q || (h.name + " " + h.core_areas + " " + h.position).toLowerCase().includes(q)));
-      const k = holdersState.sort, dir = holdersState.dir;
-      rows = rows.slice().sort((a, b) => {
-        let x = a[k], y = b[k];
-        if (typeof x === "number") return (x - y) * dir;
-        return String(x).localeCompare(String(y)) * dir;
-      });
-      const maxRisk = Math.max(...HOLDERS.map((h) => h.risk_index));
-      const thead = `<thead><tr>${cols.map((c) => {
-        const sortable = c.sort !== false;
-        const active = holdersState.sort === c.key;
-        const aria = active ? (dir === 1 ? "ascending" : "descending") : "none";
-        return `<th class="${c.num ? "num " : ""}${sortable ? "" : "no-sort"}" ${sortable ? `data-k="${c.key}" aria-sort="${aria}"` : ""}>${esc(c.label)}${sortable ? ` <span class="arrow">${active ? (dir === 1 ? "▲" : "▼") : "↕"}</span>` : ""}</th>`;
-      }).join("")}</tr></thead>`;
-      const body = `<tbody>${rows.map((h) => {
-        const f = riskFlag(h.flag);
-        const core = h.core_areas ? esc(h.core_areas) : `<span class="muted">—</span>`;
-        return `<tr>
-          <td class="num muted">${h.rank}</td>
+      const q = coreState.q.toLowerCase();
+      const rows = HOLDERS.filter((h) =>
+        (coreState.dept === "all" || h.department === coreState.dept) &&
+        (!q || (h.name + " " + h.core_areas).toLowerCase().includes(q))
+      ).slice().sort((a, b) => a.name.localeCompare(b.name));
+      $("#ctable").innerHTML = `<thead><tr>
+          <th>Name</th><th>Department</th><th>Tenure</th><th>Core expertise areas</th>
+        </tr></thead><tbody>${rows.map((h) => `<tr>
           <td class="name-cell">${esc(h.name.trim())}${h.leader ? ' <span title="Manager / leader" style="color:var(--st-warn)">★</span>' : ""}</td>
           <td><span class="dept-tag">${esc(h.department)}</span></td>
-          <td>${esc(h.position)}</td>
           <td class="muted">${esc(h.years)}</td>
-          <td class="num">${h.depth}</td>
-          <td class="num">${h.scarcity}</td>
-          <td class="num">${h.impact}</td>
-          <td><span class="riskbar"><span class="riskbar__val">${h.risk_index}</span>
-            <span class="riskbar__track"><span class="riskbar__fill" style="width:${h.risk_index / maxRisk * 100}%;background:${riskColor(f.cls)}"></span></span></span></td>
-          <td class="rare-list">${core}</td>
-          <td>${pill(f.cls, f.cls === "critical" ? "High" : f.cls === "moderate" ? "Moderate" : "Low")}</td>
-        </tr>`;
-      }).join("")}</tbody>`;
-      $("#htable").innerHTML = thead + body;
-      $("#hcount").textContent = `${rows.length} of ${HOLDERS.length} staff`;
-      $$("#htable th[data-k]").forEach((th) => th.addEventListener("click", () => {
-        const k = th.getAttribute("data-k");
-        if (holdersState.sort === k) holdersState.dir *= -1;
-        else { holdersState.sort = k; holdersState.dir = (k === "name" || k === "position") ? 1 : -1; }
-        draw();
-      }));
+          <td class="rare-list">${h.core_areas ? esc(h.core_areas) : '<span class="muted">—</span>'}</td>
+        </tr>`).join("")}</tbody>`;
+      $("#ccount").textContent = `${rows.length} of ${HOLDERS.length} staff`;
     }
     draw();
-    $("#hq").addEventListener("input", (e) => { holdersState.q = e.target.value; draw(); });
-    $("#hdept").addEventListener("change", (e) => { holdersState.dept = e.target.value; draw(); });
-  }
-
-  /* ---------------------------------------------------------------- Gaps */
-  const gapsState = { status: "all", q: "" };
-  function renderGaps(el) {
-    // Heatmap domain × status
-    const statusOrder = [
-      { cls: "good", label: "Adequate", color: "var(--st-good)" },
-      { cls: "warn", label: "Thin", color: "var(--st-warn)" },
-      { cls: "serious", label: "Single core", color: "var(--st-serious)" },
-      { cls: "critical", label: "No core", color: "var(--st-critical)" },
-    ];
-    const heatRows = DOMAINS.map((d) => {
-      const counts = { good: 0, warn: 0, serious: 0, critical: 0 };
-      GAPS.filter((g) => g.domain === d).forEach((g) => { const c = coverageStatus(g.status).cls; if (counts[c] != null) counts[c]++; });
-      return { domain: d, counts };
-    });
-    const heat = `<table class="heat"><thead><tr><th class="row-h">Domain</th>
-      ${statusOrder.map((s) => `<th>${s.label}</th>`).join("")}<th>Total</th></tr></thead><tbody>
-      ${heatRows.map((r) => {
-        const total = r.counts.good + r.counts.warn + r.counts.serious + r.counts.critical;
-        return `<tr><td class="row-h">${esc(r.domain)}</td>
-          ${statusOrder.map((s) => {
-            const v = r.counts[s.cls];
-            return `<td><span class="heat-cell ${v === 0 ? "zero" : ""}" style="${v ? `background:${s.color}` : ""}"
-              data-tip="<b>${esc(r.domain)}</b><br>${s.label}: ${v}">${v}</span></td>`;
-          }).join("")}
-          <td><span class="heat-cell zero" style="font-weight:800;color:var(--ink)">${total}</span></td></tr>`;
-      }).join("")}</tbody></table>`;
-
-    el.innerHTML = `
-      <div class="view__head"><h1>Knowledge Gaps</h1>
-        <p>Core expertise areas rated by how many people hold each as <em>core</em> expertise. <b style="color:var(--st-serious)">Single core experts</b> (one holder) are the sharpest continuity risk; <b style="color:var(--st-critical)">no core expert</b> marks areas dropped from the taxonomy because nobody holds them at core level.</p></div>
-
-      <div class="grid grid--kpi" style="margin-bottom:16px">
-        <div class="card kpi" style="--kpi-accent:var(--st-good)"><div class="kpi__value">${M.adequate}</div><div class="kpi__label">Adequate (3+ core)</div></div>
-        <div class="card kpi" style="--kpi-accent:var(--st-warn)"><div class="kpi__value">${M.thin}</div><div class="kpi__label">Thin coverage (2 core)</div></div>
-        <div class="card kpi" style="--kpi-accent:var(--st-serious)"><div class="kpi__value">${M.spof}</div><div class="kpi__label">Single core expert</div></div>
-        <div class="card kpi" style="--kpi-accent:var(--st-critical)"><div class="kpi__value">${M.noCore}</div><div class="kpi__label">No core expert</div></div>
-      </div>
-
-      <div class="card">
-        <div class="card__hd"><div class="card__title">Coverage heatmap</div>
-          <div class="card__sub">Expertise areas per domain, by resilience level</div></div>
-        <div class="table-wrap" style="border:0;box-shadow:none">${heat}</div>
-      </div>
-
-      <div class="toolbar" style="margin-top:24px">
-        <div class="field"><input type="search" id="gq" placeholder="Search expertise or domain…" aria-label="Search gaps" value="${esc(gapsState.q)}"></div>
-        <div class="field"><select id="gstatus" aria-label="Filter by status">
-          <option value="all">All statuses</option>
-          <option value="serious">Single core expert</option>
-          <option value="critical">No core expert</option>
-          <option value="warn">Thin coverage</option>
-          <option value="good">Adequate</option>
-        </select></div>
-        <span class="muted" id="gcount" style="margin-left:auto;font-size:13px"></span>
-      </div>
-      <div class="table-wrap"><table class="data" id="gtable"></table></div>`;
-
-    $("#gstatus").value = gapsState.status;
-
-    function draw() {
-      const q = gapsState.q.toLowerCase();
-      const rows = GAPS.filter((g) => {
-        const st = coverageStatus(g.status).cls;
-        return (gapsState.status === "all" || st === gapsState.status) &&
-          (!q || (g.expertise + " " + g.domain + " " + g.subdomain).toLowerCase().includes(q));
-      }).sort((a, b) => a.holders_n - b.holders_n || a.domain.localeCompare(b.domain));
-      $("#gtable").innerHTML = `<thead><tr>
-          <th>Expertise</th><th>Domain</th><th>Sub-domain</th>
-          <th class="num">Core</th><th>Status</th><th>Sole core holder</th><th>Recommended action</th>
-        </tr></thead><tbody>${rows.map((g) => {
-          const s = coverageStatus(g.status);
-          return `<tr>
-            <td class="name-cell">${esc(g.expertise)}</td>
-            <td><span class="dept-tag" style="background:color-mix(in srgb,${DOMAIN_COLOR[g.domain]} 18%,transparent);color:${DOMAIN_COLOR[g.domain]}">${esc(g.domain)}</span></td>
-            <td class="muted">${esc(g.subdomain)}</td>
-            <td class="num"><b>${g.holders_n}</b></td>
-            <td>${pill(s.cls, s.label, s.icon)}</td>
-            <td class="muted">${g.sole_holder ? esc(g.sole_holder) : "—"}</td>
-            <td class="muted">${esc(g.recommendation)}</td>
-          </tr>`;
-        }).join("")}</tbody>`;
-      $("#gcount").textContent = `${rows.length} of ${GAPS.length} areas`;
-    }
-    draw();
-    $("#gq").addEventListener("input", (e) => { gapsState.q = e.target.value; draw(); });
-    $("#gstatus").addEventListener("change", (e) => { gapsState.status = e.target.value; draw(); });
+    $("#cq").addEventListener("input", (e) => { coreState.q = e.target.value; draw(); });
+    $("#cdept").addEventListener("change", (e) => { coreState.dept = e.target.value; draw(); });
   }
 
   /* ---------------------------------------------------------------- Interviews */
@@ -708,8 +577,7 @@
   /* ---------------------------------------------------------------- router */
   const VIEWS = {
     overview: { el: "#view-overview", render: renderOverview, done: false },
-    holders: { el: "#view-holders", render: renderHolders },
-    gaps: { el: "#view-gaps", render: renderGaps },
+    core: { el: "#view-core", render: renderCore },
     interviews: { el: "#view-interviews", render: renderInterviews },
     matrix: { el: "#view-matrix", render: renderMatrix },
     mapping: { el: "#view-mapping", render: renderMapping },
