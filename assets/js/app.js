@@ -623,9 +623,9 @@
             <p>In January 2021, at the Al-Ula Summit, the Supreme Council of the Gulf Cooperation Council decided to establish the Gulf Center for Disease Prevention and Control. The aim of the Gulf Center is to enhance cooperation in public health and exchange knowledge among all member states.</p>
           </div>
           <figure class="photo-frame">
-            <img src="assets/img/about-summit.jpg" alt="Signing ceremony at the Al-Ula Summit"
+            <img src="assets/img/about-summit.png" alt="Signing ceremony at the Al-Ula Summit"
                  onerror="this.parentElement.classList.add('photo-frame--missing')" />
-            <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/about-summit.jpg</code></figcaption>
+            <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/about-summit.png</code></figcaption>
           </figure>
         </div>
       </section>
@@ -653,9 +653,9 @@
           </div>
           <div class="ceo-card">
             <figure class="photo-frame photo-frame--portrait">
-              <img src="assets/img/ceo-manaf.jpg" alt="Dr. Manaf Alqahtani, Chief Executive Officer, Gulf CDC"
+              <img src="assets/img/ceo-manaf.png" alt="Dr. Manaf Alqahtani, Chief Executive Officer, Gulf CDC"
                    onerror="this.parentElement.classList.add('photo-frame--missing')" />
-              <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/ceo-manaf.jpg</code></figcaption>
+              <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/ceo-manaf.png</code></figcaption>
             </figure>
             <div class="ceo-card__plate">
               <div class="ceo-card__name">Dr. Manaf Alqahtani</div>
