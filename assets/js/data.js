@@ -423,7 +423,7 @@ window.GCDC_DATA = {
       "expertise": "Risk Assessment (Rapid Risk Assessment)",
       "holders_n": 1,
       "holders": [
-        "Dr Mahim Al Balushi (PHPP)"
+        "Mahim Al Balushi (PHPP)"
       ]
     },
     {
@@ -500,7 +500,7 @@ window.GCDC_DATA = {
       "expertise": "Road Traffic & Injury Prevention",
       "holders_n": 3,
       "holders": [
-        "Dr Mahim Al Balushi (PHPP)",
+        "Mahim Al Balushi (PHPP)",
         "Abdullah Alqahtani (PHPP)",
         "Raghad AlHumud (PHPP)"
       ]
@@ -654,7 +654,7 @@ window.GCDC_DATA = {
       "expertise": "Data Analysis (Quantitative)",
       "holders_n": 8,
       "holders": [
-        "Dr Mahim Al Balushi (PHPP)",
+        "Mahim Al Balushi (PHPP)",
         "Haya Sulaiman Alothaimeen (PHE)",
         "Nouf Alzuhayri (PHI)",
         "Abdullah Alqahtani (PHPP)",
@@ -758,7 +758,7 @@ window.GCDC_DATA = {
       "expertise": "Survey Design & Validation",
       "holders_n": 1,
       "holders": [
-        "Dr Mahim Al Balushi (PHPP)"
+        "Mahim Al Balushi (PHPP)"
       ]
     },
     {
@@ -894,7 +894,7 @@ window.GCDC_DATA = {
       "holders_n": 2,
       "holders": [
         "Waleed Al Nadabi (PHE)",
-        "Dr Mahim Al Balushi (PHPP)"
+        "Mahim Al Balushi (PHPP)"
       ]
     },
     {
@@ -1999,7 +1999,7 @@ window.GCDC_DATA = {
       "rank": 2
     },
     {
-      "name": "Dr Mahim Al Balushi",
+      "name": "Mahim Al Balushi",
       "department": "PHPP",
       "position": "Manager",
       "years": "More than 10 years",
