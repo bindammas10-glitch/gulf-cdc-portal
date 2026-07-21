@@ -96,6 +96,7 @@ button { font-family: inherit; cursor: pointer; }
   max-width: var(--maxw); margin: 0 auto; padding: 7px clamp(16px, 4vw, 32px);
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
+.utilbar__inner--end { justify-content: flex-end; }
 .utilbar__org { display: flex; align-items: center; gap: 9px; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .utilbar__org [dir="rtl"] { font-weight: 600; color: rgba(255,255,255,.85); }
 .utilbar__org .sep { opacity: .45; }
@@ -119,7 +120,7 @@ button { font-family: inherit; cursor: pointer; }
   min-height: 66px; display: flex; align-items: stretch; gap: 18px;
 }
 .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; flex-shrink: 0; }
-.brand__logo { height: 36px; width: auto; display: block; }
+.brand__logo { height: 40px; width: auto; display: block; }
 .brand__tag {
   color: #fff; font-weight: 700; font-size: 14px; letter-spacing: .3px;
   border-left: 1px solid rgba(255,255,255,.28); padding-left: 13px;
