@@ -19,7 +19,8 @@ def norm(n):
     return re.sub(r"[^a-z0-9 ]", "", str(n or "").lower()).strip()
 
 # Display-name and department corrections, applied everywhere downstream
-NAME_FIX = {"Bushra": "Bushra Alghamdi", "Faris": "Faris Aldammas", "Rose": "Rose Nazra"}
+NAME_FIX = {"Bushra": "Bushra Alghamdi", "Faris": "Faris Aldammas", "Rose": "Rose Nazra",
+            "Dr Mahim Al Balushi": "Mahim Al Balushi"}
 DEPT_FIX = {"CEO": "CEO office"}
 def fix_name(n): return NAME_FIX.get(s(n), s(n))
 def fix_dept(d): return DEPT_FIX.get(s(d), s(d))
