@@ -11,8 +11,26 @@ import openpyxl, json, re, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, "data", "GulfCDC_KnowledgeMapping_MasterAnalysis_CoreTaxonomy.xlsx")
+SURVEY = os.path.join(ROOT, "data", "Knowledge_Mapping_survey.xlsx")
 
 def s(v): return "" if v is None else str(v).strip()
+
+def norm(n):
+    return re.sub(r"[^a-z0-9 ]", "", str(n or "").lower()).strip()
+
+# Emails from the survey workbook, keyed by normalised name
+email_by_name = {}
+if os.path.exists(SURVEY):
+    sv = openpyxl.load_workbook(SURVEY, data_only=True)[["Sheet1"][0]]
+    for r in sv.iter_rows(min_row=2, values_only=True):
+        name = r[6] or r[4]
+        if not name:
+            continue
+        raw = s(r[7])
+        found = re.findall(r"[\w.\-]+@[\w.\-]+\.[A-Za-z]{2,}", raw)
+        email = next((e for e in found if "gulfcdc" in e.lower()), found[0] if found else "")
+        if email:
+            email_by_name[norm(name)] = email.strip()
 
 wb = openpyxl.load_workbook(XLSX, data_only=True)
 
@@ -70,7 +88,8 @@ for m in sorted(master, key=lambda x: (-x["risk_index"], x["num"])):
         years=m["years"], profile_level=m["profile_level"], depth=m["depth"], scarcity=m["scarcity"],
         impact=m["impact"], risk_index=m["risk_index"], core_count=m["core_count"],
         core_areas=m["core_areas"], rare_expertise="; ".join(sole.get(m["name"], [])) or "(none sole-held)",
-        flag=flag_for(m["risk_index"]), leader=m["leader"], continuity=cont.get(m["name"], "")))
+        flag=flag_for(m["risk_index"]), leader=m["leader"], continuity=cont.get(m["name"], ""),
+        email=email_by_name.get(norm(m["name"]), "")))
 for i, h in enumerate(holders_out, 1):
     h["rank"] = i
 

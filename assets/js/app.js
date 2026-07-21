@@ -246,39 +246,61 @@
     $("#cdept").addEventListener("change", (e) => { coreState.dept = e.target.value; draw(); });
   }
 
-  /* ---------------------------------------------------------------- Interviews */
-  // Classify the interview status string → {cls, label}
-  function interviewStatus(raw) {
-    const s = String(raw || "");
-    if (s.includes("✓") || /interviewed/i.test(s)) return { cls: "good", label: "Interviewed" };
-    if (s.includes("◑") || /survey/i.test(s)) return { cls: "moderate", label: "Survey-validated" };
-    return { cls: "neutral", label: "Pending interview" };
+  /* ---------------------------------------------------------------- Contacts */
+  const contactsState = { dept: "all", q: "" };
+  function initials(name) {
+    const parts = clean(name).split(" ").filter(Boolean);
+    const skip = /^(dr|mr|ms|mrs)\.?$/i;
+    const use = parts.filter((p) => !skip.test(p));
+    return ((use[0] || "")[0] || "").toUpperCase() + ((use[1] || "")[0] || "").toUpperCase();
   }
-  function renderInterviews(el) {
-    const done = SHORTLIST.filter((s) => interviewStatus(s.interview_status).cls === "good").length;
-    const totalMin = SHORTLIST.reduce((a, s) => a + (parseInt(s.duration, 10) || 0), 0);
-    const cards = SHORTLIST.slice().sort((a, b) => a.order - b.order).map((s) => {
-      const focus = String(s.focus || "").split(";").map(clean).filter(Boolean);
-      const iv = interviewStatus(s.interview_status);
-      return `<article class="iv">
-        <div class="iv__rank">${s.order}</div>
-        <div>
-          <div class="iv__name">${esc(s.name.trim())} <span class="dept-tag">${esc(s.department)}</span></div>
-          <div class="iv__meta">${esc(s.position)} · ${esc(s.profile_level)}</div>
-        </div>
-        <div class="iv__right">
-          ${pill("critical", "Risk " + s.risk_index)}
-          ${pill(iv.cls, iv.label)}
-          <span class="muted" style="font-size:12px">${esc(s.duration)}</span>
-        </div>
-        <div class="iv__why">${focus.map((r) => `<span class="tag-chip">${esc(r)}</span>`).join("")}</div>
-      </article>`;
-    }).join("");
-
+  function renderContacts(el) {
+    const depts = ["all", ...Array.from(new Set(HOLDERS.map((h) => h.department)))];
     el.innerHTML = `
-      <div class="view__head"><h1>Knowledge-Capture Interview Plan</h1>
-        <p>The structured deep-dive interview shortlist — all managers and strategic-profile staff, ordered by continuity risk. ${done} of ${SHORTLIST.length} interviews complete · about ${Math.round(totalMin / 60)} hours total.</p></div>
-      <div class="iv-list">${cards}</div>`;
+      <div class="view__head"><h1>Contacts</h1>
+        <p>Directory of all ${M.experts} staff — role, tenure, core expertise, and work email. Filter by department, or search by name or expertise.</p></div>
+      <div class="toolbar">
+        <div class="field"><input type="search" id="ctq" placeholder="Search name or expertise…" aria-label="Search contacts" value="${esc(contactsState.q)}"></div>
+        <div class="field"><select id="ctdept" aria-label="Filter by department">
+          ${depts.map((d) => `<option value="${esc(d)}"${d === contactsState.dept ? " selected" : ""}>${d === "all" ? "All departments" : esc(d)}</option>`).join("")}
+        </select></div>
+        <span class="muted" id="ctcount" style="margin-left:auto;font-size:13px"></span>
+      </div>
+      <div class="contact-grid" id="ctgrid"></div>`;
+
+    function draw() {
+      const q = contactsState.q.toLowerCase();
+      const rows = HOLDERS.filter((h) =>
+        (contactsState.dept === "all" || h.department === contactsState.dept) &&
+        (!q || (h.name + " " + h.core_areas + " " + h.email).toLowerCase().includes(q))
+      ).slice().sort((a, b) => a.name.localeCompare(b.name));
+      const deptList = Array.from(new Set(HOLDERS.map((x) => x.department)));
+      const deptColor = (n) => `var(--c${(deptList.indexOf(n) % 9) + 1})`;
+      $("#ctgrid").innerHTML = rows.map((h) => {
+        const areas = String(h.core_areas || "").split(";").map(clean).filter(Boolean);
+        return `<article class="contact">
+          <div class="contact__hd">
+            <span class="contact__avatar" style="background:${deptColor(h.department)}">${esc(initials(h.name))}</span>
+            <div class="contact__id">
+              <div class="contact__name">${esc(h.name.trim())}${h.leader ? ' <span title="Manager / leader" style="color:var(--st-warn)">★</span>' : ""}</div>
+              <div class="contact__role">${esc(h.position)} · <span class="dept-tag">${esc(h.department)}</span></div>
+            </div>
+          </div>
+          <dl class="contact__meta">
+            <div><dt>Tenure</dt><dd>${esc(h.years)}</dd></div>
+            <div><dt>Profile</dt><dd>${esc(h.profile_level)}</dd></div>
+          </dl>
+          <div class="contact__areas">${areas.map((a) => `<span class="tag-chip">${esc(a)}</span>`).join("")}</div>
+          <a class="contact__email" href="mailto:${esc(h.email)}">
+            <span aria-hidden="true">✉</span> ${h.email ? esc(h.email) : "—"}
+          </a>
+        </article>`;
+      }).join("") || `<div class="empty">No staff match your search.</div>`;
+      $("#ctcount").textContent = `${rows.length} of ${HOLDERS.length} staff`;
+    }
+    draw();
+    $("#ctq").addEventListener("input", (e) => { contactsState.q = e.target.value; draw(); });
+    $("#ctdept").addEventListener("change", (e) => { contactsState.dept = e.target.value; draw(); });
   }
 
   /* ---------------------------------------------------------------- Matrix */
@@ -554,7 +576,7 @@
   const VIEWS = {
     overview: { el: "#view-overview", render: renderOverview, done: false },
     core: { el: "#view-core", render: renderCore },
-    interviews: { el: "#view-interviews", render: renderInterviews },
+    contacts: { el: "#view-contacts", render: renderContacts },
     matrix: { el: "#view-matrix", render: renderMatrix },
     mapping: { el: "#view-mapping", render: renderMapping },
   };
