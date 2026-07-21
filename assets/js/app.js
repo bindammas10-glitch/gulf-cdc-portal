@@ -149,25 +149,16 @@
       { label: "Low / Standard", value: M.lowRisk, color: "var(--st-good)" },
     ];
 
-    // Coverage by domain (stacked) — core taxonomy areas only (57)
-    const byDomain = DOMAINS.map((d) => {
-      const rows = GAPS.filter((g) => g.domain === d && g.in_taxonomy !== false);
-      const c = { good: 0, warn: 0, serious: 0 };
-      rows.forEach((g) => { const cl = coverageStatus(g.status).cls; if (c[cl] != null) c[cl]++; });
-      return { label: d, total: rows.length,
-        segs: [
-          { value: c.good, color: "var(--st-good)", label: "Adequate" },
-          { value: c.warn, color: "var(--st-warn)", label: "Thin (2 core)" },
-          { value: c.serious, color: "var(--st-serious)", label: "Single core expert" },
-        ] };
-    }).sort((a, b) => b.total - a.total);
-    const maxDomTotal = Math.max(...byDomain.map((d) => d.total));
-
-    // Top continuity risks
-    const topRisk = HOLDERS.slice().sort((a, b) => b.risk_index - a.risk_index).slice(0, 8)
-      .map((h) => ({ label: h.name.trim(), value: h.risk_index, color: riskColor(riskFlag(h.flag).cls),
-        tip: `<b>${esc(h.name.trim())}</b> (${esc(h.department)})<br>Risk index: ${h.risk_index} · Depth ${h.depth} · Scarcity ${h.scarcity} · Impact ${h.impact}` }));
-    const maxRisk = Math.max(...HOLDERS.map((h) => h.risk_index));
+    // Coverage by department — core areas each department has ≥1 core holder in
+    const deptOf = (h) => { const m = /\(([^)]+)\)\s*$/.exec(h); return m ? m[1].trim() : ""; };
+    const DEPTS = Array.from(new Set(HOLDERS.map((h) => h.department)));
+    const deptCov = DEPTS.map((d, i) => {
+      const areas = MATRIX.filter((m) => m.holders.some((h) => deptOf(h) === d)).length;
+      const staff = HOLDERS.filter((h) => h.department === d).length;
+      return { label: d, value: areas, staff, color: `var(--c${(i % 9) + 1})`,
+        tip: `<b>${esc(d)}</b><br>${areas} of ${M.expertiseAreas} core areas · ${staff} staff` };
+    }).sort((a, b) => b.value - a.value);
+    const maxDeptCov = Math.max(...deptCov.map((d) => d.value), 1);
 
     const kpi = (val, label, note, accent) =>
       `<div class="card kpi" style="--kpi-accent:${accent}">
@@ -176,8 +167,8 @@
 
     el.innerHTML = `
       <div class="view__head">
-        <h1>Workforce Knowledge Continuity</h1>
-        <p>A live picture of where GCDC's core expertise lives, where losing one person would break a capability, and who to talk to first. Built from the core-taxonomy analysis: ${M.experts} staff across ${M.depts} departments, mapped to ${M.domains} domains and ${M.expertiseAreas} core expertise areas.</p>
+        <h1>Knowledge Mapping</h1>
+        <p>A live picture of where GCDC's core expertise lives and where it is thinly held. Built from the core-taxonomy analysis: ${M.experts} staff across ${M.depts} departments, mapped to ${M.domains} domains and ${M.expertiseAreas} core expertise areas.</p>
       </div>
 
       <div class="grid grid--kpi">
@@ -185,9 +176,6 @@
         ${kpi(M.expertiseAreas, "Core expertise areas", `${M.subdomains} sub-domains`, "var(--accent)")}
         ${kpi(M.spof, "Single core expert", "Only one core holder", "var(--st-serious)")}
         ${kpi(M.thin, "Thinly covered", "Only two core holders", "var(--st-warn)")}
-        ${kpi(M.noCore, "No core expert", "Areas dropped from taxonomy", "var(--st-critical)")}
-        ${kpi(M.highRisk, "High-risk experts", "Continuity flag", "var(--st-critical)")}
-        ${kpi(M.interviews, "Interview shortlist", "Knowledge capture", "var(--brand)")}
       </div>
 
       <div class="grid grid--2" style="margin-top:16px">
@@ -213,22 +201,10 @@
         </div>
       </div>
 
-      <div class="grid grid--2" style="margin-top:16px">
-        <div class="card">
-          <div class="card__hd"><div class="card__title">Coverage by domain</div>
-            <div class="card__sub">Expertise areas per domain, by resilience</div></div>
-          ${stackedRows(byDomain, maxDomTotal)}
-          <div class="legend" style="margin-top:16px">
-            <span class="legend__item"><span class="legend__swatch" style="background:var(--st-good)"></span>Adequate</span>
-            <span class="legend__item"><span class="legend__swatch" style="background:var(--st-warn)"></span>Thin</span>
-            <span class="legend__item"><span class="legend__swatch" style="background:var(--st-serious)"></span>Single point</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__hd"><div class="card__title">Highest continuity risk</div>
-            <div class="card__sub">Top staff by risk index (depth × scarcity × impact)</div></div>
-          ${rankedBars(topRisk, maxRisk)}
-        </div>
+      <div class="card" style="margin-top:16px">
+        <div class="card__hd"><div class="card__title">Coverage by department</div>
+          <div class="card__sub">Core expertise areas each department covers (of ${M.expertiseAreas})</div></div>
+        ${rankedBars(deptCov, maxDeptCov)}
       </div>`;
   }
 
