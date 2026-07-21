@@ -572,8 +572,104 @@
     draw();
   }
 
+  /* ---------------------------------------------------------------- Home */
+  function renderHome(el) {
+    el.innerHTML = `
+      <div class="hero">
+        <div class="hero__inner">
+          <img class="hero__logo" src="assets/img/km-logo.svg" alt="Knowledge Mapping" />
+          <div class="hero__ar" dir="rtl">خريطة المعرفة</div>
+          <div class="hero__en">KNOWLEDGE MAPPING</div>
+          <div class="hero__tag">Right Knowledge. Right People. Right Time.</div>
+        </div>
+      </div>
+
+      <div class="grid grid--2" style="margin-top:26px">
+        <div class="card">
+          <div class="card__hd"><div class="card__title">About the Knowledge Mapping</div></div>
+          <p style="color:var(--ink-2)">An institutional initiative to develop a comprehensive map of health expertise across the Center and GCC countries. It identifies and documents employees’ specialized knowledge and skills, classifies them within a unified public health framework, and serves as a reference for determining areas of expertise, proficiency levels, and their distribution across departments.</p>
+        </div>
+        <div class="card">
+          <div class="card__hd"><div class="card__title">Purpose</div></div>
+          <p style="color:var(--ink-2)">To identify, document, and connect knowledge and expertise across the organization, ensuring access to the right knowledge at the right time. This supports informed decision-making, ensures business continuity, maximizes the use of institutional expertise, and reduces the risk of knowledge loss.</p>
+        </div>
+      </div>
+
+      <div class="home-stats">
+        <div class="card home-stat">
+          <div class="home-stat__num">30</div>
+          <div class="home-stat__label">Employees contributed</div>
+        </div>
+        <div class="card home-stat">
+          <div class="home-stat__num">4</div>
+          <div class="home-stat__label">Departments</div>
+        </div>
+        <div class="card home-stat">
+          <div class="home-stat__num">10</div>
+          <div class="home-stat__label">Domains of experience</div>
+        </div>
+      </div>`;
+  }
+
+  /* ---------------------------------------------------------------- About */
+  function renderAbout(el) {
+    el.innerHTML = `
+      <div class="view__head"><h1>About</h1></div>
+
+      <section class="about-block">
+        <h2 class="about-title">About Gulf CDC</h2>
+        <div class="about-grid">
+          <div class="card about-text">
+            <p>In January 2021, at the Al-Ula Summit, the Supreme Council of the Gulf Cooperation Council decided to establish the Gulf Center for Disease Prevention and Control. The aim of the Gulf Center is to enhance cooperation in public health and exchange knowledge among all member states.</p>
+          </div>
+          <figure class="photo-frame">
+            <img src="assets/img/about-summit.jpg" alt="Signing ceremony at the Al-Ula Summit"
+                 onerror="this.parentElement.classList.add('photo-frame--missing')" />
+            <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/about-summit.jpg</code></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about-block">
+        <div class="grid grid--2">
+          <div class="card">
+            <div class="card__hd"><div class="card__title">Our Mission</div></div>
+            <p style="color:var(--ink-2)">To strengthen coordination, build knowledge, and generate evidence to enable the prevention of communicable and non-communicable diseases, reduce public health emergencies, and promote healthy communities across the Gulf.</p>
+          </div>
+          <div class="card">
+            <div class="card__hd"><div class="card__title">Our Vision</div></div>
+            <p style="color:var(--ink-2)">A Gulf community where all individuals enjoy the best possible health at every stage of life.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-block about-block--band">
+        <h2 class="about-title">CEO Message</h2>
+        <div class="about-grid about-grid--ceo">
+          <div class="card about-text">
+            <p>I am truly excited to begin this journey with you.</p>
+            <p style="margin-top:10px">What makes Gulf CDC special is not only its mission, but the people behind it — a team united by purpose, expertise, and commitment to protecting the health of our region.</p>
+            <p style="margin-top:10px">Together, we have a unique opportunity to build a Gulf CDC that is agile, respected, science-driven, and globally connected.</p>
+          </div>
+          <div class="ceo-card">
+            <figure class="photo-frame photo-frame--portrait">
+              <img src="assets/img/ceo-manaf.jpg" alt="Dr. Manaf Alqahtani, Chief Executive Officer, Gulf CDC"
+                   onerror="this.parentElement.classList.add('photo-frame--missing')" />
+              <figcaption class="photo-frame__ph">📷 Photo — upload <code>assets/img/ceo-manaf.jpg</code></figcaption>
+            </figure>
+            <div class="ceo-card__plate">
+              <div class="ceo-card__name">Dr. Manaf Alqahtani</div>
+              <div class="ceo-card__role">Chief Executive Officer, Gulf CDC</div>
+            </div>
+          </div>
+        </div>
+      </section>`;
+  }
+
   /* ---------------------------------------------------------------- router */
   const VIEWS = {
+    home: { el: "#view-home", render: renderHome },
+    about: { el: "#view-about", render: renderAbout },
     overview: { el: "#view-overview", render: renderOverview, done: false },
     core: { el: "#view-core", render: renderCore },
     contacts: { el: "#view-contacts", render: renderContacts },
@@ -581,7 +677,7 @@
     mapping: { el: "#view-mapping", render: renderMapping },
   };
   function go(name) {
-    if (!VIEWS[name]) name = "overview";
+    if (!VIEWS[name]) name = "home";
     Object.keys(VIEWS).forEach((k) => { $(VIEWS[k].el).hidden = k !== name; });
     $$(".tab").forEach((t) => t.classList.toggle("is-active", t.dataset.view === name));
     const v = VIEWS[name];
@@ -621,5 +717,5 @@
 
   /* ---------------------------------------------------------------- boot */
   $("#footerMeta").textContent = `${M.experts} staff · ${M.expertiseAreas} expertise areas · ${M.spof} single points of failure`;
-  go(location.hash.replace("#", "") || "overview");
+  go(location.hash.replace("#", "") || "home");
 })();
