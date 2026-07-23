@@ -567,7 +567,7 @@
 
       <div class="grid grid--2" style="margin-top:26px">
         <div class="card">
-          <div class="card__hd"><div class="card__title">About the Knowledge Mapping</div></div>
+          <div class="card__hd"><div class="card__title">About Knowledge Mapping</div></div>
           <p style="color:var(--ink-2)">An institutional initiative to develop a comprehensive map of health expertise across the Center and GCC countries. It identifies and documents employees’ specialized knowledge and skills, classifies them within a unified public health framework, and serves as a reference for determining areas of expertise, proficiency levels, and their distribution across departments.</p>
         </div>
         <div class="card">
