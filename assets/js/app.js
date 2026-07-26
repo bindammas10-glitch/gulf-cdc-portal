@@ -630,6 +630,9 @@
   });
 
   /* ---------------------------------------------------------------- site search */
+  // Handled in JS (not an inline onsubmit) so a strict CSP can forbid inline scripts.
+  const siteSearchForm = $("#siteSearchForm");
+  if (siteSearchForm) siteSearchForm.addEventListener("submit", (e) => e.preventDefault());
   const siteSearch = $("#siteSearch");
   if (siteSearch) {
     const runSearch = () => {

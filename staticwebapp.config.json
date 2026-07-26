@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+
+  "//": [
+    "Azure Static Web Apps configuration for the GCDC Knowledge Mapping Page.",
+    "Effect: every page requires a signed-in GCDC work account (Microsoft Entra ID).",
+    "Anonymous visitors are redirected to the Microsoft sign-in page.",
+    "See docs/AZURE_DEPLOYMENT.md for the setup steps."
+  ],
+
+  "trailingSlash": "auto",
+
+  "routes": [
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404,
+      "//": "Disable the built-in GitHub identity provider — work accounts only."
+    },
+    {
+      "route": "/login",
+      "rewrite": "/.auth/login/aad"
+    },
+    {
+      "route": "/logout",
+      "redirect": "/.auth/logout"
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["authenticated"],
+      "//": "Everything on the site requires an authenticated user."
+    }
+  ],
+
+  "responseOverrides": {
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/aad",
+      "//": "Send anonymous visitors straight to Entra ID sign-in (usually silent SSO)."
+    },
+    "403": {
+      "rewrite": "/index.html"
+    },
+    "404": {
+      "rewrite": "/index.html"
+    }
+  },
+
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/data/*"]
+  },
+
+  "mimeTypes": {
+    ".json": "application/json",
+    ".svg": "image/svg+xml",
+    ".webmanifest": "application/manifest+json"
+  },
+
+  "globalHeaders": {
+    "Cache-Control": "no-cache",
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Content-Security-Policy": "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'self' https://*.sharepoint.com; base-uri 'self'; form-action 'self'"
+  }
+}
