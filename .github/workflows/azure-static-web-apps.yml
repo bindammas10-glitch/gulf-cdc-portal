@@ -1,0 +1,66 @@
+name: Deploy to Azure Static Web Apps
+
+# Publishes the Knowledge Mapping Page to Azure Static Web Apps on every push
+# to main, so the normal edit → commit → live loop is preserved.
+#
+# One-time setup (see docs/AZURE_DEPLOYMENT.md):
+#   Add the repository secret AZURE_STATIC_WEB_APPS_API_TOKEN
+#   (Settings → Secrets and variables → Actions → New repository secret)
+#   with the deployment token from the Azure Static Web App.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: azure-swa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build_and_deploy:
+    # Stays dormant until IT adds AZURE_STATIC_WEB_APPS_API_TOKEN, so this
+    # workflow cannot fail before the Azure resource exists.
+    if: >-
+      secrets.AZURE_STATIC_WEB_APPS_API_TOKEN != '' &&
+      (github.event_name != 'pull_request' || github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+          lfs: false
+
+      - name: Deploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: upload
+          # The site is plain static HTML/CSS/JS — nothing to build.
+          app_location: "/"
+          output_location: ""
+          skip_app_build: true
+          skip_api_build: true
+
+  close_pull_request:
+    if: >-
+      secrets.AZURE_STATIC_WEB_APPS_API_TOKEN != '' &&
+      github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close staging environment
+    steps:
+      - name: Close
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: close
