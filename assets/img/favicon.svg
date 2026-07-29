@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GCDC Knowledge Mapping">
+  <rect width="64" height="64" rx="14" fill="#0D3269"/>
+  <!-- knowledge-map pin: node network inside a marker -->
+  <g stroke="#4CC0DF" stroke-width="3" fill="none">
+    <path d="M32 15 L20 27 M32 15 L44 27 M20 27 L32 44 M44 27 L32 44 M20 27 L44 27"/>
+  </g>
+  <circle cx="32" cy="15" r="5" fill="#ffffff"/>
+  <circle cx="20" cy="27" r="4.5" fill="#4CC0DF"/>
+  <circle cx="44" cy="27" r="4.5" fill="#4CC0DF"/>
+  <circle cx="32" cy="45" r="5" fill="#00902E"/>
+</svg>
