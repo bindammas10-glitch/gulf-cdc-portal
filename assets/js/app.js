@@ -217,11 +217,11 @@
     el.innerHTML = `
       <div class="view__head">
         <h1>Knowledge Mapping</h1>
-        <p>A live picture of where GCDC's core expertise lives and where it is thinly held. Built from the core-taxonomy analysis: ${M.experts} staff across ${M.depts} departments, mapped to ${M.domains} domains and ${M.expertiseAreas} core expertise areas.</p>
+        <p>A live picture of where GCDC's core expertise lives and where it is thinly held. Built from the core-taxonomy analysis: ${M.experts} staff across 4 departments, mapped to ${M.domains} domains and ${M.expertiseAreas} core expertise areas.</p>
       </div>
 
       <div class="grid grid--kpi">
-        ${kpi(M.experts, "Staff assessed", `${M.depts} departments`, "var(--brand)", "view:contacts", "Open the staff directory")}
+        ${kpi(M.experts, "Staff assessed", "4 departments", "var(--brand)", "view:contacts", "Open the staff directory")}
         ${kpi(M.expertiseAreas, "Core expertise areas", `${M.subdomains} sub-domains`, "var(--accent)", "view:matrix", "Browse the expertise matrix")}
         ${kpi(M.spof, "Single core expert", "Only one core holder", "var(--st-serious)", "view:matrix", "See which areas have a single holder")}
         ${kpi(M.thin, "Thinly covered", "Only two core holders", "var(--st-warn)", "view:matrix", "See thinly covered areas")}
@@ -237,6 +237,14 @@
               <p class="card__sub" style="margin-top:12px">${Math.round((M.spof + M.thin) / M.expertiseAreas * 100)}% of all capabilities rest on one or two people.</p>
             </div>
           </div>
+          <dl class="deflist">
+            <div><dt><span class="legend__swatch" style="background:var(--st-good)"></span> Adequate</dt>
+              <dd>Three or more staff hold the area as core expertise — the knowledge is resilient: if one person leaves, others can carry it.</dd></div>
+            <div><dt><span class="legend__swatch" style="background:var(--st-warn)"></span> Thinly covered</dt>
+              <dd>Exactly two core holders. Workable today, but one departure would leave a single point of failure — worth building redundancy.</dd></div>
+            <div><dt><span class="legend__swatch" style="background:var(--st-serious)"></span> Single core expert</dt>
+              <dd>Only one person in GCDC holds this area at core level. If they leave, the capability leaves with them — the highest continuity risk and the priority for knowledge capture.</dd></div>
+          </dl>
         </div>
         <div class="card">
           <div class="card__hd"><div class="card__title">Coverage by department</div>
@@ -545,6 +553,25 @@
     el.innerHTML = `
       <div class="view__head"><h1>Expertise Matrix</h1>
         <p>The full taxonomy: ${M.domains} domains, ${M.subdomains} sub-domains and ${M.expertiseAreas} expertise areas, showing who holds each. Colour marks coverage resilience.</p></div>
+
+      <details class="howto card">
+        <summary>How to read this matrix</summary>
+        <div class="howto__body">
+          <p>Each card is one <b>core expertise area</b>. The bold line is the area's name, and the smaller line under it is the <b>sub-domain</b> it belongs to. Cards are grouped under colour-coded <b>domain</b> headings.</p>
+          <p>The badge in the top-right corner (for example ${pill("serious", "1", "▲")}) tells you two things at a glance:</p>
+          <ul>
+            <li>The <b>number</b> is how many staff hold this area as core expertise.</li>
+            <li>The <b>colour and symbol</b> grade how safe that coverage is:
+              <span class="howto__pills">
+                ${pill("good", "Adequate — 3+ core holders", "●")}
+                ${pill("warn", "Thin — only 2", "◆")}
+                ${pill("serious", "Single core expert — only 1", "▲")}
+              </span>
+            </li>
+          </ul>
+          <p>The chips inside each card are the <b>people who hold that expertise</b>, with their department in brackets — click a name to open their profile in Contacts. So a card showing ${pill("serious", "1", "▲")} with one chip means exactly one person carries that capability for GCDC: if they leave, the knowledge leaves too.</p>
+        </div>
+      </details>
       <div class="toolbar">
         <div class="field field--search">
           <span class="field__icon" aria-hidden="true">⌕</span>
@@ -870,8 +897,9 @@
 
       <div class="home-stats">
         <div class="card home-stat">
-          <div class="home-stat__num">30</div>
+          <div class="home-stat__num">30<span class="home-stat__den">/40</span></div>
           <div class="home-stat__label">Employees contributed</div>
+          <div class="home-stat__note">30 of 40 GCDC employees took part</div>
         </div>
         <div class="card home-stat">
           <div class="home-stat__num">4</div>
@@ -970,6 +998,5 @@
   }
 
   /* ---------------------------------------------------------------- boot */
-  $("#footerMeta").textContent = `${M.experts} staff · ${M.expertiseAreas} expertise areas · ${M.spof} single points of failure`;
   go(location.hash.replace("#", "") || "home");
 })();
