@@ -65,12 +65,6 @@ window.GCDC_DATA = {
       "path": "Public Health Emergency & Health Security > Response & Operations > Disaster Medicine & Management"
     },
     {
-      "domain": "Public Health Emergency & Health Security",
-      "subdomain": "Health Security",
-      "expertise": "Strategic Stockpile Management",
-      "path": "Public Health Emergency & Health Security > Health Security > Strategic Stockpile Management"
-    },
-    {
       "domain": "Communicable & Non-Communicable Diseases",
       "subdomain": "Communicable Diseases",
       "expertise": "Infectious Disease Epidemiology",
@@ -87,6 +81,12 @@ window.GCDC_DATA = {
       "subdomain": "Communicable Diseases",
       "expertise": "Infection & Immunity",
       "path": "Communicable & Non-Communicable Diseases > Communicable Diseases > Infection & Immunity"
+    },
+    {
+      "domain": "Communicable & Non-Communicable Diseases",
+      "subdomain": "Communicable Diseases",
+      "expertise": "Vector-borne Diseases",
+      "path": "Communicable & Non-Communicable Diseases > Communicable Diseases > Vector-borne Diseases"
     },
     {
       "domain": "Communicable & Non-Communicable Diseases",
@@ -253,12 +253,6 @@ window.GCDC_DATA = {
     {
       "domain": "Research & Scientific Practice",
       "subdomain": "Research Methodology",
-      "expertise": "Survey Design & Validation",
-      "path": "Research & Scientific Practice > Research Methodology > Survey Design & Validation"
-    },
-    {
-      "domain": "Research & Scientific Practice",
-      "subdomain": "Research Methodology",
       "expertise": "Indicators Development & Measurement",
       "path": "Research & Scientific Practice > Research Methodology > Indicators Development & Measurement"
     },
@@ -321,12 +315,6 @@ window.GCDC_DATA = {
       "subdomain": "Clinical Disciplines",
       "expertise": "Emergency Medical Services / Paramedic",
       "path": "Clinical & Specialized Practice > Clinical Disciplines > Emergency Medical Services / Paramedic"
-    },
-    {
-      "domain": "Clinical & Specialized Practice",
-      "subdomain": "Laboratory & Diagnostics",
-      "expertise": "Medical Laboratory",
-      "path": "Clinical & Specialized Practice > Laboratory & Diagnostics > Medical Laboratory"
     },
     {
       "domain": "Clinical & Specialized Practice",
@@ -446,15 +434,6 @@ window.GCDC_DATA = {
       ]
     },
     {
-      "domain": "Public Health Emergency & Health Security",
-      "subdomain": "Health Security",
-      "expertise": "Strategic Stockpile Management",
-      "holders_n": 1,
-      "holders": [
-        "Abdullatif Bin Khunayn (PHE)"
-      ]
-    },
-    {
       "domain": "Communicable & Non-Communicable Diseases",
       "subdomain": "Communicable Diseases",
       "expertise": "Infectious Disease Epidemiology",
@@ -482,6 +461,15 @@ window.GCDC_DATA = {
       "holders_n": 1,
       "holders": [
         "Abdullatif Bin Khunayn (PHE)"
+      ]
+    },
+    {
+      "domain": "Communicable & Non-Communicable Diseases",
+      "subdomain": "Communicable Diseases",
+      "expertise": "Vector-borne Diseases",
+      "holders_n": 1,
+      "holders": [
+        "Abrar Alsurayhi (TCB)"
       ]
     },
     {
@@ -642,9 +630,8 @@ window.GCDC_DATA = {
       "domain": "Data, Digital Health & Health Informatics",
       "subdomain": "Data Governance & Quality",
       "expertise": "Data Governance",
-      "holders_n": 2,
+      "holders_n": 1,
       "holders": [
-        "Ahmed Alhatlan (PHI)",
         "Mazin Al Rahbi (PHI)"
       ]
     },
@@ -652,7 +639,7 @@ window.GCDC_DATA = {
       "domain": "Data, Digital Health & Health Informatics",
       "subdomain": "Data Analytics & BI",
       "expertise": "Data Analysis (Quantitative)",
-      "holders_n": 8,
+      "holders_n": 7,
       "holders": [
         "Mahim Al Balushi (PHPP)",
         "Haya Sulaiman Alothaimeen (PHE)",
@@ -660,8 +647,7 @@ window.GCDC_DATA = {
         "Abdullah Alqahtani (PHPP)",
         "Norah Albedah (PHI)",
         "Turki Almalki (PHI)",
-        "Heyam Almosabihi (PHPP)",
-        "Faris Aldammas (TCB)"
+        "Heyam Almosabihi (PHPP)"
       ]
     },
     {
@@ -750,15 +736,6 @@ window.GCDC_DATA = {
       "holders": [
         "MOHAMMED ALSHEHRI (PHI)",
         "Najla Alorayyidh (PHPP)"
-      ]
-    },
-    {
-      "domain": "Research & Scientific Practice",
-      "subdomain": "Research Methodology",
-      "expertise": "Survey Design & Validation",
-      "holders_n": 1,
-      "holders": [
-        "Mahim Al Balushi (PHPP)"
       ]
     },
     {
@@ -871,15 +848,6 @@ window.GCDC_DATA = {
     },
     {
       "domain": "Clinical & Specialized Practice",
-      "subdomain": "Laboratory & Diagnostics",
-      "expertise": "Medical Laboratory",
-      "holders_n": 1,
-      "holders": [
-        "Abrar Alsurayhi (TCB)"
-      ]
-    },
-    {
-      "domain": "Clinical & Specialized Practice",
       "subdomain": "Specialized Areas",
       "expertise": "Toxicology",
       "holders_n": 1,
@@ -891,10 +859,9 @@ window.GCDC_DATA = {
       "domain": "Cross-Cutting Professional Skills",
       "subdomain": "Leadership & Strategy",
       "expertise": "Leadership",
-      "holders_n": 2,
+      "holders_n": 1,
       "holders": [
-        "Waleed Al Nadabi (CEO office)",
-        "Mahim Al Balushi (PHPP)"
+        "Waleed Al Nadabi (CEO office)"
       ]
     },
     {
@@ -1009,16 +976,6 @@ window.GCDC_DATA = {
       "in_taxonomy": true
     },
     {
-      "domain": "Public Health Emergency & Health Security",
-      "subdomain": "Health Security",
-      "expertise": "Strategic Stockpile Management",
-      "holders_n": 1,
-      "status": "🟠 Single Core Expert (SPOF)",
-      "sole_holder": "Abdullatif Bin Khunayn (PHE, Strategic)",
-      "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
-      "in_taxonomy": true
-    },
-    {
       "domain": "Communicable & Non-Communicable Diseases",
       "subdomain": "Communicable Diseases",
       "expertise": "Infectious Disease Epidemiology",
@@ -1046,6 +1003,16 @@ window.GCDC_DATA = {
       "status": "🟠 Single Core Expert (SPOF)",
       "sole_holder": "Abdullatif Bin Khunayn (PHE, Strategic)",
       "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+      "in_taxonomy": true
+    },
+    {
+      "domain": "Communicable & Non-Communicable Diseases",
+      "subdomain": "Communicable Diseases",
+      "expertise": "Vector-borne Diseases",
+      "holders_n": 1,
+      "status": "🟠 Single Core Expert (SPOF)",
+      "sole_holder": "Abrar Alsurayhi (TCB)",
+      "recommendation": "Single core expert — capture knowledge and identify a successor.",
       "in_taxonomy": true
     },
     {
@@ -1212,17 +1179,17 @@ window.GCDC_DATA = {
       "domain": "Data, Digital Health & Health Informatics",
       "subdomain": "Data Governance & Quality",
       "expertise": "Data Governance",
-      "holders_n": 2,
-      "status": "🟡 Thin Coverage",
-      "sole_holder": "",
-      "recommendation": "Only two core holders — build redundancy and document SOPs.",
+      "holders_n": 1,
+      "status": "🟠 Single Core Expert (SPOF)",
+      "sole_holder": "Mazin Al Rahbi (PHI)",
+      "recommendation": "Single core expert — capture knowledge and identify a successor.",
       "in_taxonomy": true
     },
     {
       "domain": "Data, Digital Health & Health Informatics",
       "subdomain": "Data Analytics & BI",
       "expertise": "Data Analysis (Quantitative)",
-      "holders_n": 8,
+      "holders_n": 7,
       "status": "🟢 Adequate",
       "sole_holder": "",
       "recommendation": "Maintain via documentation and knowledge champions.",
@@ -1316,16 +1283,6 @@ window.GCDC_DATA = {
       "status": "🟡 Thin Coverage",
       "sole_holder": "",
       "recommendation": "Only two core holders — build redundancy and document SOPs.",
-      "in_taxonomy": true
-    },
-    {
-      "domain": "Research & Scientific Practice",
-      "subdomain": "Research Methodology",
-      "expertise": "Survey Design & Validation",
-      "holders_n": 1,
-      "status": "🟠 Single Core Expert (SPOF)",
-      "sole_holder": "Dr Mahim Al Balushi (PHPP, Strategic)",
-      "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
       "in_taxonomy": true
     },
     {
@@ -1440,16 +1397,6 @@ window.GCDC_DATA = {
     },
     {
       "domain": "Clinical & Specialized Practice",
-      "subdomain": "Laboratory & Diagnostics",
-      "expertise": "Medical Laboratory",
-      "holders_n": 1,
-      "status": "🟠 Single Core Expert (SPOF)",
-      "sole_holder": "Abrar Alsurayhi (TCB, Expert)",
-      "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
-      "in_taxonomy": true
-    },
-    {
-      "domain": "Clinical & Specialized Practice",
       "subdomain": "Specialized Areas",
       "expertise": "Toxicology",
       "holders_n": 1,
@@ -1462,10 +1409,10 @@ window.GCDC_DATA = {
       "domain": "Cross-Cutting Professional Skills",
       "subdomain": "Leadership & Strategy",
       "expertise": "Leadership",
-      "holders_n": 2,
-      "status": "🟡 Thin Coverage",
-      "sole_holder": "",
-      "recommendation": "Only two core holders — build redundancy and document SOPs.",
+      "holders_n": 1,
+      "status": "🟠 Single Core Expert (SPOF)",
+      "sole_holder": "Waleed Al Nadabi (CEO office)",
+      "recommendation": "Single core expert — capture knowledge and identify a successor.",
       "in_taxonomy": true
     },
     {
@@ -1957,6 +1904,36 @@ window.GCDC_DATA = {
       "sole_holder": "(nobody)",
       "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
       "in_taxonomy": false
+    },
+    {
+      "domain": "Public Health Emergency & Health Security",
+      "subdomain": "Health Security",
+      "expertise": "Strategic Stockpile Management",
+      "holders_n": 0,
+      "status": "🔴 No Core Expert",
+      "sole_holder": "",
+      "recommendation": "No staff member holds this area at core level any more — recruit or develop this capability.",
+      "in_taxonomy": false
+    },
+    {
+      "domain": "Research & Scientific Practice",
+      "subdomain": "Research Methodology",
+      "expertise": "Survey Design & Validation",
+      "holders_n": 0,
+      "status": "🔴 No Core Expert",
+      "sole_holder": "",
+      "recommendation": "No staff member holds this area at core level any more — recruit or develop this capability.",
+      "in_taxonomy": false
+    },
+    {
+      "domain": "Clinical & Specialized Practice",
+      "subdomain": "Laboratory & Diagnostics",
+      "expertise": "Medical Laboratory",
+      "holders_n": 0,
+      "status": "🔴 No Core Expert",
+      "sole_holder": "",
+      "recommendation": "No staff member holds this area at core level any more — recruit or develop this capability.",
+      "in_taxonomy": false
     }
   ],
   "criticalHolders": [
@@ -1970,9 +1947,9 @@ window.GCDC_DATA = {
       "scarcity": 5,
       "impact": 5,
       "risk_index": 125,
-      "core_count": 4,
-      "core_areas": "Emergency Preparedness Planning; Infection & Immunity; Strategic Stockpile Management; Project Management (PMP/CAPM)",
-      "rare_expertise": "Strategic Stockpile Management; Infection & Immunity",
+      "core_count": 3,
+      "core_areas": "Emergency Preparedness Planning; Infection & Immunity; Project Management (PMP/CAPM)",
+      "rare_expertise": "Infection & Immunity",
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Infection & Immunity, Strategic Stockpile Management. Priority for knowledge capture & succession planning.",
@@ -1989,8 +1966,8 @@ window.GCDC_DATA = {
       "scarcity": 5,
       "impact": 5,
       "risk_index": 125,
-      "core_count": 5,
-      "core_areas": "Casemix Funding & Classification; Data Governance; Governance, Risk & Compliance (GRC); Policy Drafting & Analysis; Registry Development (Cancer, RTI, etc.)",
+      "core_count": 4,
+      "core_areas": "Casemix Funding & Classification; Governance, Risk & Compliance (GRC); Policy Drafting & Analysis; Registry Development (Cancer, RTI, etc.)",
       "rare_expertise": "Registry Development (Cancer, RTI, etc.); Governance, Risk & Compliance (GRC); Casemix Funding & Classification",
       "flag": "🔴 High Continuity Risk",
       "leader": true,
@@ -2008,9 +1985,9 @@ window.GCDC_DATA = {
       "scarcity": 5,
       "impact": 5,
       "risk_index": 125,
-      "core_count": 5,
-      "core_areas": "Data Analysis (Quantitative); Leadership; Risk Assessment (Rapid Risk Assessment); Road Traffic & Injury Prevention; Survey Design & Validation",
-      "rare_expertise": "Risk Assessment (Rapid Risk Assessment); Survey Design & Validation",
+      "core_count": 3,
+      "core_areas": "Data Analysis (Quantitative); Risk Assessment (Rapid Risk Assessment); Road Traffic & Injury Prevention",
+      "rare_expertise": "Risk Assessment (Rapid Risk Assessment)",
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Risk Assessment (Rapid Risk Assessment), Survey Design & Validation. Priority for knowledge capture & succession planning.",
@@ -2029,7 +2006,7 @@ window.GCDC_DATA = {
       "risk_index": 100,
       "core_count": 4,
       "core_areas": "Leadership; Patient Safety; Performance Management (KPIs / OKRs); Project Management (PMP/CAPM)",
-      "rare_expertise": "Patient Safety",
+      "rare_expertise": "Patient Safety; Leadership",
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Patient Safety. Priority for knowledge capture & succession planning.",
@@ -2142,8 +2119,8 @@ window.GCDC_DATA = {
       "impact": 4,
       "risk_index": 80,
       "core_count": 3,
-      "core_areas": "Medical Laboratory; Policy Brief & White Paper Writing; Value-Based Healthcare (VBHC)",
-      "rare_expertise": "Policy Brief & White Paper Writing; Value-Based Healthcare (VBHC); Medical Laboratory",
+      "core_areas": "Policy Brief & White Paper Writing; Value-Based Healthcare (VBHC); Vector-borne Diseases",
+      "rare_expertise": "Vector-borne Diseases; Policy Brief & White Paper Writing; Value-Based Healthcare (VBHC)",
       "flag": "🔴 High Continuity Risk",
       "leader": true,
       "continuity": "Sole core expert in: Medical Laboratory, Policy Brief & White Paper Writing, Value-Based Healthcare (VBHC). Priority for knowledge capture & succession planning.",
@@ -2179,8 +2156,8 @@ window.GCDC_DATA = {
       "scarcity": 5,
       "impact": 4,
       "risk_index": 80,
-      "core_count": 5,
-      "core_areas": "AI in Health; Project Management (PMP/CAPM); Toxicology; Data Analysis (Quantitative); Dashboard & BI Development",
+      "core_count": 4,
+      "core_areas": "AI in Health; Project Management (PMP/CAPM); Toxicology; Dashboard & BI Development",
       "rare_expertise": "Toxicology",
       "flag": "🔴 High Continuity Risk",
       "leader": false,
@@ -2219,7 +2196,7 @@ window.GCDC_DATA = {
       "risk_index": 64,
       "core_count": 3,
       "core_areas": "Data Governance; Data Engineering & Automation; Dashboard & BI Development",
-      "rare_expertise": "(none sole-held)",
+      "rare_expertise": "Data Governance",
       "flag": "🟡 Moderate Risk",
       "leader": false,
       "continuity": "",

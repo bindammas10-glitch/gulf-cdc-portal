@@ -100,16 +100,6 @@
     "in_taxonomy": true
   },
   {
-    "domain": "Public Health Emergency & Health Security",
-    "subdomain": "Health Security",
-    "expertise": "Strategic Stockpile Management",
-    "holders_n": 1,
-    "status": "🟠 Single Core Expert (SPOF)",
-    "sole_holder": "Abdullatif Bin Khunayn (PHE, Strategic)",
-    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
-    "in_taxonomy": true
-  },
-  {
     "domain": "Communicable & Non-Communicable Diseases",
     "subdomain": "Communicable Diseases",
     "expertise": "Infectious Disease Epidemiology",
@@ -137,6 +127,16 @@
     "status": "🟠 Single Core Expert (SPOF)",
     "sole_holder": "Abdullatif Bin Khunayn (PHE, Strategic)",
     "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
+    "in_taxonomy": true
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Vector-borne Diseases",
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Abrar Alsurayhi (TCB)",
+    "recommendation": "Single core expert — capture knowledge and identify a successor.",
     "in_taxonomy": true
   },
   {
@@ -303,17 +303,17 @@
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Data Governance & Quality",
     "expertise": "Data Governance",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "sole_holder": "",
-    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Mazin Al Rahbi (PHI)",
+    "recommendation": "Single core expert — capture knowledge and identify a successor.",
     "in_taxonomy": true
   },
   {
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Data Analytics & BI",
     "expertise": "Data Analysis (Quantitative)",
-    "holders_n": 8,
+    "holders_n": 7,
     "status": "🟢 Adequate",
     "sole_holder": "",
     "recommendation": "Maintain via documentation and knowledge champions.",
@@ -407,16 +407,6 @@
     "status": "🟡 Thin Coverage",
     "sole_holder": "",
     "recommendation": "Only two core holders — build redundancy and document SOPs.",
-    "in_taxonomy": true
-  },
-  {
-    "domain": "Research & Scientific Practice",
-    "subdomain": "Research Methodology",
-    "expertise": "Survey Design & Validation",
-    "holders_n": 1,
-    "status": "🟠 Single Core Expert (SPOF)",
-    "sole_holder": "Dr Mahim Al Balushi (PHPP, Strategic)",
-    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
     "in_taxonomy": true
   },
   {
@@ -531,16 +521,6 @@
   },
   {
     "domain": "Clinical & Specialized Practice",
-    "subdomain": "Laboratory & Diagnostics",
-    "expertise": "Medical Laboratory",
-    "holders_n": 1,
-    "status": "🟠 Single Core Expert (SPOF)",
-    "sole_holder": "Abrar Alsurayhi (TCB, Expert)",
-    "recommendation": "One person is the sole core expert. Capture knowledge, cross-train a successor, document SOPs.",
-    "in_taxonomy": true
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
     "subdomain": "Specialized Areas",
     "expertise": "Toxicology",
     "holders_n": 1,
@@ -553,10 +533,10 @@
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Leadership & Strategy",
     "expertise": "Leadership",
-    "holders_n": 2,
-    "status": "🟡 Thin Coverage",
-    "sole_holder": "",
-    "recommendation": "Only two core holders — build redundancy and document SOPs.",
+    "holders_n": 1,
+    "status": "🟠 Single Core Expert (SPOF)",
+    "sole_holder": "Waleed Al Nadabi (CEO office)",
+    "recommendation": "Single core expert — capture knowledge and identify a successor.",
     "in_taxonomy": true
   },
   {
@@ -1047,6 +1027,36 @@
     "status": "🔴 No Core Expert",
     "sole_holder": "(nobody)",
     "recommendation": "Not part of the active taxonomy. Consider recruitment, external partnership, or targeted development if strategically needed.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Public Health Emergency & Health Security",
+    "subdomain": "Health Security",
+    "expertise": "Strategic Stockpile Management",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "",
+    "recommendation": "No staff member holds this area at core level any more — recruit or develop this capability.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Research & Scientific Practice",
+    "subdomain": "Research Methodology",
+    "expertise": "Survey Design & Validation",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "",
+    "recommendation": "No staff member holds this area at core level any more — recruit or develop this capability.",
+    "in_taxonomy": false
+  },
+  {
+    "domain": "Clinical & Specialized Practice",
+    "subdomain": "Laboratory & Diagnostics",
+    "expertise": "Medical Laboratory",
+    "holders_n": 0,
+    "status": "🔴 No Core Expert",
+    "sole_holder": "",
+    "recommendation": "No staff member holds this area at core level any more — recruit or develop this capability.",
     "in_taxonomy": false
   }
 ]
