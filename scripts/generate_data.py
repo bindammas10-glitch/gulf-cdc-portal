@@ -91,6 +91,66 @@ for r in wb["05_Critical_Holders"].iter_rows(min_row=5, values_only=True):
         continue
     cont[fix_name(r[1])] = s(r[10])
 
+# ---------------------------------------------------------------------------
+# Post-workbook expertise corrections (requested edits applied on top of the
+# source sheets). Everything downstream — holder counts, coverage statuses,
+# sole-holder lists, gaps, charts — recomputes from the edited matrix.
+EXPERTISE_EDITS = {
+    "Abrar Alsurayhi":        {"remove": ["Medical Laboratory"], "add": ["Vector-borne Diseases"]},
+    "Faris Aldammas":         {"remove": ["Data Analysis (Quantitative)"]},
+    "Abdullatif Bin Khunayn": {"remove": ["Strategic Stockpile Management"]},
+    "Ahmed Alhatlan":         {"remove": ["Data Governance"]},
+    "Mahim Al Balushi":       {"remove": ["Leadership", "Survey Design & Validation"]},
+}
+# Areas that don't exist in the workbook taxonomy yet: (domain, sub-domain)
+NEW_AREAS = {
+    "Vector-borne Diseases": ("Communicable & Non-Communicable Diseases", "Communicable Diseases"),
+}
+
+dept_of = {m["name"]: m["department"] for m in master}
+mat_by_exp = {m["expertise"]: m for m in matrix}
+
+for person, ops in EXPERTISE_EDITS.items():
+    for area in ops.get("remove", []):
+        m = mat_by_exp.get(area)
+        assert m, f"unknown area to remove: {area}"
+        before = len(m["holders"])
+        m["holders"] = [h for h in m["holders"] if h.split(" (")[0].strip() != person]
+        assert len(m["holders"]) == before - 1, f"{person} did not hold {area}"
+    for area in ops.get("add", []):
+        if area not in mat_by_exp:
+            dom, sub = NEW_AREAS[area]
+            entry = dict(domain=dom, subdomain=sub, expertise=area, holders_n=0, holders=[])
+            # insert alongside the other areas of the same sub-domain
+            idx = max(i for i, t in enumerate(tax) if t["domain"] == dom and t["subdomain"] == sub) + 1
+            matrix.insert(idx, entry)
+            tax.insert(idx, dict(domain=dom, subdomain=sub, expertise=area, holders_n=0,
+                                 path=f"{dom} > {sub} > {area}"))
+            mat_by_exp[area] = entry
+        mat_by_exp[area]["holders"].append(f"{person} ({dept_of[person]})")
+
+# Recompute holder counts, then retire areas nobody holds at core level
+for m in matrix:
+    m["holders_n"] = len(m["holders"])
+tax_by_exp = {t["expertise"]: t for t in tax}
+for t in tax:
+    t["holders_n"] = mat_by_exp[t["expertise"]]["holders_n"]
+retired = [t for t in tax if t["holders_n"] == 0]
+tax = [t for t in tax if t["holders_n"] > 0]
+matrix = [m for m in matrix if m["holders_n"] > 0]
+
+# Mirror the edits in each person's core-areas list
+for m in master:
+    ops = EXPERTISE_EDITS.get(m["name"])
+    if not ops:
+        continue
+    areas = [a.strip() for a in m["core_areas"].split(";") if a.strip()]
+    areas = [a for a in areas if a not in ops.get("remove", [])]
+    areas += [a for a in ops.get("add", []) if a not in areas]
+    m["core_areas"] = "; ".join(areas)
+    m["core_count"] = len(areas)
+# ---------------------------------------------------------------------------
+
 # sole-held areas per person (from matrix, holders_n == 1)
 sole = {}
 for m in matrix:
@@ -141,6 +201,12 @@ for r in wb["06_Knowledge_Gaps"].iter_rows(min_row=4, values_only=True):
     if r[0] and "No Core Expert" in s(r[4]):
         gaps.append(dict(domain=s(r[0]), subdomain=s(r[1]), expertise=s(r[2]), holders_n=0,
             status="\U0001F534 No Core Expert", sole_holder=s(r[5]), recommendation=s(r[6]), in_taxonomy=False))
+# Areas retired by EXPERTISE_EDITS (their last core holder was removed)
+for t in retired:
+    gaps.append(dict(domain=t["domain"], subdomain=t["subdomain"], expertise=t["expertise"], holders_n=0,
+        status="\U0001F534 No Core Expert", sole_holder="",
+        recommendation="No staff member holds this area at core level any more — recruit or develop this capability.",
+        in_taxonomy=False))
 
 # 07 Interview Shortlist
 shortlist = []

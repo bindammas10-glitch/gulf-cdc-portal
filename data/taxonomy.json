@@ -60,12 +60,6 @@
     "path": "Public Health Emergency & Health Security > Response & Operations > Disaster Medicine & Management"
   },
   {
-    "domain": "Public Health Emergency & Health Security",
-    "subdomain": "Health Security",
-    "expertise": "Strategic Stockpile Management",
-    "path": "Public Health Emergency & Health Security > Health Security > Strategic Stockpile Management"
-  },
-  {
     "domain": "Communicable & Non-Communicable Diseases",
     "subdomain": "Communicable Diseases",
     "expertise": "Infectious Disease Epidemiology",
@@ -82,6 +76,12 @@
     "subdomain": "Communicable Diseases",
     "expertise": "Infection & Immunity",
     "path": "Communicable & Non-Communicable Diseases > Communicable Diseases > Infection & Immunity"
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Vector-borne Diseases",
+    "path": "Communicable & Non-Communicable Diseases > Communicable Diseases > Vector-borne Diseases"
   },
   {
     "domain": "Communicable & Non-Communicable Diseases",
@@ -248,12 +248,6 @@
   {
     "domain": "Research & Scientific Practice",
     "subdomain": "Research Methodology",
-    "expertise": "Survey Design & Validation",
-    "path": "Research & Scientific Practice > Research Methodology > Survey Design & Validation"
-  },
-  {
-    "domain": "Research & Scientific Practice",
-    "subdomain": "Research Methodology",
     "expertise": "Indicators Development & Measurement",
     "path": "Research & Scientific Practice > Research Methodology > Indicators Development & Measurement"
   },
@@ -316,12 +310,6 @@
     "subdomain": "Clinical Disciplines",
     "expertise": "Emergency Medical Services / Paramedic",
     "path": "Clinical & Specialized Practice > Clinical Disciplines > Emergency Medical Services / Paramedic"
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
-    "subdomain": "Laboratory & Diagnostics",
-    "expertise": "Medical Laboratory",
-    "path": "Clinical & Specialized Practice > Laboratory & Diagnostics > Medical Laboratory"
   },
   {
     "domain": "Clinical & Specialized Practice",

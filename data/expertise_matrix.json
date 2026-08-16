@@ -97,15 +97,6 @@
     ]
   },
   {
-    "domain": "Public Health Emergency & Health Security",
-    "subdomain": "Health Security",
-    "expertise": "Strategic Stockpile Management",
-    "holders_n": 1,
-    "holders": [
-      "Abdullatif Bin Khunayn (PHE)"
-    ]
-  },
-  {
     "domain": "Communicable & Non-Communicable Diseases",
     "subdomain": "Communicable Diseases",
     "expertise": "Infectious Disease Epidemiology",
@@ -133,6 +124,15 @@
     "holders_n": 1,
     "holders": [
       "Abdullatif Bin Khunayn (PHE)"
+    ]
+  },
+  {
+    "domain": "Communicable & Non-Communicable Diseases",
+    "subdomain": "Communicable Diseases",
+    "expertise": "Vector-borne Diseases",
+    "holders_n": 1,
+    "holders": [
+      "Abrar Alsurayhi (TCB)"
     ]
   },
   {
@@ -293,9 +293,8 @@
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Data Governance & Quality",
     "expertise": "Data Governance",
-    "holders_n": 2,
+    "holders_n": 1,
     "holders": [
-      "Ahmed Alhatlan (PHI)",
       "Mazin Al Rahbi (PHI)"
     ]
   },
@@ -303,7 +302,7 @@
     "domain": "Data, Digital Health & Health Informatics",
     "subdomain": "Data Analytics & BI",
     "expertise": "Data Analysis (Quantitative)",
-    "holders_n": 8,
+    "holders_n": 7,
     "holders": [
       "Mahim Al Balushi (PHPP)",
       "Haya Sulaiman Alothaimeen (PHE)",
@@ -311,8 +310,7 @@
       "Abdullah Alqahtani (PHPP)",
       "Norah Albedah (PHI)",
       "Turki Almalki (PHI)",
-      "Heyam Almosabihi (PHPP)",
-      "Faris Aldammas (TCB)"
+      "Heyam Almosabihi (PHPP)"
     ]
   },
   {
@@ -401,15 +399,6 @@
     "holders": [
       "MOHAMMED ALSHEHRI (PHI)",
       "Najla Alorayyidh (PHPP)"
-    ]
-  },
-  {
-    "domain": "Research & Scientific Practice",
-    "subdomain": "Research Methodology",
-    "expertise": "Survey Design & Validation",
-    "holders_n": 1,
-    "holders": [
-      "Mahim Al Balushi (PHPP)"
     ]
   },
   {
@@ -522,15 +511,6 @@
   },
   {
     "domain": "Clinical & Specialized Practice",
-    "subdomain": "Laboratory & Diagnostics",
-    "expertise": "Medical Laboratory",
-    "holders_n": 1,
-    "holders": [
-      "Abrar Alsurayhi (TCB)"
-    ]
-  },
-  {
-    "domain": "Clinical & Specialized Practice",
     "subdomain": "Specialized Areas",
     "expertise": "Toxicology",
     "holders_n": 1,
@@ -542,10 +522,9 @@
     "domain": "Cross-Cutting Professional Skills",
     "subdomain": "Leadership & Strategy",
     "expertise": "Leadership",
-    "holders_n": 2,
+    "holders_n": 1,
     "holders": [
-      "Waleed Al Nadabi (CEO office)",
-      "Mahim Al Balushi (PHPP)"
+      "Waleed Al Nadabi (CEO office)"
     ]
   },
   {
